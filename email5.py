@@ -37,7 +37,7 @@ def email_163():
     print((msg['subject']))
     # result = msg['subject'].find('Mickey')
     # print('result:',result)
-   
+
     for part in msg.walk():
         #print(part.get_content_type())
         if part.get_content_maintype() == 'text':
