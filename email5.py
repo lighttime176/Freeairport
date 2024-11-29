@@ -1,9 +1,13 @@
 import imaplib
 import email
 import re
+import os
 def email_163():
+    cookies = os.environ.get("ydyp")
+    print(type(cookies)) 
+    print(cookies) 
     EMAIL_ADDRESS = 'luo1764682172@163.com'
-    EMAIL_PASSWORD = 'ZHQgy35wE28LqzTU'
+    EMAIL_PASSWORD = cookies
     server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
     #网易邮箱需要发送额外的Command验证后才能登录
     #https://blog.csdn.net/jony_online/article/details/108638571
@@ -33,17 +37,17 @@ def email_163():
     print((msg['subject']))
     # result = msg['subject'].find('Mickey')
     # print('result:',result)
-
-    for part in msg.walk():
-        #print(part.get_content_type())
-        if part.get_content_maintype() == 'text':
-            body = part.get_payload(decode=True)
-            text = body.decode('utf8')
-            #print(text)
-    match = re.search(r"验证码是：(\d+)", text)
-    if match:
-        verification_code = match.group(1)
-        print("验证码:", verification_code)
-    else:
-        print("未找到验证码")
+    if msg['subject'] == 'MickeyEmail verification code':
+        for part in msg.walk():
+            #print(part.get_content_type())
+            if part.get_content_maintype() == 'text':
+                body = part.get_payload(decode=True)
+                text = body.decode('utf8')
+                #print(text)
+        match = re.search(r"验证码是：(\d+)", text)
+        if match:
+            verification_code = match.group(1)
+            print("验证码:", verification_code)
+        else:
+            print("未找到验证码")
     return verification_code
