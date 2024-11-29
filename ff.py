@@ -1,8 +1,10 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
-import logging,random,time,email5
+import logging,random,time,email5,requests
 
-
+headers ={
+"User-Agent":"clash"
+}
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -84,7 +86,8 @@ logger.info(res)
 token = res['data']['token']
 clash_url = f"https://www.yhc1314dy.link/api/v1/client/subscribe?token={token}"
 logger.info(clash_url)
-
-
-
+response = ''
+response = requests.get(clash_url,headers=headers)
+with open('clash.yaml', 'w', encoding='utf-8') as file:
+    file.writelines(response.text)
 browser.quit()
