@@ -76,9 +76,7 @@ ele.input(vcode)
 tab.listen.start(targets='www.yhcvpn.xyz')  # 开始监听，指定获取包含该文本的数据包
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > button')
 ele.click()
-tab.get_screenshot(path=r"./test_browser_page.png", full_page=True)
-with open(r"./test_browser.html", "w", encoding="utf-8") as f:
-    f.write(tab.html)
+
 logger.info('注册')
 res = tab.listen.wait().response
 res = res.body
