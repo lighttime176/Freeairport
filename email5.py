@@ -37,17 +37,17 @@ def email_163():
     print((msg['subject']))
     # result = msg['subject'].find('Mickey')
     # print('result:',result)
-    if msg['subject'] == 'MickeyEmail verification code':
-        for part in msg.walk():
-            #print(part.get_content_type())
-            if part.get_content_maintype() == 'text':
-                body = part.get_payload(decode=True)
-                text = body.decode('utf8')
-                #print(text)
-        match = re.search(r"验证码是：(\d+)", text)
-        if match:
-            verification_code = match.group(1)
-            print("验证码:", verification_code)
-        else:
-            print("未找到验证码")
+   
+    for part in msg.walk():
+        #print(part.get_content_type())
+        if part.get_content_maintype() == 'text':
+            body = part.get_payload(decode=True)
+            text = body.decode('utf8')
+            #print(text)
+    match = re.search(r"验证码是：(\d+)", text)
+    if match:
+        verification_code = match.group(1)
+        print("验证码:", verification_code)
+    else:
+        print("未找到验证码")
     return verification_code
