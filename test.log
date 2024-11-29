@@ -1,0 +1,12 @@
+2024-11-29 23:55:19,896 - INFO - 打开FireFly url
+2024-11-29 23:55:23,100 - INFO - 1ick2mfo4u@176468.xyz
+2024-11-29 23:55:24,152 - INFO - 输入邮箱1ick2mfo4u@176468.xyz
+2024-11-29 23:55:24,755 - INFO - 发送邮件
+2024-11-29 23:55:24,798 - INFO - 输入密码
+2024-11-29 23:55:24,833 - INFO - 再次输入密码
+2024-11-29 23:55:24,833 - INFO - 等待邮件中,第00秒
+2024-11-29 23:55:34,835 - INFO - 等待邮件中,第10秒
+2024-11-29 23:55:44,838 - INFO - 等待邮件中,第20秒
+2024-11-29 23:56:36,109 - INFO - 注册
+2024-11-29 23:56:37,200 - INFO - {'data': {'token': '1520a9077cf976c388b2a6d7eb381873', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjkyODEsInNlc3Npb24iOiJjMGZmZDY3YWFjOGY0YjdmOWYyM2UzZjFhMGMyYTJlYSJ9.C0j0AuewrNV_tU7H30xxMBS1dg6D2PNv38fFDBgKi8U'}}
+2024-11-29 23:56:37,203 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=1520a9077cf976c388b2a6d7eb381873
