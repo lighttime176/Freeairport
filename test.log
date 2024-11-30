@@ -34,3 +34,15 @@
 2024-11-30 04:11:35,116 - INFO - 注册
 2024-11-30 04:11:35,955 - INFO - {'data': {'token': '706bd1896c4b11bdfdfb4522fbc207c3', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjkyODUsInNlc3Npb24iOiI5MmFiN2E2YzQ5NGZmODc2ZGNlZWQxMTg2OWY4YTYyNyJ9.qZGo9-3WRblj9pmAWjdzJZZXewWZFSGGduIBZy8sOgA'}}
 2024-11-30 04:11:35,955 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=706bd1896c4b11bdfdfb4522fbc207c3
+2024-11-30 20:30:52,594 - INFO - 打开FireFly url
+2024-11-30 20:30:56,197 - INFO - mphubccis5@176468.xyz
+2024-11-30 20:30:59,612 - INFO - 输入邮箱mphubccis5@176468.xyz
+2024-11-30 20:31:00,108 - INFO - 发送邮件
+2024-11-30 20:31:00,324 - INFO - 输入密码
+2024-11-30 20:31:00,513 - INFO - 再次输入密码
+2024-11-30 20:31:00,513 - INFO - 等待邮件中,第00秒
+2024-11-30 20:31:10,653 - INFO - 等待邮件中,第10秒
+2024-11-30 20:31:20,698 - INFO - 等待邮件中,第20秒
+2024-11-30 20:32:16,541 - INFO - 注册
+2024-11-30 20:32:17,541 - INFO - {'data': {'token': 'e0a74af0c96b4baf71771117bf7b1e70', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjkyOTQsInNlc3Npb24iOiJkYWFjMWRkNDRhNjZjMDNlMWExYTA2NDkxNTg0YzE5YiJ9.gef-G3jZIBhC8vzy6NqLX94bVM694sBNZGE1E73LOmo'}}
+2024-11-30 20:32:17,541 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=e0a74af0c96b4baf71771117bf7b1e70
