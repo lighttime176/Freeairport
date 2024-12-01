@@ -58,3 +58,15 @@
 2024-12-01 09:40:09,535 - INFO - 注册
 2024-12-01 09:40:10,328 - INFO - {'data': {'token': '0ee3dd4ebe1acc1852b5d4569fe4e437', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjkyOTksInNlc3Npb24iOiJhNjVjMmI5NGJmMDg1N2VlM2M1YmFmYjE0MTkwY2U2NCJ9.sLgBH1sL5wedM97-KuVftuWUhGf2NXpQwVt0ZSqyNSM'}}
 2024-12-01 09:40:10,328 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=0ee3dd4ebe1acc1852b5d4569fe4e437
+2024-12-01 20:31:36,124 - INFO - 打开FireFly url
+2024-12-01 20:31:38,688 - INFO - gpmw60s8ca@176468.xyz
+2024-12-01 20:31:39,622 - INFO - 输入邮箱gpmw60s8ca@176468.xyz
+2024-12-01 20:31:40,026 - INFO - 发送邮件
+2024-12-01 20:31:40,074 - INFO - 输入密码
+2024-12-01 20:31:40,125 - INFO - 再次输入密码
+2024-12-01 20:31:40,125 - INFO - 等待邮件中,第00秒
+2024-12-01 20:31:50,251 - INFO - 等待邮件中,第10秒
+2024-12-01 20:32:00,399 - INFO - 等待邮件中,第20秒
+2024-12-01 20:32:45,478 - INFO - 注册
+2024-12-01 20:32:46,254 - INFO - {'data': {'token': '82cb8f925f99e7494b6971d9624a3909', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjkzMDQsInNlc3Npb24iOiIwMWI4ZDJiODMyYzNlOGQ0YjhkZTA0YmRhZmM0ODYzYSJ9.TEZdoE3RWaqsdDbli-G22j2zV1QY9MHoRaN3pziEjZw'}}
+2024-12-01 20:32:46,254 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=82cb8f925f99e7494b6971d9624a3909
