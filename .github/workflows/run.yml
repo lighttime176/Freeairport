@@ -18,7 +18,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: macos-12
+    runs-on: macOS-15
     env:
       TZ: Asia/Shanghai
     steps:
