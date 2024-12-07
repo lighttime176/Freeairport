@@ -66,7 +66,7 @@ logger.info('输入密码')
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > span:nth-child(4) > input')
 ele.input('123456789')
 logger.info('再次输入密码')
-for i_sleepcode in range(3):
+for i_sleepcode in range(4):
     logger.info(f"等待邮件中,第{i_sleepcode}0秒")
     time.sleep(10)
     
