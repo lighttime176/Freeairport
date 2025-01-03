@@ -241,3 +241,16 @@
 2024-12-26 13:49:14,927 - INFO - 注册
 2024-12-26 13:49:16,105 - INFO - {'data': {'token': '275f824cfab53cdf3deec30ada6a4712', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mjk1OTQsInNlc3Npb24iOiI5MjE3YTBmMDc0ZWI4ZGJlYmNiZTk5ZWZlZGRiYjg4ZSJ9.5vIN8pf3xboM13-Hh5UC9jxPh_HY97t0U6UbdLIDgoU'}}
 2024-12-26 13:49:16,105 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=275f824cfab53cdf3deec30ada6a4712
+2025-01-03 10:55:26,141 - INFO - 打开FireFly url
+2025-01-03 10:55:29,250 - INFO - dvver2kb46@176468.xyz
+2025-01-03 10:55:29,559 - INFO - 输入邮箱dvver2kb46@176468.xyz
+2025-01-03 10:55:30,610 - INFO - 发送邮件
+2025-01-03 10:55:30,754 - INFO - 输入密码
+2025-01-03 10:55:30,878 - INFO - 再次输入密码
+2025-01-03 10:55:30,878 - INFO - 等待邮件中,第00秒
+2025-01-03 10:55:40,898 - INFO - 等待邮件中,第10秒
+2025-01-03 10:55:51,021 - INFO - 等待邮件中,第20秒
+2025-01-03 10:56:01,134 - INFO - 等待邮件中,第30秒
+2025-01-03 10:57:51,694 - INFO - 注册
+2025-01-03 10:57:52,855 - INFO - {'data': {'token': 'a587e9201f72c9656a938488b7db4c84', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mjk3MDIsInNlc3Npb24iOiI0NmVmYjgxZTQxMWI4ZTg5MzczNTUxMjQ3N2Q3YmI5MCJ9.PIfU0W0kTnh6PUKK9oYDDwfN3elqMHvvr72AQM7P1WU'}}
+2025-01-03 10:57:52,855 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=a587e9201f72c9656a938488b7db4c84
