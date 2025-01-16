@@ -267,3 +267,16 @@
 2025-01-09 14:28:04,544 - INFO - 注册
 2025-01-09 14:28:05,613 - INFO - {'data': {'token': 'bb65ceec8ffae475504e96ad1bb7f40d', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mjk3ODMsInNlc3Npb24iOiI3N2M2NDM1Nzk1NTY2OTdhOTdjMzI2MzhjMGY5NmM5NyJ9.MMAguG-cYCR2TDwbjLjnUZNtMh50alwbzvxSn_SQ2EM'}}
 2025-01-09 14:28:05,614 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=bb65ceec8ffae475504e96ad1bb7f40d
+2025-01-16 18:44:35,971 - INFO - 打开FireFly url
+2025-01-16 18:44:39,738 - INFO - hbhzw0elvc@176468.xyz
+2025-01-16 18:44:40,054 - INFO - 输入邮箱hbhzw0elvc@176468.xyz
+2025-01-16 18:44:40,551 - INFO - 发送邮件
+2025-01-16 18:44:40,576 - INFO - 输入密码
+2025-01-16 18:44:40,593 - INFO - 再次输入密码
+2025-01-16 18:44:40,593 - INFO - 等待邮件中,第00秒
+2025-01-16 18:44:50,703 - INFO - 等待邮件中,第10秒
+2025-01-16 18:45:00,713 - INFO - 等待邮件中,第20秒
+2025-01-16 18:45:10,822 - INFO - 等待邮件中,第30秒
+2025-01-16 18:46:58,229 - INFO - 注册
+2025-01-16 18:46:59,280 - INFO - {'data': {'token': '8919a384d4b13954ecf4d60d99426cb5', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mjk4NzQsInNlc3Npb24iOiJmMmFkNmZlYmYzMDY2OWIxNDgwMmJkYTU0YzRkNDIzZSJ9.MfEv5EhVv8XzLd2jRtyo8m3C0EYVtwI7gRHsFQlbe8A'}}
+2025-01-16 18:46:59,280 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=8919a384d4b13954ecf4d60d99426cb5
