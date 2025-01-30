@@ -1,10 +1,60 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
-import logging,random,time,email5,requests
-
+import logging,random,time,requests
+import imaplib
+import email
 headers ={
 "User-Agent":"clash"
 }
+def email_163():
+    cookies = os.environ.get("ydyp")
+    print(type(cookies)) 
+    print(cookies) 
+    EMAIL_ADDRESS = 'luo1764682172@163.com'
+    EMAIL_PASSWORD = cookies
+    server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+    #网易邮箱需要发送额外的Command验证后才能登录
+    #https://blog.csdn.net/jony_online/article/details/108638571
+    imaplib.Commands ['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+    args = ("name", "imaplib", "version", "1.0.0")
+    typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
+    server.login (EMAIL_ADDRESS, EMAIL_PASSWORD)
+    #print(server.list())
+    server.select("INBOX")
+    typ,data = server.search(None,'ALL')#'ALL',or 'SEEN'
+    data[0].split()
+    fetch_data_lst = []
+    for num in data[0].split():
+        typ,fetch_data = server.fetch(num,'(RFC822)')
+        fetch_data_lst.append(fetch_data)
+    # for fetch_data in fetch_data_lst:
+    #     msg = email.message_from_bytes(fetch_data[0][1])
+    #     for part in msg.walk():
+    #         print(part.get_content_type())
+    #         if part.get_content_maintype() == 'text':
+    #             body = part.get_payload(decode=True)
+    #             text = body.decode('utf8')
+    #             print(text)
+    fetch_data = fetch_data_lst[-1]
+    msg = email.message_from_bytes(fetch_data[0][1])
+    #print(msg)
+    print((msg['subject']))
+    # result = msg['subject'].find('Mickey')
+    # print('result:',result)
+
+    for part in msg.walk():
+        #print(part.get_content_type())
+        if part.get_content_maintype() == 'text':
+            body = part.get_payload(decode=True)
+            text = body.decode('utf8')
+            #print(text)
+    match = re.search(r"验证码是：(\d+)", text)
+    if match:
+        verification_code = match.group(1)
+        print("验证码:", verification_code)
+    else:
+        print("未找到验证码")
+    return verification_code
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -66,14 +116,15 @@ logger.info('输入密码')
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > span:nth-child(4) > input')
 ele.input('123456789')
 logger.info('再次输入密码')
-for i_sleepcode in range(4):
+for i_sleepcode in range(6):
     logger.info(f"等待邮件中,第{i_sleepcode}0秒")
     time.sleep(10)
     
-vcode = email5.email_163()
+vcode = email_163()
+logger.info(vcode)
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > div.styles_xhBix > input')
 ele.input(vcode)
-tab.listen.start(targets='www.yhcvpn.xyz')  # 开始监听，指定获取包含该文本的数据包
+tab.listen.start(targets='www.yhcvpn.xyz',timeout = 30)  # 开始监听，指定获取包含该文本的数据包
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > button')
 ele.click()
 
