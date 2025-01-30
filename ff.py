@@ -38,7 +38,7 @@ def email_163():
     fetch_data = fetch_data_lst[-1]
     msg = email.message_from_bytes(fetch_data[0][1])
     #print(msg)
-    print((msg['subject']))
+    logger.info((msg['subject']))
     # result = msg['subject'].find('Mickey')
     # print('result:',result)
 
@@ -51,9 +51,9 @@ def email_163():
     match = re.search(r"验证码是：(\d+)", text)
     if match:
         verification_code = match.group(1)
-        print("验证码:", verification_code)
+        logger.info("验证码:", verification_code)
     else:
-        print("未找到验证码")
+        logger.info("未找到验证码")
     return verification_code
 def logging_init():
   # 创建一个logger对象
