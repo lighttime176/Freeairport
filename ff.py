@@ -8,19 +8,22 @@ headers ={
 }
 def email_163():
     cookies = os.environ.get("ydyp")
-    print(type(cookies)) 
-    print(cookies) 
+    logger.info(type(cookies)) 
     EMAIL_ADDRESS = 'luo1764682172@163.com'
     EMAIL_PASSWORD = cookies
     server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+    logger.info('连接网易服务器') 
     #网易邮箱需要发送额外的Command验证后才能登录
     #https://blog.csdn.net/jony_online/article/details/108638571
     imaplib.Commands ['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+    logger.info('发送command命令') 
     args = ("name", "imaplib", "version", "1.0.0")
     typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
     server.login (EMAIL_ADDRESS, EMAIL_PASSWORD)
+    logger.info('登录邮箱服务器') 
     #print(server.list())
     server.select("INBOX")
+    logger.info('检查收件箱') 
     typ,data = server.search(None,'ALL')#'ALL',or 'SEEN'
     data[0].split()
     fetch_data_lst = []
@@ -37,6 +40,7 @@ def email_163():
     #             print(text)
     fetch_data = fetch_data_lst[-1]
     msg = email.message_from_bytes(fetch_data[0][1])
+    logger.info('获取邮箱字节数据') 
     #print(msg)
     logger.info((msg['subject']))
     # result = msg['subject'].find('Mickey')
