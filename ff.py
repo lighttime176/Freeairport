@@ -141,7 +141,7 @@ clash_url = f"https://www.yhc1314dy.link/api/v1/client/subscribe?token={token}"
 logger.info(clash_url)
 response = ''
 response = requests.get(clash_url,headers=headers)
-logger.info(reponse)
+logger.info(response)
 with open('clash.yaml', 'w', encoding='utf-8') as file:
     file.writelines(response.text)
 browser.quit()
