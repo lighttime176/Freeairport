@@ -1,6 +1,6 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
-import logging,random,time,requests
+import logging,random,time,requests,os
 import imaplib
 import email
 headers ={
