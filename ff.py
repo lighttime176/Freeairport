@@ -128,7 +128,7 @@ vcode = email_163()
 logger.info(vcode)
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > div.styles_xhBix > input')
 ele.input(vcode)
-tab.listen.start(targets='www.yhcvpn.xyz',timeout = 30)  # 开始监听，指定获取包含该文本的数据包
+tab.listen.start(targets='register',timeout = 30)  # 开始监听，指定获取包含该文本的数据包
 ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > button')
 ele.click()
 
