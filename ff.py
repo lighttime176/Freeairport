@@ -55,7 +55,7 @@ def email_163():
     match = re.search(r"验证码是：(\d+)", text)
     if match:
         verification_code = match.group(1)
-        logger.info("验证码:", verification_code)
+        logger.info(verification_code)
     else:
         logger.info("未找到验证码")
     return verification_code
