@@ -133,7 +133,7 @@ ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koX
 ele.click()
 
 logger.info('注册')
-res = tab.listen.wait().response
+res = tab.listen.wait(timeout=30).response
 res = res.body
 logger.info(res)
 token = res['data']['token']
