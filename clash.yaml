@@ -15,32 +15,32 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: A香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15551, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15552, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: C香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15533, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: D香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15554, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: A香港➟BGP🇭🇰, type: vmess, server: www.yhc10hk.xyz, port: 15556, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B香港➟BGP🇭🇰, type: vmess, server: www.yhc10hk.xyz, port: 15557, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: A台湾➟解ChatGPT🇨🇳, type: vmess, server: www.yhc22tw.cc, port: 23332, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B台湾➟解ChatGPT🇨🇳, type: vmess, server: www.yhc22tw.cc, port: 23321, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: C台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22555, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: D台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22666, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: E台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22777, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
-    - { name: A新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 32213, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 42224, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: C新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 52225, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
-    - { name: D新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 62226, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: A日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11122, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11133, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: C日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11114, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: D日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11115, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: A美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33335, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: B美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33336, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: C美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33337, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: D美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33338, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: E美国➟BGP强化🇺🇸, type: vmess, server: www.yhcus88.vip, port: 33398, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: F美国➟BGP强化🇺🇸, type: vmess, server: www.yhcus88.vip, port: 33399, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
-    - { name: '回家🏡https://www.yhcjs.com-必须https://', type: vmess, server: '23222', port: 1112, uuid: 866ec247-07aa-4856-8fd7-a9868b312888, alterId: 0, cipher: auto, udp: true }
+    - { name: A香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15551, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15552, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: C香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15533, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: D香港➟解锁Netflix🇭🇰, type: vmess, server: www.yhc11hk.cc, port: 15554, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: A香港➟BGP🇭🇰, type: vmess, server: www.yhc10hk.xyz, port: 15556, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B香港➟BGP🇭🇰, type: vmess, server: www.yhc10hk.xyz, port: 15557, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: A台湾➟解ChatGPT🇨🇳, type: vmess, server: www.yhc22tw.cc, port: 23332, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B台湾➟解ChatGPT🇨🇳, type: vmess, server: www.yhc22tw.cc, port: 23321, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: C台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22555, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: D台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22666, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: E台湾➟解TK/NF🇨🇳, type: vmess, server: www.yhc67kr.cc, port: 22777, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
+    - { name: A新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 32213, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 42224, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: C新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 52225, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
+    - { name: D新加坡➟CN2隧道🇸🇬, type: vmess, server: www.yhc33sg.xyz, port: 62226, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: A日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11122, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11133, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: C日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11114, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: D日本➟CN2隧道🇯🇵, type: vmess, server: rb.yhcrb.top, port: 11115, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: A美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33335, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: B美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33336, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: C美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33337, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: D美国➟解Netflix🇺🇸, type: vmess, server: www.yhc88us.cc, port: 33338, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: E美国➟BGP强化🇺🇸, type: vmess, server: www.yhcus88.vip, port: 33398, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: F美国➟BGP强化🇺🇸, type: vmess, server: www.yhcus88.vip, port: 33399, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
+    - { name: '回家🏡https://www.yhcjs.com-必须https://', type: vmess, server: '23222', port: 1112, uuid: 406687bc-b186-448d-af71-eacc8b8a5c16, alterId: 0, cipher: auto, udp: true }
 proxy-groups:
     - { name: FireFly, type: select, proxies: [自动选择, 故障转移, A香港➟解锁Netflix🇭🇰, B香港➟解锁Netflix🇭🇰, C香港➟解锁Netflix🇭🇰, D香港➟解锁Netflix🇭🇰, A香港➟BGP🇭🇰, B香港➟BGP🇭🇰, A台湾➟解ChatGPT🇨🇳, B台湾➟解ChatGPT🇨🇳, C台湾➟解TK/NF🇨🇳, D台湾➟解TK/NF🇨🇳, E台湾➟解TK/NF🇨🇳, A新加坡➟CN2隧道🇸🇬, B新加坡➟CN2隧道🇸🇬, C新加坡➟CN2隧道🇸🇬, D新加坡➟CN2隧道🇸🇬, A日本➟CN2隧道🇯🇵, B日本➟CN2隧道🇯🇵, C日本➟CN2隧道🇯🇵, D日本➟CN2隧道🇯🇵, A美国➟解Netflix🇺🇸, B美国➟解Netflix🇺🇸, C美国➟解Netflix🇺🇸, D美国➟解Netflix🇺🇸, E美国➟BGP强化🇺🇸, F美国➟BGP强化🇺🇸, '回家🏡https://www.yhcjs.com-必须https://'] }
     - { name: 自动选择, type: url-test, proxies: [A香港➟解锁Netflix🇭🇰, B香港➟解锁Netflix🇭🇰, C香港➟解锁Netflix🇭🇰, D香港➟解锁Netflix🇭🇰, A香港➟BGP🇭🇰, B香港➟BGP🇭🇰, A台湾➟解ChatGPT🇨🇳, B台湾➟解ChatGPT🇨🇳, C台湾➟解TK/NF🇨🇳, D台湾➟解TK/NF🇨🇳, E台湾➟解TK/NF🇨🇳, A新加坡➟CN2隧道🇸🇬, B新加坡➟CN2隧道🇸🇬, C新加坡➟CN2隧道🇸🇬, D新加坡➟CN2隧道🇸🇬, A日本➟CN2隧道🇯🇵, B日本➟CN2隧道🇯🇵, C日本➟CN2隧道🇯🇵, D日本➟CN2隧道🇯🇵, A美国➟解Netflix🇺🇸, B美国➟解Netflix🇺🇸, C美国➟解Netflix🇺🇸, D美国➟解Netflix🇺🇸, E美国➟BGP强化🇺🇸, F美国➟BGP强化🇺🇸, '回家🏡https://www.yhcjs.com-必须https://'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
