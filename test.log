@@ -1167,3 +1167,26 @@
 2025-06-05 09:43:31,245 - INFO - {'data': {'token': 'dabeff5d14913ea2f9d9d1edcdb7ee0b', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE4MzQsInNlc3Npb24iOiJlMGY4YzVlMGEwZGFjMmRiYmYxYTNmYWVjZjAzMWYzYSJ9.v2VBPIEqU8IrQFsAN9nnZ9S59GmJtwgVfE-kwnk3YAg'}}
 2025-06-05 09:43:31,246 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=dabeff5d14913ea2f9d9d1edcdb7ee0b
 2025-06-05 09:43:32,296 - INFO - <Response [200]>
+2025-06-07 09:40:46,640 - INFO - 打开FireFly url
+2025-06-07 09:40:49,366 - INFO - rfn14ghwfm@176468.xyz
+2025-06-07 09:40:49,769 - INFO - 输入邮箱rfn14ghwfm@176468.xyz
+2025-06-07 09:40:50,120 - INFO - 发送邮件
+2025-06-07 09:40:50,201 - INFO - 输入密码
+2025-06-07 09:40:50,227 - INFO - 再次输入密码
+2025-06-07 09:40:50,227 - INFO - 等待邮件中,第00秒
+2025-06-07 09:41:00,271 - INFO - 等待邮件中,第10秒
+2025-06-07 09:41:10,330 - INFO - 等待邮件中,第20秒
+2025-06-07 09:41:20,394 - INFO - 等待邮件中,第30秒
+2025-06-07 09:41:30,453 - INFO - <class 'str'>
+2025-06-07 09:41:31,615 - INFO - 连接网易服务器
+2025-06-07 09:41:31,616 - INFO - 发送command命令
+2025-06-07 09:41:32,106 - INFO - 登录邮箱服务器
+2025-06-07 09:41:32,302 - INFO - 检查收件箱
+2025-06-07 09:42:54,192 - INFO - 获取邮箱字节数据
+2025-06-07 09:42:54,195 - INFO - =?utf-8?Q?FireFly=E9=82=AE=E7=AE=B1=E9=AA=8C=E8=AF=81=E7=A0=81?=
+2025-06-07 09:42:54,198 - INFO - 673287
+2025-06-07 09:42:54,201 - INFO - 673287
+2025-06-07 09:42:54,611 - INFO - 注册
+2025-06-07 09:42:55,753 - INFO - {'data': {'token': '319912ab5be5188042005166ec5a904f', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE4NDgsInNlc3Npb24iOiIzNDU2YjhmNDIyMGVmYjBjOGE2OTc2ZDAxOWFmNGQzNiJ9.x2PgkI8aXydKuRu77IkMoo40w9G1CmQvzcBAnIn3G90'}}
+2025-06-07 09:42:55,753 - INFO - https://www.yhc1314dy.link/api/v1/client/subscribe?token=319912ab5be5188042005166ec5a904f
+2025-06-07 09:42:56,662 - INFO - <Response [200]>
