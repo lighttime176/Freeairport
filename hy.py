@@ -36,7 +36,7 @@ default_strings = [
 
 
 ]
-file_path = "source_list.txt"
+file_path = "source_listhy.txt"
 
 
 # 如果文件不存在，则初始化为 0
@@ -64,7 +64,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('hx.log')
+  file_handler = logging.FileHandler('hy.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
@@ -95,7 +95,7 @@ tab = browser.latest_tab
 # tab.set.cookies(cookies)
 
 logger.info('打开红杏 url')
-tab.get('https://www.redleaf.cloud/auth/register')
+tab.get('https://hx666.02000.net/auth/register')
 account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
 account = sign_email
 
@@ -118,9 +118,9 @@ ele.input("11111111")
 ele = tab.ele('text=再次输入密码')
 ele = ele.next().child()
 ele.input("11111111")
-ele = tab.ele('text=我已阅读并同意')
-logger.info(ele)
-ele.click()
+# ele = tab.ele('text=我已阅读并同意')
+# logger.info(ele)
+# ele.click()
 for _ in range(20):
   time.sleep(1)
   print(f"等待邮箱中，第{_}S")
