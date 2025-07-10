@@ -1,7 +1,7 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
 import logging,random,time,requests,os,re
-import imaplib
+import imaplib,sys
 import email
 headers ={
 "User-Agent":"clash"
@@ -48,8 +48,8 @@ tab = browser.latest_tab
 
 logger.info('打开红杏 url')
 tab.get('https://hx666.02000.net/auth/register')
-
-account = 'h1kgihjf3'
+account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
+#account = 'h1kgihjf3'
 
 logger.info(account)
 ele = tab.ele('text=邮箱')
