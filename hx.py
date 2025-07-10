@@ -140,4 +140,4 @@ ele.click()
 
 res = tab.listen.wait(timeout=10).response
 res = res.body
-logger.info('res')
+logger.info(res)
