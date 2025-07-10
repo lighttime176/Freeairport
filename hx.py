@@ -6,6 +6,53 @@ import email
 headers ={
 "User-Agent":"clash"
 }
+# 初始化字符串列表（如果文件不存在，则第一次运行时使用此列表）
+default_strings = [
+    "a1dfssf34", "b1fdg3422df", "a1fhttt4", "b1fghfty5", "a1ghjkhjkl",
+    "b1uiybhj78", "a1iuouitybb34", "b1hgjutykyu",  "a1ghjnbnnvb","b1gjyukyppp99", 
+    "a1rtyuty8888", "b1ytiyu7777", "a1tryrrt6666", "b1uiiiipoi","a1fdgdfg44", 
+    "b1uiiojhkkk", "a1bbdfdddd33", "b1rteytruyff33", "a1ryertyree44","b1tyutyufgfg", 
+
+    'c1rtrkk444'	,'d1mainddd22'	,'c1rftgdrtgd',	'd1tghfghfg66'	,'c2tianjin22'	,
+    'd1kingq33',	'c1wto1323'	,'d1lianheh222',	'c1ping2323'	,'d1bimjjj22',	
+    'c1gfgh66',	'd1tyuytgh67',	'c1tryu55',	'd1tyutr67',	'c13453main',	
+    'd1cepiong3'	,'c1thrfthf78'	,'d1yi789uj',	'c1tytrf33'	,'d1tyuyt778',	
+
+
+	'e1fghfgdhf55'	,'f1tyupoi88',	'e1jiaohuan2'	,'f1yusheng3',	'e1main22',	
+    'f1tyui77',	'e1tykafaka21'	,'f1yinlang2',	'e1ren242',	'f1maidong22'	,
+    'e1bneiz23',	'f1shushu26'	,'e1xianshi234',	'f1zhanghh3'	,'e1qqcode242',	
+    'f1chromew342'	,'e1intel23'	,'f1btytm23'	,'e1weixi232',	'f1clashwer2'	,
+
+    'g1dfssdf22'	,'h1tyrty6',	'g1sdfd43'	,'h1rfedgdr3'	,'g1gtdhii3'	,
+    'h1yuiii4'	,'g1rdghttt6'	,'h1uythjjko6',	'g1dfgrt4'	,'h1fdfg43fdg'	,
+    'g1sdfsepp9'	,'h1fdghrt54'	,'g1fsrfer343',	'h1truhjfghn65',	'g1dfghrft5',	
+    'h1jhiy7',	'g1gfhf5',	'h1fdgfdy56'	,'g1sdflsdfo3',	'h1kgihjf3'	
+
+    'i1sefd2',	'j1derfse23',	'i1sadfe2'	,'j1saf33d'	,'i1sdas3',	
+    'j1dfggg4',	'i1sdfdf23',	'j1asfdf33',	'i1dsfedf3'	,'j1dsfdf3',
+    'i1asfds2',	'j1dsfefff3',	'i1safdas2',	'j1dfsd3'	,'i1sadfasd32',
+    'j1sdfg23','i1sadfed2'	,'j1sdfsel3',	'i1afsdf2',	'j1sdfdk5'	
+
+
+]
+file_path = "source_list.txt"
+
+
+# 如果文件不存在，则初始化为 0
+if not os.path.exists(file_path):
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write("0")
+
+# 读取文件中的数字
+with open(file_path, "r", encoding="utf-8") as file:
+    try:
+        number = int(file.read().strip())  # 读取并转换为整数
+    except ValueError:
+        number = 0  # 如果文件内容不是数字，初始化为 0
+sign_email = default_strings[number]
+
+
 
 def logging_init():
   # 创建一个logger对象
@@ -50,7 +97,7 @@ tab = browser.latest_tab
 logger.info('打开红杏 url')
 tab.get('https://www.redleaf.cloud/auth/register')
 account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
-#account = 'h1kgihjf3'
+account = sign_email
 
 logger.info(account)
 ele = tab.ele('text=邮箱')
@@ -147,3 +194,10 @@ res = tab.listen.wait(timeout=10).response
 res = res.body
 logger.info(res)
 tab.get_screenshot(path=r"./1.png", full_page=True)
+# 数字加 1
+number += 1
+
+# 将更新后的数字写回文件
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(str(number))
+print(f"新的数字已写入: {number}")
