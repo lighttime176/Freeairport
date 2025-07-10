@@ -36,8 +36,7 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run python code
-      run: python input.py "${{ github.event.inputs.name }}"
-        python hx.py
+      run: python hx.py "${{ github.event.inputs.name }}"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
