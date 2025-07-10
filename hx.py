@@ -62,7 +62,7 @@ ele.select.by_text('outlook.com')
 
 ele = tab.ele('text=验证码')
 ele = ele.next().child().next()
-# ele.click()
+ele.click()
 codeele = ele.prev()
 ele = tab.ele('text=密码')
 ele = ele.next().child()
