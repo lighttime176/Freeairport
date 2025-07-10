@@ -6,59 +6,7 @@ import email
 headers ={
 "User-Agent":"clash"
 }
-def email_163():
-    cookies = os.environ.get("ydyp")
-    logger.info(type(cookies)) 
-    EMAIL_ADDRESS = 'luo1764682172@163.com'
-    EMAIL_PASSWORD = cookies
-    server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
-    logger.info('连接网易服务器') 
-    #网易邮箱需要发送额外的Command验证后才能登录
-    #https://blog.csdn.net/jony_online/article/details/108638571
-    imaplib.Commands ['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
-    logger.info('发送command命令') 
-    args = ("name", "imaplib", "version", "1.0.0")
-    typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
-    server.login (EMAIL_ADDRESS, EMAIL_PASSWORD)
-    logger.info('登录邮箱服务器') 
-    #print(server.list())
-    server.select("INBOX")
-    logger.info('检查收件箱') 
-    typ,data = server.search(None,'ALL')#'ALL',or 'SEEN'
-    data[0].split()
-    fetch_data_lst = []
-    for num in data[0].split():
-        typ,fetch_data = server.fetch(num,'(RFC822)')
-        fetch_data_lst.append(fetch_data)
-    # for fetch_data in fetch_data_lst:
-    #     msg = email.message_from_bytes(fetch_data[0][1])
-    #     for part in msg.walk():
-    #         print(part.get_content_type())
-    #         if part.get_content_maintype() == 'text':
-    #             body = part.get_payload(decode=True)
-    #             text = body.decode('utf8')
-    #             print(text)
-    fetch_data = fetch_data_lst[-1]
-    msg = email.message_from_bytes(fetch_data[0][1])
-    logger.info('获取邮箱字节数据') 
-    #print(msg)
-    logger.info((msg['subject']))
-    # result = msg['subject'].find('Mickey')
-    # print('result:',result)
 
-    for part in msg.walk():
-        #print(part.get_content_type())
-        if part.get_content_maintype() == 'text':
-            body = part.get_payload(decode=True)
-            text = body.decode('utf8')
-            #print(text)
-    match = re.search(r"验证码是：(\d+)", text)
-    if match:
-        verification_code = match.group(1)
-        logger.info(verification_code)
-    else:
-        logger.info("未找到验证码")
-    return verification_code
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -69,7 +17,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('test.log')
+  file_handler = logging.FileHandler('hx.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
@@ -98,50 +46,98 @@ browser = ChromiumPage(co)
 tab = browser.latest_tab
 # tab.set.cookies(cookies)
 
-logger.info('打开FireFly url')
-tab.get('https://www.yhcvpn.xyz/index.php#/register')
-account = ''
-randomlength = 10
-base_str = 'abcdefghijklmnopqrstuvwxyz0123456789'
-length = len(base_str) - 1
-for i in range(randomlength):
-    account += base_str[random.randint(0, length)]
-account = f"{account}@176468.xyz"
+logger.info('打开红杏 url')
+tab.get('https://hx666.02000.net/auth/register')
+
+account = 'g1sdflsdfo3'
+
 logger.info(account)
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > input:nth-child(1)')
+ele = tab.ele('text=邮箱')
+ele = ele.next().child()
 ele.input(account)
-logger.info(f'输入邮箱{account}')
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > div.styles_xhBix > button > span')
-ele.click()
-logger.info('发送邮件')
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > span:nth-child(3) > input')
-ele.input('123456789')
-logger.info('输入密码')
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > span:nth-child(4) > input')
-ele.input('123456789')
-logger.info('再次输入密码')
-for i_sleepcode in range(4):
-    logger.info(f"等待邮件中,第{i_sleepcode}0秒")
-    time.sleep(10)
-    
-vcode = email_163()
-logger.info(vcode)
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > div.styles_xhBix > input')
-ele.input(vcode)
-tab.listen.start(targets='register')  # 开始监听，指定获取包含该文本的数据包
-ele = tab.ele('css=#root > div.styles_C6Q6h > div.styles_svCqL > div.styles_2koXy > button')
+
+ele = ele.next().child().next()
+logger.info(ele)
+ele.select.by_text('outlook.com')
+
+ele = tab.ele('text=验证码')
+ele = ele.next().child().next()
+# ele.click()
+codeele = ele.prev()
+ele = tab.ele('text=密码')
+ele = ele.next().child()
+ele.input("11111111")
+ele = tab.ele('text=再次输入密码')
+ele = ele.next().child()
+ele.input("11111111")
+
+
+
+cookies = os.environ.get("ydyp")
+EMAIL_ADDRESS = 'luo1764682172@163.com'
+EMAIL_PASSWORD = cookies # 请确保是网易邮箱的 IMAP 授权码
+
+# 连接网易 IMAP 服务器
+server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+logger.info('连接网易服务器')
+
+# 添加 ID 命令支持
+imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+logger.info('发送command命令')
+
+args = ("name", "imaplib", "version", "1.0.0")
+typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
+server._untagged_response(typ, dat, 'ID')
+
+# 登录邮箱
+server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+logger.info('登录邮箱服务器')
+
+# 选中收件箱
+server.select("INBOX")
+logger.info('检查收件箱')
+
+# 搜索所有邮件 ID
+typ, data = server.search(None, 'ALL')
+all_ids = data[0].split()
+logger.info(f'共找到 {len(all_ids)} 封邮件')
+
+# 只取最新5封（若总数不足5封，就全部取）
+latest_ids = all_ids[-5:]
+
+# 拉取邮件
+fetch_data_lst = []
+for num in latest_ids:
+    typ, fetch_data = server.fetch(num, '(RFC822)')
+    fetch_data_lst.append(fetch_data)
+
+# 解析最新一封邮件（最后一封）
+fetch_data = fetch_data_lst[-1]
+msg = email.message_from_bytes(fetch_data[0][1])
+logger.info('获取邮箱字节数据')
+logger.info(f'原始主题: {msg["subject"]}')
+
+# 解码主题（更可靠的方式）
+from email.header import decode_header
+subject_parts = decode_header(msg['subject'])
+decoded_subject = ''.join([
+    (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
+    for part, charset in subject_parts
+])
+logger.info(f'解码后主题: {decoded_subject}')
+match = re.search(r'证码:(\d+)', decoded_subject)
+
+if match:
+    # 输出匹配到的验证码
+    logger.info(f"验证码是:{match.group(1)}")
+else:
+    logger.info("未找到验证码")
+
+codeele.input(match.group(1))
+ele = tab.ele('text=注册账号')
+tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
 ele.click()
 
-logger.info('注册')
-res = tab.listen.wait(timeout=30).response
+res = tab.listen.wait(timeout=10).response
 res = res.body
-logger.info(res)
-token = res['data']['token']
-clash_url = f"https://www.yhc1314dy.link/api/v1/client/subscribe?token={token}"
-logger.info(clash_url)
-response = ''
-response = requests.get(clash_url,headers=headers)
-logger.info(response)
-with open('clash.yaml', 'w', encoding='utf-8') as file:
-    file.writelines(response.text)
-browser.quit()
+logger.info('res')
