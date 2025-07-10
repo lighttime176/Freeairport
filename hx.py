@@ -57,7 +57,7 @@ ele = ele.next().child()
 ele.input(account)
 
 ele = ele.next().child().next()
-logger.info(ele)
+#logger.info(ele)
 ele.select.by_text('outlook.com')
 
 ele = tab.ele('text=验证码')
