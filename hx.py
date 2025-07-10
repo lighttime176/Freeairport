@@ -38,6 +38,7 @@ co.set_argument('--no-sandbox')  # 无沙盒模式
 co.set_argument('--headless=new')  # 无界面系统添加
 co.set_paths(browser_path="/opt/google/chrome/google-chrome")  # 设置浏览器路径
 co.set_argument('--disable-gpu')    # 禁用gpu，提高加载速度
+co.set_argument('--blink-settings=imagesEnabled=false')  # 禁用图片加载
 co.set_user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0") 
 # co.incognito(True)
 co.remove_extensions()
