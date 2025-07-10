@@ -121,7 +121,7 @@ ele.input("11111111")
 # ele = tab.ele('text=我已阅读并同意')
 # logger.info(ele)
 # ele.click()
-for _ in range(20):
+for _ in range(30):
   time.sleep(1)
   print(f"等待邮箱中，第{_}S")
 
