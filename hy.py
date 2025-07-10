@@ -182,10 +182,11 @@ match = re.search(r'证码:(\d+)', decoded_subject)
 if match:
     # 输出匹配到的验证码
     logger.info(f"验证码是:{match.group(1)}")
+    codeele.input(match.group(1))
 else:
     logger.info("未找到验证码")
 
-codeele.input(match.group(1))
+
 ele = tab.ele('text=注册账号')
 tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
 ele.click()
