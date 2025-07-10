@@ -71,7 +71,7 @@ ele.input("11111111")
 ele = tab.ele('text=再次输入密码')
 ele = ele.next().child()
 ele.input("11111111")
-ele = tab.ele('text=我已阅读并同意').next()
+ele = tab.ele('text=我已阅读并同意')
 logger.info(ele)
 ele.click()
 for _ in range(20):
