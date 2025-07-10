@@ -104,4 +104,4 @@
  =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A768510?=
 2025-07-10 17:55:50,219 - INFO - 解码后主题: 紅葉邮箱验证码:768510
 2025-07-10 17:55:50,219 - INFO - 验证码是:768510
-2025-07-10 17:55:51,818 - INFO - {'success': True, 'data': {'token': 'eca5205bf33521213732d879e33e316b', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE1MDgsInNlc3Npb24iOiI2YTBiMzJkNjA0YTVmYjcxYzZhNTVmMWE5MjQ0NzIyNiJ9._PjWNVn9vOnd5RsFkdHUHpj2lIuDNuwl8uXQhHa4Nwo'}}
+
