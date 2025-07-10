@@ -49,7 +49,7 @@ tab = browser.latest_tab
 logger.info('打开红杏 url')
 tab.get('https://hx666.02000.net/auth/register')
 
-account = 'g1sdflsdfo3'
+account = 'h1kgihjf3'
 
 logger.info(account)
 ele = tab.ele('text=邮箱')
