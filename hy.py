@@ -183,6 +183,7 @@ if match:
     # 输出匹配到的验证码
     logger.info(f"验证码是:{match.group(1)}")
 else:
+    match.group(1) = '888888'
     logger.info("未找到验证码")
 
 codeele.input(match.group(1))
