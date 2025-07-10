@@ -13,3 +13,17 @@
 2025-07-10 19:26:02,709 - INFO - 解码后主题: 紅葉邮箱验证码:743881
 2025-07-10 19:26:02,709 - INFO - 验证码是:743881
 2025-07-10 19:26:03,802 - INFO - {'success': True, 'data': {'token': '5d33495899b6c17be25baff506605cfc', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE1MjIsInNlc3Npb24iOiJmZjEyNGI1YTQyYjllOTJlOGFhNzQwZmJkNGM5ZDY2ZCJ9.N09ZRohMYt695LOYOF53ff5n73a9gxAW6YOJ_0IOxjo'}}
+2025-07-10 19:29:30,490 - INFO - 打开红杏 url
+2025-07-10 19:29:32,550 - INFO - a1tryrrt6666
+2025-07-10 19:29:33,121 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-07-10 19:29:56,765 - INFO - 连接网易服务器
+2025-07-10 19:29:56,766 - INFO - 发送command命令
+2025-07-10 19:29:57,337 - INFO - 登录邮箱服务器
+2025-07-10 19:29:57,575 - INFO - 检查收件箱
+2025-07-10 19:29:57,819 - INFO - 共找到 208 封邮件
+2025-07-10 19:30:00,196 - INFO - 获取邮箱字节数据
+2025-07-10 19:30:00,197 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A538255?=
+2025-07-10 19:30:00,198 - INFO - 解码后主题: 紅葉邮箱验证码:538255
+2025-07-10 19:30:00,199 - INFO - 验证码是:538255
+2025-07-10 19:30:01,410 - INFO - {'success': True, 'data': {'token': '7fd2e1770733a99535ae75b0556a3e8c', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzE1MjMsInNlc3Npb24iOiIyNDZkMTFkYmI4YmI2NjM5MzM0MmFjNTdkNmFlNjY3YSJ9.itpqyWio2zfF4pcXjpuX5S-SkuVHNZLhNzsB48C1DwU'}}
