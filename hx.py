@@ -47,7 +47,7 @@ tab = browser.latest_tab
 # tab.set.cookies(cookies)
 
 logger.info('打开红杏 url')
-tab.get('https://hx666.02000.net/auth/register')
+tab.get('https://www.redleaf.cloud/auth/register')
 account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
 #account = 'h1kgihjf3'
 
