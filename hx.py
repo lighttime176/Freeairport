@@ -71,7 +71,9 @@ ele = tab.ele('text=再次输入密码')
 ele = ele.next().child()
 ele.input("11111111")
 
-
+for _ in range(20):
+  time.sleep(1)
+  print(f"等待邮箱中，第{_}S")
 
 cookies = os.environ.get("ydyp")
 EMAIL_ADDRESS = 'luo1764682172@163.com'
