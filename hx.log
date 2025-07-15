@@ -97,3 +97,24 @@
 2025-07-15 18:27:31,483 - INFO - 解码后主题: 紅葉邮箱验证码:156949
 2025-07-15 18:27:31,483 - INFO - 验证码是:156949
 2025-07-15 18:27:32,966 - INFO - {'success': True, 'data': {'token': '45c6424bdd1d72e20ef24a8e55b3e5c0', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzI3NTgsInNlc3Npb24iOiIxMDcyZDAxZDljNDdkNTQ3NzMxY2Y0ODdmMzI0MDU2MCJ9.CN0o0qW2yBpKrojxmA3oFvv3hF5hHOu9c-xDfa228ks'}}
+2025-07-15 19:07:05,576 - INFO - 打开红杏 url
+2025-07-15 19:07:07,120 - INFO - a1ryertyree44
+2025-07-15 19:07:07,725 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-07-15 19:07:40,478 - INFO - 连接网易服务器
+2025-07-15 19:07:40,478 - INFO - 发送command命令
+2025-07-15 19:07:40,902 - INFO - 登录邮箱服务器
+2025-07-15 19:07:41,082 - INFO - 检查收件箱
+2025-07-15 19:07:41,257 - INFO - 共找到 219 封邮件
+2025-07-15 19:07:43,027 - INFO - 获取邮箱字节数据
+2025-07-15 19:07:43,027 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A949006?=
+2025-07-15 19:07:43,028 - INFO - 解码后主题: 紅葉邮箱验证码:949006
+2025-07-15 19:07:43,029 - INFO - 验证码是:949006
+2025-07-15 19:07:44,198 - INFO - <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+
