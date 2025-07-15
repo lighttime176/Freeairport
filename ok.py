@@ -129,9 +129,9 @@ ele.click()
 
 
 
-# for _ in range(30):
-#   time.sleep(1)
-#   print(f"等待邮箱中，第{_}S")
+for _ in range(30):
+  time.sleep(1)
+  print(f"等待邮箱中，第{_}S")
 
 cookies = os.environ.get("ydyp")
 EMAIL_ADDRESS = 'luo1764682172@163.com'
