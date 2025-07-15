@@ -1,2 +1,3 @@
 requests
 DrissionPage
+beautifulsoup4
