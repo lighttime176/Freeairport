@@ -201,5 +201,5 @@ number += 1
 with open(file_path, "w", encoding="utf-8") as file:
     file.write(str(number))
 print(f"新的数字已写入: {number}")
-time,sleep(3)
+time.sleep(3)
 tab.get_screenshot(path=r"./1.png", full_page=True)
