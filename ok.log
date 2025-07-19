@@ -165,3 +165,17 @@
 邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 361507 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
 2025-07-18 17:19:51,596 - INFO - 提取验证码: 361507
 2025-07-18 17:19:53,292 - INFO - {'data': {'token': 'c79f669322cc8a8de77914a7d6bc8111', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDAwOTMsInNlc3Npb24iOiJiZDk2NjE2MDUwODIzZmJkYTNlMzgzMjJlNWIyYjNiNiJ9.ZRBzMOjbL4c07VbBPaKcB3gseIeBR_lhKOWEu_sTFxQ'}}
+2025-07-19 17:20:21,493 - INFO - 打开OK url
+2025-07-19 17:20:24,048 - INFO - b1ytiyu7777
+2025-07-19 17:20:58,965 - INFO - 连接网易服务器
+2025-07-19 17:20:58,966 - INFO - 发送command命令
+2025-07-19 17:20:59,357 - INFO - 登录邮箱服务器
+2025-07-19 17:20:59,534 - INFO - 检查收件箱
+2025-07-19 17:21:00,172 - INFO - 共找到 228 封邮件
+2025-07-19 17:21:01,956 - INFO - 获取邮箱字节数据
+2025-07-19 17:21:01,957 - INFO - 原始主题: okancEmail verification code
+2025-07-19 17:21:01,957 - INFO - 解码后主题: okancEmail verification code
+2025-07-19 17:21:01,961 - INFO - 纯文本正文:
+邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 738375 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
+2025-07-19 17:21:01,961 - INFO - 提取验证码: 738375
+2025-07-19 17:21:05,056 - INFO - {'data': {'token': 'b029da9040eb8be1aaac58935217e971', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDAxODQsInNlc3Npb24iOiIyMzBmZDM4Y2MyMjE3M2RkMjQwMjI1MDBiZmRhMWUwZSJ9.83JgakCfn87hxoXYYHlsjlOxZ0JTELzi_nAUm7CUk0s'}}
