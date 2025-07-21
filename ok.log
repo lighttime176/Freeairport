@@ -208,3 +208,17 @@
 邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 452958 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
 2025-07-20 17:20:58,340 - INFO - 提取验证码: 452958
 2025-07-20 17:20:59,480 - INFO - {'data': {'token': '3429561fd728707d79298c363cf0f381', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDAyNzYsInNlc3Npb24iOiJlYTZjZjI5MmQ5YmYxNThhOWEwZGM3ODIyYTVlNWY2MiJ9.Ksq0mTHO1oL88c6e1zkukG4-0BAyhJTKvof2SQJ6AXM'}}
+2025-07-21 15:00:19,584 - INFO - 打开OK url
+2025-07-21 15:00:22,825 - INFO - a1fdgdfg44
+2025-07-21 15:00:58,503 - INFO - 连接网易服务器
+2025-07-21 15:00:58,510 - INFO - 发送command命令
+2025-07-21 15:00:59,051 - INFO - 登录邮箱服务器
+2025-07-21 15:00:59,287 - INFO - 检查收件箱
+2025-07-21 15:00:59,521 - INFO - 共找到 238 封邮件
+2025-07-21 15:01:02,374 - INFO - 获取邮箱字节数据
+2025-07-21 15:01:02,374 - INFO - 原始主题: okancEmail verification code
+2025-07-21 15:01:02,374 - INFO - 解码后主题: okancEmail verification code
+2025-07-21 15:01:02,378 - INFO - 纯文本正文:
+邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 592133 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
+2025-07-21 15:01:02,378 - INFO - 提取验证码: 592133
+2025-07-21 15:01:03,677 - INFO - {'data': {'token': '4eee65aab9fbc9f076424861ee3ddffc', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDAzNjMsInNlc3Npb24iOiJhZmMzNDg1YjkyNjYwYTExYWU1NTYzM2IwODFlODQ1MyJ9.VkUM_qUB2XRXGs8PbSzVCNfxjUjNktFH0S9Vb3tWI8s'}}
