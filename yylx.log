@@ -55,4 +55,3 @@
 
 2025-07-21 14:47:20,703 - INFO - 提取验证码: 379072
 2025-07-21 14:47:23,593 - INFO - {'data': {'token': 'e61929742c3d6810371bace8273306ab', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQwMCwic2Vzc2lvbiI6IjhiNjU1MTI1MGI5ZGMzNTgxYjM5ZTYyMDM2ZjU1ZTI3In0.84vVlDXYQ7yVrzdPr1k-q52ciUhLaJEK2JpDKQpgb04'}}
-2025-07-21 14:47:23,593 - INFO - {'data': {'token': '47fe39d55c6bbbf1048ba761ffad07c7', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQwMCwic2Vzc2lvbiI6IjhiNjU1MTI1MGI5ZGMzNTgxYjM5ZTYyMDM2ZjU1ZTI3In0.84vVlDXYQ7yVrzdPr1k-q52ciUhLaJEK2JpDKQpgb04'}}
