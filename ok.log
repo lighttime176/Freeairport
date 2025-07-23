@@ -250,3 +250,17 @@
 邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 876386 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
 2025-07-22 20:16:10,647 - INFO - 提取验证码: 876386
 2025-07-22 20:16:20,457 - INFO - {'data': {'token': 'e3b8a559e7448f9599470ffd5bb43580', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDA0OTUsInNlc3Npb24iOiJiMDgzNDc3N2M0NGFmMjY1NGJiOWU4ZjhiYWEyYjQ5YiJ9.fBrXgUWBGIiqGLa_SB1AMBJndyNUVcYv-TW6CJ7s0EY'}}
+2025-07-23 19:05:23,687 - INFO - 打开OK url
+2025-07-23 19:05:26,280 - INFO - b1rteytruyff33
+2025-07-23 19:06:01,419 - INFO - 连接网易服务器
+2025-07-23 19:06:01,421 - INFO - 发送command命令
+2025-07-23 19:06:01,816 - INFO - 登录邮箱服务器
+2025-07-23 19:06:02,020 - INFO - 检查收件箱
+2025-07-23 19:06:02,200 - INFO - 共找到 238 封邮件
+2025-07-23 19:06:04,024 - INFO - 获取邮箱字节数据
+2025-07-23 19:06:04,025 - INFO - 原始主题: okancEmail verification code
+2025-07-23 19:06:04,025 - INFO - 解码后主题: okancEmail verification code
+2025-07-23 19:06:04,034 - INFO - 纯文本正文:
+邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 231026 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
+2025-07-23 19:06:04,034 - INFO - 提取验证码: 231026
+2025-07-23 19:06:05,367 - INFO - {'data': {'token': 'f580c620142440c636d57b245b194a52', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDA1ODEsInNlc3Npb24iOiI3YzNkM2QzNTkzMzQ1YmRjNWJjMWEzMzExOWE2ZTBmNyJ9.PamzmjaBvIcqggErDMCcTsQk99Ml_dgMq7bQlSod-Z0'}}
