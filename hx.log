@@ -220,3 +220,17 @@
 2025-07-18 20:32:23,415 - INFO - {'success': True, 'data': {'token': 'eca5205bf33521213732d879e33e316b', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzMyNzYsInNlc3Npb24iOiJiMjQ0NTYzMTkwYWI1NWU0ZTA0OTFhNDEyM2ExNTg3YyJ9.N_EApQp0Tj0T2MJYPfUbNwUyLtFn_hlGdHkr0Td69N4'}}
 2025-07-18 20:32:23,415 - INFO - {'success': True, 'data': {'token': '359141e9542f5b4cbc7702e641546b49', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzMyNzYsInNlc3Npb24iOiJiMjQ0NTYzMTkwYWI1NWU0ZTA0OTFhNDEyM2ExNTg3YyJ9.N_EApQp0Tj0T2MJYPfUbNwUyLtFn_hlGdHkr0Td69N4'}}
 2025-07-18 20:32:23,415 - INFO - {'success': True, 'data': {'token': '60b7876cf8b0ee87902136bd31b94791', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzMyNzYsInNlc3Npb24iOiJiMjQ0NTYzMTkwYWI1NWU0ZTA0OTFhNDEyM2ExNTg3YyJ9.N_EApQp0Tj0T2MJYPfUbNwUyLtFn_hlGdHkr0Td69N4'}}
+2025-07-29 16:12:42,770 - INFO - 打开红杏 url
+2025-07-29 16:12:44,612 - INFO - c1wto1323
+2025-07-29 16:12:45,304 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-07-29 16:13:17,996 - INFO - 连接网易服务器
+2025-07-29 16:13:17,996 - INFO - 发送command命令
+2025-07-29 16:13:18,439 - INFO - 登录邮箱服务器
+2025-07-29 16:13:18,629 - INFO - 检查收件箱
+2025-07-29 16:13:18,816 - INFO - 共找到 242 封邮件
+2025-07-29 16:13:21,241 - INFO - 获取邮箱字节数据
+2025-07-29 16:13:21,242 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A235672?=
+2025-07-29 16:13:21,244 - INFO - 解码后主题: 紅葉邮箱验证码:235672
+2025-07-29 16:13:21,244 - INFO - 验证码是:235672
+2025-07-29 16:13:22,283 - INFO - {'success': True, 'data': {'token': 'b22815ea2f97b22204c32d4c7756133a', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzQ1NzEsInNlc3Npb24iOiJjMzI3OTFmYWI4N2MwZmZkMGY3ZGNhMzlmM2U5M2ZlNyJ9.m-QAYQaiHIJWS--aWYpCM_WMc0xgs_MKwxZHpAVYlDM'}}
