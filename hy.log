@@ -115,3 +115,16 @@
 2025-07-29 16:34:02,439 - INFO - 解码后主题: 紅杏.co邮箱验证码:661204
 2025-07-29 16:34:02,439 - INFO - 验证码是:661204
 2025-07-29 16:34:04,071 - INFO - {'success': True, 'data': {'token': '373ad6bbd6e20d867b24554ed2b39d12', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3NzA3LCJzZXNzaW9uIjoiNTcyODlkZDFhMjU4MmQxYWNiZWYyYTc3NzE1MzI0ZjYifQ.8s1ncL5Jrxjc5Hw1nmSA6N6u_bmRKebQadsLi2H-Kz4'}}
+2025-07-30 10:57:49,263 - INFO - 打开红杏 url
+2025-07-30 10:57:50,746 - INFO - h1yuiii4
+2025-07-30 10:58:25,121 - INFO - 连接网易服务器
+2025-07-30 10:58:25,124 - INFO - 发送command命令
+2025-07-30 10:58:25,555 - INFO - 登录邮箱服务器
+2025-07-30 10:58:25,751 - INFO - 检查收件箱
+2025-07-30 10:58:25,927 - INFO - 共找到 245 封邮件
+2025-07-30 10:58:27,735 - INFO - 获取邮箱字节数据
+2025-07-30 10:58:27,735 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E6=9D=8F=2Eco=E9=82=AE=E7=AE=B1=E9=AA=8C?=
+ =?utf-8?Q?=E8=AF=81=E7=A0=81=3A225280?=
+2025-07-30 10:58:27,737 - INFO - 解码后主题: 紅杏.co邮箱验证码:225280
+2025-07-30 10:58:27,738 - INFO - 验证码是:225280
+2025-07-30 10:58:29,723 - INFO - {'success': True, 'data': {'token': 'de45d0f737975972c4b8aeacce884a09', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTE3NzkzLCJzZXNzaW9uIjoiMGZkOGMxMzlhMGVmMDFmODNmNjNmODk2MWIwZTYwMjYifQ.SYMbTQc6JUYeFiwRVyvmUFKHFcycMcht84CCiNl_JEA'}}
