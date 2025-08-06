@@ -346,3 +346,17 @@
 2025-08-05 09:01:38,784 - INFO - 解码后主题: 紅葉邮箱验证码:383019
 2025-08-05 09:01:38,784 - INFO - 验证码是:383019
 2025-08-05 09:01:40,481 - INFO - {'success': True, 'data': {'token': '5f0a58735da47eae35a895bdc1efc2c0', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzU0MTIsInNlc3Npb24iOiIwOGY2ZGYzY2YwMmUzMzZiMjg1ZGNiNTE0NjMwZDQ4MiJ9.uX7lx2llMbz8n-5stL6nxNG8Gbfpe612HaERKJCcb0I'}}
+2025-08-06 08:59:40,912 - INFO - 打开红杏 url
+2025-08-06 08:59:42,990 - INFO - d1cepiong3
+2025-08-06 08:59:43,720 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-08-06 09:00:18,256 - INFO - 连接网易服务器
+2025-08-06 09:00:18,256 - INFO - 发送command命令
+2025-08-06 09:00:18,818 - INFO - 登录邮箱服务器
+2025-08-06 09:00:19,079 - INFO - 检查收件箱
+2025-08-06 09:00:19,314 - INFO - 共找到 288 封邮件
+2025-08-06 09:00:22,201 - INFO - 获取邮箱字节数据
+2025-08-06 09:00:22,202 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A704078?=
+2025-08-06 09:00:22,204 - INFO - 解码后主题: 紅葉邮箱验证码:704078
+2025-08-06 09:00:22,204 - INFO - 验证码是:704078
+2025-08-06 09:00:23,488 - INFO - {'success': True, 'data': {'token': 'be137bef0a755cf7424a78ebb5cf4adc', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzU1MTcsInNlc3Npb24iOiI0MDM5NjEwY2U1YzhlNTc2MTAzOTllNmNjODI5YTIzNCJ9.kafTreZS20qaFaTp-mvLPQV5mVD-MRHx7psQRSNgQ4w'}}
