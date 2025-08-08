@@ -432,3 +432,17 @@
 邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 884467 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
 2025-08-08 09:06:22,091 - INFO - 提取验证码: 884467
 2025-08-08 09:06:23,977 - INFO - {'data': {'token': '3e2c9ed57ceb548f61ef0dc1ae347cf0', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDE4OTUsInNlc3Npb24iOiI3ODhlY2QwZDY0MjE1OTNhOGQxZjZhMjllOTBiNWVjYSJ9._S6OhaNyfZS2PT4DRvc-EQUGU-4y7SmtJCTloFcRTRg'}}
+2025-08-08 20:20:30,512 - INFO - 打开OK url
+2025-08-08 20:20:32,979 - INFO - d1tyuytgh67
+2025-08-08 20:21:08,131 - INFO - 连接网易服务器
+2025-08-08 20:21:08,132 - INFO - 发送command命令
+2025-08-08 20:21:08,563 - INFO - 登录邮箱服务器
+2025-08-08 20:21:09,222 - INFO - 检查收件箱
+2025-08-08 20:21:09,397 - INFO - 共找到 299 封邮件
+2025-08-08 20:21:11,163 - INFO - 获取邮箱字节数据
+2025-08-08 20:21:11,163 - INFO - 原始主题: okancEmail verification code
+2025-08-08 20:21:11,163 - INFO - 解码后主题: okancEmail verification code
+2025-08-08 20:21:11,167 - INFO - 纯文本正文:
+邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 177880 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
+2025-08-08 20:21:11,167 - INFO - 提取验证码: 177880
+2025-08-08 20:21:12,751 - INFO - {'data': {'token': 'b20c9b688b3da55a241bdf2836d843ad', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDE5NDksInNlc3Npb24iOiIxZmQyNWQ2YzdkODlhZGFjMTI0NTRhODlmOGI2ZWViMCJ9.nR6bNpgN6tBHa2xcB7QHnTHCjBe6mNiMBLNFuUAIdhw'}}
