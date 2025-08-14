@@ -517,3 +517,5 @@
 
 2025-08-14 17:58:29,908 - INFO - 提取验证码: 160746
 2025-08-14 17:58:32,035 - INFO - {'message': 'Incorrect email verification code'}
+2025-08-14 18:19:47,720 - INFO - 打开OK url
+2025-08-14 18:19:51,223 - INFO - c13453main
