@@ -234,7 +234,8 @@ res = res.body
 logger.info(res)
 tab.get_screenshot(path=r"./1.png", full_page=True)
 # 数字加 1
-number += 1
+if res['message'] != 'Incorrect email verification code':
+	number += 1
 
 #将更新后的数字写回文件
 with open(file_path, "w", encoding="utf-8") as file:
