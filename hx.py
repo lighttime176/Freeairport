@@ -8,15 +8,16 @@ headers ={
 }
 # 初始化字符串列表（如果文件不存在，则第一次运行时使用此列表）
 default_strings = [
-	'a1dfgsrt44',	'b1thrh655g',	'a1dgsergsdr33'	,'b1gj65tg',	'a1fdgrrfg45',
-    'b1tyhtru55'	,'a1dfgsrfg34232',	'b1fdytt54'	,'a1fgrt332f'	,'b1tyrtyr434',	
-    'a1fdgrt443'	,'b1ghftyu55'	,'a1tnnbcc43'	,'b1fdygbb33'	,'a1fdgfd443'	,
-    'b1gfhtryh44',	'a1dfset33v',	'b1gdgerdg33',	'a1sdfesf33',	'b1dsfdf3434'	,
+    "a1dfssf34", "b1fdg3422df", "a1fhttt4", "b1fghfty5", "a1ghjkhjkl",
+    "b1uiybhj78", "a1iuouitybb34", "b1hgjutykyu",  "a1ghjnbnnvb","b1gjyukyppp99", 
+    "a1rtyuty8888", "b1ytiyu7777", "a1tryrrt6666", "b1uiiiipoi","a1fdgdfg44", 
+    "b1uiiojhkkk", "a1bbdfdddd33", "b1rteytruyff33", "a1ryertyree44","b1tyutyufgfg", 
 
-    'c1rtrkk444'	,'d1mainddd22'	,'c1rftgdrtgd',	'd1tghfghfg66'	,'c2tianjin22'	,
-    'd1kingq33',	'c1wto1323'	,'d1lianheh222',	'c1ping2323'	,'d1bimjjj22',	
-    'c1gfgh66',	'd1tyuytgh67',	'c1tryu55',	'd1tyutr67',	'c13453main',	
-    'd1cepiong3'	,'c1thrfthf78'	,'d1yi789uj',	'c1tytrf33'	,'d1tyuyt778',	
+	'c1fhhkuy55'	,'d1fgdt44f33',	'c1dgr33d',	'd1gfdgggg4',	'c1ererer3',
+    'd1ewrwert33',	'c1dsfse232'	,'d1dfsretg33','c1edfsdfe2'	,'d1fdgreg33'	,
+    'c1sfasdf3'	,'d1sdfdf22',	'c1safesfdas32',	'd1trtrr4','c1sdfasdf222',
+    'd1rewpp44'	,'c1sdfd22',	'd1dfsdf33'	,'c1dsrebbb2'	,'d1d32rdfd',	
+
 
 
 	'e1fghfgdhf55'	,'f1tyupoi88',	'e1jiaohuan2'	,'f1yusheng3',	'e1main22',	
