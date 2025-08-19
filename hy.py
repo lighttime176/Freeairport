@@ -122,9 +122,9 @@ ele.input("11111111")
 
 tab.get_screenshot(path=r"./1.png", full_page=True)
 
-ele = tab.ele('text=我已阅读并同意')
-logger.info(ele)
-ele.click()
+# ele = tab.ele('text=我已阅读并同意')
+# logger.info(ele)
+# ele.click()
 for _ in range(30):
   time.sleep(1)
   print(f"等待邮箱中，第{_}S")
