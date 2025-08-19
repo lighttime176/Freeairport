@@ -603,3 +603,5 @@
 邮箱验证码 邮箱验证码 Dear Customer 请填写以下验证码完成邮箱验证 (5分钟内有效) 777040 (本邮件由系统自动发出，请勿直接回复) 登录 okanc © okanc. All Rights Reserved. 我的订阅 | 使用教程
 2025-08-19 19:23:10,605 - INFO - 提取验证码: 777040
 2025-08-19 19:23:11,998 - INFO - {'message': 'Incorrect email verification code'}
+2025-08-19 20:47:20,450 - INFO - 打开OK url
+2025-08-19 20:47:22,659 - INFO - d1trtrr4
