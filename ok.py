@@ -98,7 +98,7 @@ tab = browser.latest_tab
 # tab.set.cookies(cookies)
 
 logger.info('打开OK url')
-tab.get('https://www.okanc.com/index.php#/register')
+tab.get('https://okanc.lt.lyf520.xyz/index.php#/register')
 
 account = sign_email
 
