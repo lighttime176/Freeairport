@@ -103,108 +103,107 @@ account = sign_email
 
 logger.info(account)
 ele = tab.ele('text=邮箱')
-print(ele)
-# ele = ele.next().child()
-# ele.input(account)
+ele = ele.next().child()
+ele.input(account)
 
-# ele = ele.next().child().next()
-# #logger.info(ele)
-# ele.select.by_text('outlook.com')
+ele = ele.next().child().next()
+#logger.info(ele)
+ele.select.by_text('outlook.com')
 
-# ele = tab.ele('text=验证码')
-# ele = ele.next().child().next()
-# ele.click()
-# codeele = ele.prev()
-# ele = tab.ele('text=密码')
-# ele = ele.next().child()
-# ele.input("11111111")
-# ele = tab.ele('text=再次输入密码')
-# ele = ele.next().child()
-# ele.input("11111111")
-time.sleep(5)
-tab.get_screenshot(path=r"./1.png", full_page=True)
+ele = tab.ele('text=验证码')
+ele = ele.next().child().next()
+ele.click()
+codeele = ele.prev()
+ele = tab.ele('text=密码')
+ele = ele.next().child()
+ele.input("11111111")
+ele = tab.ele('text=再次输入密码')
+ele = ele.next().child()
+ele.input("11111111")
+
+# tab.get_screenshot(path=r"./1.png", full_page=True)
 
 # ele = tab.ele('text=我已阅读并同意')
 # logger.info(ele)
 # ele.click()
-# for _ in range(30):
-#   time.sleep(1)
-#   print(f"等待邮箱中，第{_}S")
+for _ in range(30):
+  time.sleep(1)
+  print(f"等待邮箱中，第{_}S")
 
-# cookies = os.environ.get("ydyp")
-# EMAIL_ADDRESS = 'luo1764682172@163.com'
-# EMAIL_PASSWORD = cookies # 请确保是网易邮箱的 IMAP 授权码
+cookies = os.environ.get("ydyp")
+EMAIL_ADDRESS = 'luo1764682172@163.com'
+EMAIL_PASSWORD = cookies # 请确保是网易邮箱的 IMAP 授权码
 
-# # 连接网易 IMAP 服务器
-# server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
-# logger.info('连接网易服务器')
+# 连接网易 IMAP 服务器
+server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+logger.info('连接网易服务器')
 
-# # 添加 ID 命令支持
-# imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
-# logger.info('发送command命令')
+# 添加 ID 命令支持
+imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+logger.info('发送command命令')
 
-# args = ("name", "imaplib", "version", "1.0.0")
-# typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
-# server._untagged_response(typ, dat, 'ID')
+args = ("name", "imaplib", "version", "1.0.0")
+typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
+server._untagged_response(typ, dat, 'ID')
 
-# # 登录邮箱
-# server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-# logger.info('登录邮箱服务器')
+# 登录邮箱
+server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+logger.info('登录邮箱服务器')
 
-# # 选中收件箱
-# server.select("INBOX")
-# logger.info('检查收件箱')
+# 选中收件箱
+server.select("INBOX")
+logger.info('检查收件箱')
 
-# # 搜索所有邮件 ID
-# typ, data = server.search(None, 'ALL')
-# all_ids = data[0].split()
-# logger.info(f'共找到 {len(all_ids)} 封邮件')
+# 搜索所有邮件 ID
+typ, data = server.search(None, 'ALL')
+all_ids = data[0].split()
+logger.info(f'共找到 {len(all_ids)} 封邮件')
 
-# # 只取最新5封（若总数不足5封，就全部取）
-# latest_ids = all_ids[-5:]
+# 只取最新5封（若总数不足5封，就全部取）
+latest_ids = all_ids[-5:]
 
-# # 拉取邮件
-# fetch_data_lst = []
-# for num in latest_ids:
-#     typ, fetch_data = server.fetch(num, '(RFC822)')
-#     fetch_data_lst.append(fetch_data)
+# 拉取邮件
+fetch_data_lst = []
+for num in latest_ids:
+    typ, fetch_data = server.fetch(num, '(RFC822)')
+    fetch_data_lst.append(fetch_data)
 
-# # 解析最新一封邮件（最后一封）
-# fetch_data = fetch_data_lst[-1]
-# msg = email.message_from_bytes(fetch_data[0][1])
-# logger.info('获取邮箱字节数据')
-# logger.info(f'原始主题: {msg["subject"]}')
+# 解析最新一封邮件（最后一封）
+fetch_data = fetch_data_lst[-1]
+msg = email.message_from_bytes(fetch_data[0][1])
+logger.info('获取邮箱字节数据')
+logger.info(f'原始主题: {msg["subject"]}')
 
-# # 解码主题（更可靠的方式）
-# from email.header import decode_header
-# subject_parts = decode_header(msg['subject'])
-# decoded_subject = ''.join([
-#     (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
-#     for part, charset in subject_parts
-# ])
-# logger.info(f'解码后主题: {decoded_subject}')
-# match = re.search(r'证码:(\d+)', decoded_subject)
+# 解码主题（更可靠的方式）
+from email.header import decode_header
+subject_parts = decode_header(msg['subject'])
+decoded_subject = ''.join([
+    (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
+    for part, charset in subject_parts
+])
+logger.info(f'解码后主题: {decoded_subject}')
+match = re.search(r'证码:(\d+)', decoded_subject)
 
-# if match:
-#     # 输出匹配到的验证码
-#     logger.info(f"验证码是:{match.group(1)}")
-#     codeele.input(match.group(1))
-# else:
-#     logger.info("未找到验证码")
+if match:
+    # 输出匹配到的验证码
+    logger.info(f"验证码是:{match.group(1)}")
+    codeele.input(match.group(1))
+else:
+    logger.info("未找到验证码")
 
 
-# ele = tab.ele('text=注册账号')
-# tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
-# ele.click()
+ele = tab.ele('text=注册账号')
+tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
+ele.click()
 
-# res = tab.listen.wait(timeout=10).response
-# res = res.body
-# logger.info(res)
-# tab.get_screenshot(path=r"./1.png", full_page=True)
-# # 数字加 1
-# number += 1
+res = tab.listen.wait(timeout=10).response
+res = res.body
+logger.info(res)
+tab.get_screenshot(path=r"./1.png", full_page=True)
+# 数字加 1
+number += 1
 
-# # 将更新后的数字写回文件
-# with open(file_path, "w", encoding="utf-8") as file:
-#     file.write(str(number))
-# print(f"新的数字已写入: {number}")
+# 将更新后的数字写回文件
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(str(number))
+print(f"新的数字已写入: {number}")
