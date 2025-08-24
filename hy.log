@@ -370,7 +370,9 @@
 2025-08-24 21:14:25,059 - INFO - 共找到 189 封邮件
 2025-08-24 21:14:27,606 - INFO - 获取邮箱字节数据
 2025-08-24 21:14:27,606 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E6=9D=8F=2Eco=E9=82=AE=E7=AE=B1=E9=AA=8C?=
+
  =?utf-8?Q?=E8=AF=81=E7=A0=81=3A309575?=
 2025-08-24 21:14:27,610 - INFO - 解码后主题: 紅杏.co邮箱验证码:309575
 2025-08-24 21:14:27,610 - INFO - 验证码是:309575
 2025-08-24 21:14:29,183 - INFO - {'success': True, 'data': {'token': '7be2c0068c68b26e60793ea7e130a9aa', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTIwNTkxLCJzZXNzaW9uIjoiMzdmZTcxN2U4NWFlZTY5ZWM2MTMxMTRjNTE5ZDVlN2QiLCJpYXQiOjE3NTYwNDEyNjksImV4cCI6MTc1NjA2Mjg2OX0.cIvsGHXpmy-_r-3g30vyaxBYCItC8tY6s9StivTzMus'}}
+2025-08-24 21:17:19,522 - INFO - {'success': True, 'data': {'token': '3f025bc88c8b1fb46a3d67d30d0abf1b', 'is_admin': 0, 'auth_data': '***'}}
