@@ -98,30 +98,30 @@ tab = browser.latest_tab
 
 logger.info('打开红杏 url')
 tab.get('https://hx666.02000.xin/auth/register')
-account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
-account = sign_email
+# account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
+# account = sign_email
 
-logger.info(account)
-ele = tab.ele('text=邮箱')
+# logger.info(account)
+# ele = tab.ele('text=邮箱')
 
-ele = ele.next().child()
-ele.input(account)
+# ele = ele.next().child()
+# ele.input(account)
 
-ele = ele.next().child().next()
-#logger.info(ele)
-ele.select.by_text('outlook.com')
+# ele = ele.next().child().next()
+# #logger.info(ele)
+# ele.select.by_text('outlook.com')
 
-ele = tab.ele('text=验证码')
-ele = ele.next().child().next()
-ele.click()
-codeele = ele.prev()
-ele = tab.ele('text=密码')
-ele = ele.next().child()
-ele.input("11111111")
-ele = tab.ele('text=再次输入密码')
-ele = ele.next().child()
-ele.input("11111111")
-
+# ele = tab.ele('text=验证码')
+# ele = ele.next().child().next()
+# ele.click()
+# codeele = ele.prev()
+# ele = tab.ele('text=密码')
+# ele = ele.next().child()
+# ele.input("11111111")
+# ele = tab.ele('text=再次输入密码')
+# ele = ele.next().child()
+# ele.input("11111111")
+time.sleep(5)
 tab.get_screenshot(path=r"./1.png", full_page=True)
 
 # ele = tab.ele('text=我已阅读并同意')
