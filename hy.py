@@ -98,12 +98,12 @@ tab = browser.latest_tab
 
 logger.info('打开红杏 url')
 tab.get('https://hx666.02000.xin/auth/register')
-# account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
-# account = sign_email
+account = sys.argv[1] if len(sys.argv) > 1 else "默认值"
+account = sign_email
 
-# logger.info(account)
-# ele = tab.ele('text=邮箱')
-
+logger.info(account)
+ele = tab.ele('text=邮箱')
+print(ele)
 # ele = ele.next().child()
 # ele.input(account)
 
