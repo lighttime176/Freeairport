@@ -3,42 +3,23 @@ from DrissionPage import ChromiumOptions
 import logging,random,time,requests,os,re
 import imaplib,sys
 import email
+import ast
 headers ={
 "User-Agent":"clash"
 }
-# 初始化字符串列表（如果文件不存在，则第一次运行时使用此列表）
-default_strings = [
-	'a1dfgsrt44',	'b1thrh655g'	,'a1dgsergsdr33',	'b1gj65tg',	'a1fdgrrfg45',
-    'b1tyhtru55',	'a1dfgsrfg34232',	'b1fdytt54',	'a1fgrt332f',	'b1tyrtyr434',
-    'a1fdgrt443',	'b1ghftyu55',	'a1tnnbcc43'	,'b1fdygbb33',	'a1fdgfd443',
-    'b1gfhtryh44',	'a1dfset33v',	'b1gdgerdg33',	'a1sdfesf33'	,'b1dsfdf3434'	,
 
 
-	'c1fhhkuy55'	,'d1fgdt44f33',	'c1dgr33d',	'd1gfdgggg4',	'c1ererer3',
-    'd1ewrwert33',	'c1dsfse232'	,'d1dfsretg33','c1edfsdfe2'	,'d1fdgreg33'	,
-    'c1sfasdf3'	,'d1sdfdf22',	'c1safesfdas32',	'd1trtrr4','c1sdfasdf222',
-    'd1rewpp44'	,'c1sdfd22',	'd1dfsdf33'	,'c1dsrebbb2'	,'d1d32rdfd',	
+# 读取 email.txt 文件
+with open("../email.txt", "r", encoding="utf-8") as f:
+    content = f.read()
 
+# 转换成 Python 列表
+emails = ast.literal_eval(content)
 
-
-	'e1fghfgdhf55'	,'f1tyupoi88',	'e1jiaohuan2'	,'f1yusheng3',	'e1main22',	
-    'f1tyui77',	'e1tykafaka21'	,'f1yinlang2',	'e1ren242',	'f1maidong22'	,
-    'e1bneiz23',	'f1shushu26'	,'e1xianshi234',	'f1zhanghh3'	,'e1qqcode242',	
-    'f1chromew342'	,'e1intel23'	,'f1btytm23'	,'e1weixi232',	'f1clashwer2'	,
-
-    'g1dfssdf22'	,'h1tyrty6',	'g1sdfd43'	,'h1rfedgdr3'	,'g1gtdhii3'	,
-    'h1yuiii4'	,'g1rdghttt6'	,'h1uythjjko6',	'g1dfgrt4'	,'h1fdfg43fdg'	,
-    'g1sdfsepp9'	,'h1fdghrt54'	,'g1fsrfer343',	'h1truhjfghn65',	'g1dfghrft5',	
-    'h1jhiy7',	'g1gfhf5',	'h1fdgfdy56'	,'g1sdflsdfo3',	'h1kgihjf3'	
-
-    'i1sefd2',	'j1derfse23',	'i1sadfe2'	,'j1saf33d'	,'i1sdas3',	
-    'j1dfggg4',	'i1sdfdf23',	'j1asfdf33',	'i1dsfedf3'	,'j1dsfdf3',
-    'i1asfds2',	'j1dsfefff3',	'i1safdas2',	'j1dfsd3'	,'i1sadfasd32',
-    'j1sdfg23','i1sadfed2'	,'j1sdfsel3',	'i1afsdf2',	'j1sdfdk5'	
-
-
-]
-file_path = "source_listhy.txt"
+print("成功读取 email 列表：")
+print(emails)
+print("总数量:", len(emails))
+file_path = "hxnum.txt"
 
 
 # 如果文件不存在，则初始化为 0
@@ -52,7 +33,7 @@ with open(file_path, "r", encoding="utf-8") as file:
         number = int(file.read().strip())  # 读取并转换为整数
     except ValueError:
         number = 0  # 如果文件内容不是数字，初始化为 0
-sign_email = default_strings[number]
+sign_email = emails[number]
 
 
 
