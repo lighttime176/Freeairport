@@ -44,15 +44,14 @@ jobs:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
 
-    # 提交 hx 文件夹里的更新
-    - name: Commit hx folder files
+    - name: Commit all changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        # 强制添加 hx 文件夹下所有文件，包括新文件或被忽略的
-        git add -f hx/*
-        # 如果有变更则提交
-        git diff-index --quiet HEAD || git commit -m "Update hx folder files"
+        # 添加所有修改和新文件，同时保留目录结构
+        git add -A
+        # 如果有变化则提交
+        git diff-index --quiet HEAD || git commit -m "Update all modified files"
 
     # 推送到 main 分支
     - name: Push changes
