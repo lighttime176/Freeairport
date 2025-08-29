@@ -181,7 +181,7 @@ logger.info(res)
 # 数字加 1
 number += 1
 
-# # 将更新后的数字写回文件
-# with open(file_path, "w", encoding="utf-8") as file:
-#     file.write(str(number))
-# print(f"新的数字已写入: {number}")
+# 将更新后的数字写回文件
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(str(number))
+print(f"新的数字已写入: {number}")
