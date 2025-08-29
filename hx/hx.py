@@ -10,7 +10,8 @@ headers ={
 
 
 # 读取 email.txt 文件
-with open("../email.txt", "r", encoding="utf-8") as f:
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
+with open(file_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
 # 转换成 Python 列表
