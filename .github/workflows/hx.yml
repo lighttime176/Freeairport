@@ -50,9 +50,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        # 只添加 hx 文件夹里的内容
-        git add hx/
-        # 如果有变化就提交
+        git add hx/*            # 添加 hx 文件夹下所有文件
         git diff-index --quiet HEAD || git commit -m "update hx folder files"
           
     - name: push changes
