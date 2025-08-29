@@ -40,12 +40,20 @@ jobs:
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
-    - name: commit files
+    # - name: commit files
+    #   run: |
+    #       git config --local user.email "action@github.com"
+    #       git config --local user.name "GitHub Action"
+    #       git add -A
+    #       git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+    - name: Commit hx folder files
       run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        # 只添加 hx 文件夹里的内容
+        git add hx/
+        # 如果有变化就提交
+        git diff-index --quiet HEAD || git commit -m "update hx folder files"
           
     - name: push changes
       uses: ad-m/github-push-action@v0.8.0
