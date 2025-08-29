@@ -1,60 +1,62 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
-
 name: run_hx
 
 on:
   schedule:
-    # 设置启动时间，为 UTC 时间, UTC23点 对应北京时间早7点
-    - cron : '0 0 * * *'
+    # UTC 0 点对应北京时间早 8 点
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       name:
         description: 'Name'
         required: true
         default: '邮箱'
+
 permissions:
   contents: write
   pull-requests: write
-  issues: write
-  repository-projects: write
 
 jobs:
-  build:
-
+  run-and-commit:
     runs-on: macos-latest
     env:
       TZ: Asia/Shanghai
+
     steps:
+    # 拉取代码
     - uses: actions/checkout@v3
+
+    # 设置 Python 3.12
     - name: Set up Python 3.12
       uses: actions/setup-python@v3
       with:
         python-version: "3.12"
+
+    # 安装依赖（如果有 requirements.txt）
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run python code
+
+    # 运行 hx.py 脚本
+    - name: Run hx.py
       run: python hx/hx.py "${{ github.event.inputs.name }}"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
-    # - name: commit files
-    #   run: |
-    #       git config --local user.email "action@github.com"
-    #       git config --local user.name "GitHub Action"
-    #       git add -A
-    #       git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+
+    # 提交 hx 文件夹里的更新
     - name: Commit hx folder files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add hx/*            # 添加 hx 文件夹下所有文件
-        git diff-index --quiet HEAD || git commit -m "update hx folder files"
-          
-    - name: push changes
+        # 强制添加 hx 文件夹下所有文件，包括新文件或被忽略的
+        git add -f hx/*
+        # 如果有变更则提交
+        git diff-index --quiet HEAD || git commit -m "Update hx folder files"
+
+    # 推送到 main 分支
+    - name: Push changes
       uses: ad-m/github-push-action@v0.8.0
       with:
-          github_token: ${{ secrets.TOKEN }}
-          branch: main 
+        github_token: ${{ secrets.TOKEN }}
+        branch: main
