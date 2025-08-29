@@ -16,7 +16,7 @@ with open(file_path, 'r', encoding='utf-8') as f:
 emails = ast.literal_eval(content)
 
 
-file_path = "hxnum.txt"
+file_path = "hx/hxnum.txt"
 
 
 # 如果文件不存在，则初始化为 0
