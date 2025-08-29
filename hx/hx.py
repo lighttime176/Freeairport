@@ -9,17 +9,11 @@ headers ={
 }
 
 
-# 读取 email.txt 文件
-file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
-with open(file_path, 'r', encoding='utf-8') as f:
-    content = f.read()
+# 确保 hx 文件夹存在
+os.makedirs(os.path.dirname(__file__), exist_ok=True)
 
-# 转换成 Python 列表
-emails = ast.literal_eval(content)
-
-
-file_path = "hxnum.txt"
-
+# 将 hxnum.txt 写入 hx 文件夹
+file_path = os.path.join(os.path.dirname(__file__), "hxnum.txt")
 
 # 如果文件不存在，则初始化为 0
 if not os.path.exists(file_path):
@@ -31,7 +25,7 @@ with open(file_path, "r", encoding="utf-8") as file:
     try:
         number = int(file.read().strip())  # 读取并转换为整数
     except ValueError:
-        number = 0  # 如果文件内容不是数字，初始化为 0
+        number = 0
 sign_email = emails[number]
 
 
