@@ -17,9 +17,7 @@ with open(file_path, 'r', encoding='utf-8') as f:
 # 转换成 Python 列表
 emails = ast.literal_eval(content)
 
-print("成功读取 email 列表：")
-print(emails)
-print("总数量:", len(emails))
+
 file_path = "hxnum.txt"
 
 
