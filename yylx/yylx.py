@@ -44,7 +44,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('hx/hx.log')
+  file_handler = logging.FileHandler('yylx/yylx.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
