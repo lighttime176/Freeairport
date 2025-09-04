@@ -625,3 +625,60 @@
 
 2025-09-03 20:21:18,902 - INFO - 提取验证码: 494757
 2025-09-03 20:21:21,311 - INFO - {'data': {'token': 'a9b3f2a3f669e822b2ad56ecb61ca4e6', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzU5Nywic2Vzc2lvbiI6IjUwMjcxNmQ5MTI3OTljOTJjM2UzYjExNTU4NWEwYjU3In0.5bPsU1dPsisiuXwGXMP8FQZkAu7RsnaequH22ZJtpaY'}}
+2025-09-04 08:47:28,820 - INFO - 打开yylx url
+2025-09-04 08:47:32,561 - INFO - d1fdgreg33
+2025-09-04 08:48:40,717 - INFO - 连接网易服务器
+2025-09-04 08:48:40,717 - INFO - 发送command命令
+2025-09-04 08:48:41,199 - INFO - 登录邮箱服务器
+2025-09-04 08:48:41,394 - INFO - 检查收件箱
+2025-09-04 08:48:41,587 - INFO - 共找到 174 封邮件
+2025-09-04 08:48:43,593 - INFO - 获取邮箱字节数据
+2025-09-04 08:48:43,593 - INFO - 原始主题: =?utf-8?b?6YGl6YGl6aKG5YWI6YKu566x6aqM6K+B56CB?=
+2025-09-04 08:48:43,598 - INFO - 解码后主题: 遥遥领先邮箱验证码
+2025-09-04 08:48:43,599 - INFO - 纯文本正文:
+<div style="background: #eee">
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+            <td>
+                <div style="background:#fff">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr>
+                            <td valign="middle" style="padding-left:30px;background-color:#415A94;color:#fff;padding:20px 40px;font-size: 21px;">遥遥领先</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr style="padding:40px 40px 0 40px;display:table-cell">
+                            <td style="font-size:24px;line-height:1.5;color:#000;margin-top:40px">邮箱验证码</td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:14px;color:#333;padding:24px 40px 0 40px">
+                                尊敬的用户您好！
+                                <br />
+                                <br />
+                                您的验证码是：583164，请在 5 分钟内进行验证。如果该验证码不为您本人申请，请无视。
+                            </td>
+                        </tr>
+                        <tr style="padding:40px;display:table-cell">
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td style="padding:20px 40px;font-size:12px;color:#999;line-height:20px;background:#f7f7f7"><a href="https://yylx6.yylxjichang.link" style="font-size:14px;color:#929292">返回遥遥领先</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+2025-09-04 08:48:43,599 - INFO - 提取验证码: 583164
+2025-09-04 08:48:46,133 - INFO - {'data': {'token': '6cb117c8f06cd186da1aba903796063d', 'is_admin': None, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzYwMCwic2Vzc2lvbiI6IjRmZjIzM2RkYjRhNjMyNjhhZTlmN2Y2MTc2NTk0OTM3In0.z6dZa-FBxMKJ5HZJ3ELEo8knxU6xM7hQ4DE8919nnnk'}}
