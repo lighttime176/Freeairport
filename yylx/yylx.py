@@ -87,9 +87,10 @@ ele = tab.ele('css=#main-container > div.no-gutters.v2board-auth-box > div > div
 ele.select.by_value('outlook.com')
 ele.click()
 
-
-ele = tab.ele('css=#main-container > div.no-gutters.v2board-auth-box > div > div > div > div.row.no-gutters > div > div > div:nth-child(2) > div.form-group.form-row > div.col-3 > button')
+ele = tab.ele('text=发送')
 ele.click()
+# ele = tab.ele('css=#main-container > div.no-gutters.v2board-auth-box > div > div > div > div.row.no-gutters > div > div > div:nth-child(2) > div.form-group.form-row > div.col-3 > button')
+# ele.click()
 
 
 ele = tab.ele('css=#main-container > div.no-gutters.v2board-auth-box > div > div > div > div.row.no-gutters > div > div > div:nth-child(2) > div:nth-child(3) > input')
