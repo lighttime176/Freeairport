@@ -1,0 +1,14 @@
+2025-10-02 11:51:59,160 - INFO - 打开红叶 url
+2025-10-02 11:52:00,906 - INFO - a1dfgsrt44
+2025-10-02 11:52:01,975 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-10-02 11:52:35,128 - INFO - 连接网易服务器
+2025-10-02 11:52:35,128 - INFO - 发送command命令
+2025-10-02 11:52:35,563 - INFO - 登录邮箱服务器
+2025-10-02 11:52:35,763 - INFO - 检查收件箱
+2025-10-02 11:52:35,957 - INFO - 共找到 95 封邮件
+2025-10-02 11:52:37,911 - INFO - 获取邮箱字节数据
+2025-10-02 11:52:37,911 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A223830?=
+2025-10-02 11:52:37,914 - INFO - 解码后主题: 紅葉邮箱验证码:223830
+2025-10-02 11:52:37,914 - INFO - 验证码是:223830
+2025-10-02 11:52:39,530 - INFO - {'success': True, 'data': {'token': '93575677e7c4af2fa3e310eb3cba77b5', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDI4MzEsInNlc3Npb24iOiIwODZlMmM3YjQ1MWNkNDY0MDIzZjUyM2E1ZTk2ZDU1YiIsImlhdCI6MTc1OTM3NzE1OSwiZXhwIjoxNzU5Mzk4NzU5fQ.8s2AEzfHDhjHke1DUvY2ydMMQSgSI2dBiT38eAJZqBI'}}
