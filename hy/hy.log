@@ -376,3 +376,17 @@
 2025-10-29 10:29:13,695 - INFO - 解码后主题: 紅葉邮箱验证码:384900
 2025-10-29 10:29:13,695 - INFO - 验证码是:384900
 2025-10-29 10:29:14,713 - INFO - {'success': True, 'data': {'token': 'f9abaa7662ae8d7b0165c72136921076', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDU3OTYsInNlc3Npb24iOiI3YmE5YzFhMzc4ZTBlZTdmMGIzMWEwYzdiNmY1MzhmNSIsImlhdCI6MTc2MTcwNDk1NCwiZXhwIjoxNzYxNzI2NTU0fQ.RIl7OFvOMLlq0ug5RHVI0HhIxbdq1E8NzajlkCcdzIU'}}
+2025-10-30 10:26:15,432 - INFO - 打开红叶 url
+2025-10-30 10:26:17,494 - INFO - c1safesfdas32
+2025-10-30 10:26:18,317 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-10-30 10:26:52,764 - INFO - 连接网易服务器
+2025-10-30 10:26:52,765 - INFO - 发送command命令
+2025-10-30 10:26:53,307 - INFO - 登录邮箱服务器
+2025-10-30 10:26:53,541 - INFO - 检查收件箱
+2025-10-30 10:26:53,775 - INFO - 共找到 103 封邮件
+2025-10-30 10:26:56,447 - INFO - 获取邮箱字节数据
+2025-10-30 10:26:56,448 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E8=91=89=E9=82=AE=E7=AE=B1?=
+ =?utf-8?Q?=E9=AA=8C=E8=AF=81=E7=A0=81=3A567006?=
+2025-10-30 10:26:56,456 - INFO - 解码后主题: 紅葉邮箱验证码:567006
+2025-10-30 10:26:56,457 - INFO - 验证码是:567006
+2025-10-30 10:26:58,755 - INFO - {'success': True, 'data': {'token': 'ce75d1a96a7882c9871a920e7355783a', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDU5MDQsInNlc3Npb24iOiJlNjExMzFjOWRkZmJmZTE3OWQzMjk4OTFlODY4M2NjMyIsImlhdCI6MTc2MTc5MTIxOCwiZXhwIjoxNzYxODEyODE4fQ.ifk-Gt5dNnSu4YulelouIOBC5WsqiVh4D2JwseXt4hg'}}
