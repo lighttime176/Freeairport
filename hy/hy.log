@@ -446,3 +446,17 @@
 2025-11-03 10:29:55,772 - INFO - 解码后主题: 紅葉邮箱验证码:348036
 2025-11-03 10:29:55,773 - INFO - 验证码是:348036
 2025-11-03 10:29:58,078 - INFO - {'success': True, 'data': {'token': 'a0d28003300a2f47619580eeefb3274e', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDY0MjgsInNlc3Npb24iOiJhY2RiZmM5NWMwMDczYTBhMGE1NzM5ZDkxMjgwOTJmYiIsImlhdCI6MTc2MjEzNjk5OCwiZXhwIjoxNzYyMTU4NTk4fQ.oTKDq7_eGRK9X3g9kA5KMD-HWQVn-T46YYFWbFdfo-A'}}
+2025-11-04 10:24:04,241 - INFO - 打开红叶 url
+2025-11-04 10:24:05,867 - INFO - d1dfsdf33
+2025-11-04 10:24:06,555 - INFO - <ChromiumElement span id='«r1a»' class='relative text-foreground select-none text-small transition-colors-opacity before:transition-width motion-reduce:transition-none'>
+2025-11-04 10:24:41,137 - INFO - 连接网易服务器
+2025-11-04 10:24:41,139 - INFO - 发送command命令
+2025-11-04 10:24:41,578 - INFO - 登录邮箱服务器
+2025-11-04 10:24:41,773 - INFO - 检查收件箱
+2025-11-04 10:24:41,950 - INFO - 共找到 95 封邮件
+2025-11-04 10:24:43,995 - INFO - 获取邮箱字节数据
+2025-11-04 10:24:43,995 - INFO - 原始主题: =?utf-8?Q?=E7=B4=85=E6=9D=8F=2Eco=E9=82=AE=E7=AE=B1=E9=AA=8C?=
+ =?utf-8?Q?=E8=AF=81=E7=A0=81=3A505858?=
+2025-11-04 10:24:44,002 - INFO - 解码后主题: 紅杏.co邮箱验证码:505858
+2025-11-04 10:24:44,002 - INFO - 验证码是:505858
+2025-11-04 10:24:44,853 - INFO - {'success': False, 'data': '邮箱验证码有误'}
