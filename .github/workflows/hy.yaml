@@ -1,9 +1,9 @@
 name: run_hy
 
 on:
-  schedule:
+  #schedule:
     # UTC 0 点对应北京时间早 8 点
-    - cron: '0 1 * * *'
+    #- cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       name:
