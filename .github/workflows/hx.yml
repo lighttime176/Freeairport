@@ -39,7 +39,7 @@ jobs:
 
     # 运行 hx.py 脚本
     - name: Run hx.py
-      run: python hx/hx.py "${{ github.event.inputs.name }}"
+      run: python hx/hxnew.py "${{ github.event.inputs.name }}"
       env:
         APP_ID: ${{ secrets.APP_ID }}
         ydyp: ${{ secrets.ydyp }}
