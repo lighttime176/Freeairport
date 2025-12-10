@@ -1142,3 +1142,7 @@
 2025-12-10 12:37:16,747 - INFO - 注册邮箱：wlksg36lmb
 2025-12-10 12:37:16,747 - INFO - wlksg36lmb
 2025-12-10 12:37:17,919 - INFO - {'success': True, 'data': {'token': '9c899aca77baf5d0228f3cafa8740ba5', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTM1MzQ3LCJzZXNzaW9uIjoiMzdlMzRiMjQ0M2VkZjFhZGU3Y2U2Y2ZiMTAzNzk3MmIiLCJpYXQiOjE3NjUzNDE0MzgsImV4cCI6MTc2NTM2MzAzOH0.tMsCU2I323rel9wGy1-xP7nlUKzLxED8VY9MYe_errY'}}
+2025-12-10 12:39:02,923 - INFO - 打开红杏 url
+2025-12-10 12:39:04,883 - INFO - 注册邮箱：bacb2wtt6p
+2025-12-10 12:39:04,883 - INFO - bacb2wtt6p
+2025-12-10 12:39:06,755 - INFO - {'success': True, 'data': {'token': 'dd10de5328eb8c036a962d4341bea0c7', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTM1MzQ4LCJzZXNzaW9uIjoiMjljYzgxZGQ5ZWZlYjE3MDhlZGUzNzU0Mjk4MWY0Y2YiLCJpYXQiOjE3NjUzNDE1NDYsImV4cCI6MTc2NTM2MzE0Nn0.QJqgu_DBLqQYgd9JFR55w1rm3dfzlGvFLfEeSTDuhxM'}}
