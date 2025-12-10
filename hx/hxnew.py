@@ -66,12 +66,12 @@ tab.get_screenshot(path=r"./1.png", full_page=True)
 # ele = ele.next().child().next()
 # ele.click()
 # codeele = ele.prev()
-# ele = tab.ele('text=密码')
-# ele = ele.next().child()
-# ele.input("11111111")
-# ele = tab.ele('text=再次输入密码')
-# ele = ele.next().child()
-# ele.input("11111111")
+ele = tab.ele('text=密码')
+ele = ele.next().child()
+ele.input("11111111")
+ele = tab.ele('text=再次输入密码')
+ele = ele.next().child()
+ele.input("11111111")
 
 # # tab.get_screenshot(path=r"./1.png", full_page=True)
 
@@ -144,13 +144,13 @@ tab.get_screenshot(path=r"./1.png", full_page=True)
 #     logger.info("未找到验证码")
 
 
-# ele = tab.ele('text=注册账号')
-# tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
-# ele.click()
+ele = tab.ele('text=注册账号')
+tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
+ele.click()
 
-# res = tab.listen.wait(timeout=10).response
-# res = res.body
-# logger.info(res)
+res = tab.listen.wait(timeout=10).response
+res = res.body
+logger.info(res)
 # #tab.get_screenshot(path=r"./1.png", full_page=True)
 # # 数字加 1
 # number += 1
