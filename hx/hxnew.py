@@ -47,7 +47,7 @@ tab = browser.latest_tab
 logger.info('打开红杏 url')
 tab.get('https://hx666.02000.xin/auth/register')
 # 随机生成邮箱
-account = ''.join(random.choice('abcdefghijklmnopqrstuvwxyz0123456789') for _ in range(10))
+account = ''.join(random.choice('0123456789') for _ in range(10))
 #data['email'] = f"{account}@"
 logger.info(f"注册邮箱：{account}")
 
