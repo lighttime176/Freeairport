@@ -7,7 +7,12 @@ import ast
 import requests
 
 import requests
-
+def getUA():
+    safari_version = f'{random.randint(600, 700)}.{random.randint(1, 4)}.{random.randint(1, 5)}'
+    ios_version = f'{random.randint(12, 15)}.{random.randint(0, 6)}.{random.randint(0, 9)}'
+    return f'Mozilla/5.0 (iPhone; CPU iPhone OS {ios_version} like Mac OS X) ' \
+           f'AppleWebKit/{safari_version} (KHTML, like Gecko) Mobile/15E148 ' \
+           f'MicroMessenger/7.0.20(0x16001422) NetType/WIFI Language/zh_CN'
 def check_ip_and_location(api_url="https://ipinfo.io/json"):
     """
     使用 requests 库向 ipinfo.io 发送请求，获取并返回用户的公网 IP 地址和地理位置信息。
@@ -88,7 +93,8 @@ co.set_argument('--headless=new')  # 无界面系统添加
 co.set_paths(browser_path="/opt/google/chrome/google-chrome")  # 设置浏览器路径
 co.set_argument('--disable-gpu')    # 禁用gpu，提高加载速度
 co.set_argument('--blink-settings=imagesEnabled=false')  # 禁用图片加载
-co.set_user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0") 
+ua = getUA()
+co.set_user_agent(ua) 
 # co.incognito(True)
 co.remove_extensions()
 browser = ChromiumPage(co)
