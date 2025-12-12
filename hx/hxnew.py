@@ -6,43 +6,55 @@ import email
 import ast
 import requests
 
-def check_ip_address(api_url="https://api.ipify.org?format=json"):
+import requests
+
+def check_ip_and_location(api_url="https://ipinfo.io/json"):
     """
-    使用 requests 库向第三方 API 发送请求，获取并返回用户的公网 IP 地址。
+    使用 requests 库向 ipinfo.io 发送请求，获取并返回用户的公网 IP 地址和地理位置信息。
     """
-    logger.info(f"尝试连接 IP 查询 API: {api_url}...")
+    print(f"尝试连接 IP 查询 API: {api_url}...")
     try:
         # 1. 发送 GET 请求
-        # timeout 参数用于防止请求挂起
         response = requests.get(api_url, timeout=10)
-
+        
         # 2. 检查响应状态码
-        # 如果状态码不是 200 (OK), 就会抛出一个 HTTPError 异常
         response.raise_for_status()
 
-        # 3. 解析响应内容
-        if "json" in api_url:
-            # 如果 API 返回 JSON 格式（例如 ipify?format=json）
-            data = response.json()
-            # 根据 ipify API 的返回结构，IP 地址在 'ip' 键中
-            ip = data.get('ip', '未找到 IP 地址')
-        else:
-            # 如果 API 返回纯文本格式（例如 ipify.org）
-            ip = response.text.strip()
+        # 3. 解析 JSON 响应
+        data = response.json()
         
-        logger.info("\n✅ 成功获取 IP 地址：")
-        logger.info(f"您的公网 IP 是: **{ip}**")
+        # 4. 提取所需信息
+        ip = data.get('ip', 'N/A')
+        city = data.get('city', 'N/A')
+        region = data.get('region', 'N/A')
+        country = data.get('country', 'N/A')
+        org = data.get('org', 'N/A') # 提取 ISP/组织信息
+        
+        print("\n✅ 成功获取 IP 地址和位置信息：")
+        print("--- 您的公网信息 ---")
+        print(f"公网 IP 地址: **{ip}**")
+        
+        # 格式化输出地理位置
+        location_parts = [
+            f"国家/地区: {country}",
+            f"省份/州: {region}",
+            f"城市: {city}"
+        ]
+        print("地理位置:", ", ".join(part for part in location_parts if 'N/A' not in part))
+        
+        print(f"互联网服务提供商 (ISP): {org}")
+        print("--------------------")
         
     except requests.exceptions.HTTPError as errh:
-        logger.info(f"\n❌ HTTP 错误: {errh}")
+        print(f"\n❌ HTTP 错误: {errh}")
     except requests.exceptions.ConnectionError as errc:
-        logger.info(f"\n❌ 连接错误: 请检查您的网络连接或 API 地址: {errc}")
+        print(f"\n❌ 连接错误: 请检查您的网络连接: {errc}")
     except requests.exceptions.Timeout as errt:
-        logger.info(f"\n❌ 请求超时: {errt}")
+        print(f"\n❌ 请求超时: {errt}")
     except requests.exceptions.RequestException as err:
-        logger.info(f"\n❌ 发生未知错误: {err}")
+        print(f"\n❌ 发生未知错误: {err}")
 
-# 执行函数
+
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -66,7 +78,7 @@ def logging_init():
   logger.addHandler(file_handler)
   return logger
 logger = logging_init()
-check_ip_address()
+check_ip_and_location()
 
 # 创建页面对象
 co = ChromiumOptions().auto_port()  # 指定程序每次使用空闲的端口和临时用户文件夹创建浏览器
