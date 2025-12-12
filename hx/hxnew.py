@@ -4,6 +4,46 @@ import logging,random,time,requests,os,re
 import imaplib,sys
 import email
 import ast
+import requests
+
+def check_ip_address(api_url="https://api.ipify.org?format=json"):
+    """
+    使用 requests 库向第三方 API 发送请求，获取并返回用户的公网 IP 地址。
+    """
+    print(f"尝试连接 IP 查询 API: {api_url}...")
+    try:
+        # 1. 发送 GET 请求
+        # timeout 参数用于防止请求挂起
+        response = requests.get(api_url, timeout=10)
+
+        # 2. 检查响应状态码
+        # 如果状态码不是 200 (OK), 就会抛出一个 HTTPError 异常
+        response.raise_for_status()
+
+        # 3. 解析响应内容
+        if "json" in api_url:
+            # 如果 API 返回 JSON 格式（例如 ipify?format=json）
+            data = response.json()
+            # 根据 ipify API 的返回结构，IP 地址在 'ip' 键中
+            ip = data.get('ip', '未找到 IP 地址')
+        else:
+            # 如果 API 返回纯文本格式（例如 ipify.org）
+            ip = response.text.strip()
+        
+        print("\n✅ 成功获取 IP 地址：")
+        print(f"您的公网 IP 是: **{ip}**")
+        
+    except requests.exceptions.HTTPError as errh:
+        print(f"\n❌ HTTP 错误: {errh}")
+    except requests.exceptions.ConnectionError as errc:
+        print(f"\n❌ 连接错误: 请检查您的网络连接或 API 地址: {errc}")
+    except requests.exceptions.Timeout as errt:
+        print(f"\n❌ 请求超时: {errt}")
+    except requests.exceptions.RequestException as err:
+        print(f"\n❌ 发生未知错误: {err}")
+
+# 执行函数
+check_ip_address()
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
