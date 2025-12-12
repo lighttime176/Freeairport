@@ -40,7 +40,7 @@ def check_ip_and_location(api_url="https://ipinfo.io/json"):
             f"省份/州: {region}",
             f"城市: {city}"
         ]
-        logger.info("地理位置:", ", ".join(part for part in location_parts if 'N/A' not in part))
+        #logger.info(f"地理位置:", ", ".join(part for part in location_parts if 'N/A' not in part))
         
         logger.info(f"互联网服务提供商 (ISP): {org}")
         logger.info("--------------------")
