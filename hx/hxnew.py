@@ -43,7 +43,6 @@ def check_ip_address(api_url="https://api.ipify.org?format=json"):
         logger.info(f"\n❌ 发生未知错误: {err}")
 
 # 执行函数
-check_ip_address()
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -67,6 +66,7 @@ def logging_init():
   logger.addHandler(file_handler)
   return logger
 logger = logging_init()
+check_ip_address()
 
 # 创建页面对象
 co = ChromiumOptions().auto_port()  # 指定程序每次使用空闲的端口和临时用户文件夹创建浏览器
