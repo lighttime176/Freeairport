@@ -10,7 +10,7 @@ def check_ip_address(api_url="https://api.ipify.org?format=json"):
     """
     使用 requests 库向第三方 API 发送请求，获取并返回用户的公网 IP 地址。
     """
-    print(f"尝试连接 IP 查询 API: {api_url}...")
+    logger.info(f"尝试连接 IP 查询 API: {api_url}...")
     try:
         # 1. 发送 GET 请求
         # timeout 参数用于防止请求挂起
@@ -30,17 +30,17 @@ def check_ip_address(api_url="https://api.ipify.org?format=json"):
             # 如果 API 返回纯文本格式（例如 ipify.org）
             ip = response.text.strip()
         
-        print("\n✅ 成功获取 IP 地址：")
-        print(f"您的公网 IP 是: **{ip}**")
+        logger.info("\n✅ 成功获取 IP 地址：")
+        logger.info(f"您的公网 IP 是: **{ip}**")
         
     except requests.exceptions.HTTPError as errh:
-        print(f"\n❌ HTTP 错误: {errh}")
+        logger.info(f"\n❌ HTTP 错误: {errh}")
     except requests.exceptions.ConnectionError as errc:
-        print(f"\n❌ 连接错误: 请检查您的网络连接或 API 地址: {errc}")
+        logger.info(f"\n❌ 连接错误: 请检查您的网络连接或 API 地址: {errc}")
     except requests.exceptions.Timeout as errt:
-        print(f"\n❌ 请求超时: {errt}")
+        logger.info(f"\n❌ 请求超时: {errt}")
     except requests.exceptions.RequestException as err:
-        print(f"\n❌ 发生未知错误: {err}")
+        logger.info(f"\n❌ 发生未知错误: {err}")
 
 # 执行函数
 check_ip_address()
@@ -120,7 +120,7 @@ ele.input("11111111")
 # # ele.click()
 # for _ in range(30):
 #   time.sleep(1)
-#   print(f"等待邮箱中，第{_}S")
+#   logger.info(f"等待邮箱中，第{_}S")
 
 # cookies = os.environ.get("ydyp")
 # EMAIL_ADDRESS = 'luo1764682172@163.com'
@@ -198,4 +198,4 @@ logger.info(res)
 # # 将更新后的数字写回文件
 # with open(file_path, "w", encoding="utf-8") as file:
 #     file.write(str(number))
-# print(f"新的数字已写入: {number}")
+# logger.info(f"新的数字已写入: {number}")
