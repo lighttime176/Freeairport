@@ -12,7 +12,7 @@ def check_ip_and_location(api_url="https://ipinfo.io/json"):
     """
     使用 requests 库向 ipinfo.io 发送请求，获取并返回用户的公网 IP 地址和地理位置信息。
     """
-    print(f"尝试连接 IP 查询 API: {api_url}...")
+    logger.info(f"尝试连接 IP 查询 API: {api_url}...")
     try:
         # 1. 发送 GET 请求
         response = requests.get(api_url, timeout=10)
@@ -30,9 +30,9 @@ def check_ip_and_location(api_url="https://ipinfo.io/json"):
         country = data.get('country', 'N/A')
         org = data.get('org', 'N/A') # 提取 ISP/组织信息
         
-        print("\n✅ 成功获取 IP 地址和位置信息：")
-        print("--- 您的公网信息 ---")
-        print(f"公网 IP 地址: **{ip}**")
+        logger.info("\n✅ 成功获取 IP 地址和位置信息：")
+        logger.info("--- 您的公网信息 ---")
+        logger.info(f"公网 IP 地址: **{ip}**")
         
         # 格式化输出地理位置
         location_parts = [
@@ -40,19 +40,19 @@ def check_ip_and_location(api_url="https://ipinfo.io/json"):
             f"省份/州: {region}",
             f"城市: {city}"
         ]
-        print("地理位置:", ", ".join(part for part in location_parts if 'N/A' not in part))
+        logger.info("地理位置:", ", ".join(part for part in location_parts if 'N/A' not in part))
         
-        print(f"互联网服务提供商 (ISP): {org}")
-        print("--------------------")
+        logger.info(f"互联网服务提供商 (ISP): {org}")
+        logger.info("--------------------")
         
     except requests.exceptions.HTTPError as errh:
-        print(f"\n❌ HTTP 错误: {errh}")
+        logger.info(f"\n❌ HTTP 错误: {errh}")
     except requests.exceptions.ConnectionError as errc:
-        print(f"\n❌ 连接错误: 请检查您的网络连接: {errc}")
+        logger.info(f"\n❌ 连接错误: 请检查您的网络连接: {errc}")
     except requests.exceptions.Timeout as errt:
-        print(f"\n❌ 请求超时: {errt}")
+        logger.info(f"\n❌ 请求超时: {errt}")
     except requests.exceptions.RequestException as err:
-        print(f"\n❌ 发生未知错误: {err}")
+        logger.info(f"\n❌ 发生未知错误: {err}")
 
 
 def logging_init():
