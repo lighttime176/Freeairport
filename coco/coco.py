@@ -90,12 +90,13 @@ tab.get_screenshot(path=r"./coco关闭广告.png", full_page=True)
 ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
 
 ele.click()
+time.sleep(0.5)
 link = pyperclip.paste()
 tab.get_screenshot(path=r"./coco点击复制.png", full_page=True)
 
 
 logger.info(link)
-print(ele)
+print(link)
 # time.sleep(0.5)
 # link = pyperclip.paste()
 # print(link)
