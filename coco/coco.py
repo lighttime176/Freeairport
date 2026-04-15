@@ -11,19 +11,19 @@ import pyperclip
 headers ={
 "User-Agent":"clash"
 }
-with open('email.txt', 'r', encoding='utf-8') as f:
-    content = f.read().strip()
+# with open('email.txt', 'r', encoding='utf-8') as f:
+#     content = f.read().strip()
 
-email_list = ast.literal_eval(content)
+# email_list = ast.literal_eval(content)
 # 读取文件中的数字
-with open('num.txt', "r", encoding="utf-8") as file:
-    try:
-        number = int(file.read().strip())  # 读取并转换为整数
-    except ValueError:
-        number = 0  # 如果文件内容不是数字，初始化为 0
+# with open('num.txt', "r", encoding="utf-8") as file:
+#     try:
+#         number = int(file.read().strip())  # 读取并转换为整数
+#     except ValueError:
+#         number = 0  # 如果文件内容不是数字，初始化为 0
 
-signemail = email_list[number]
-signemail = signemail + '@outlook.com'
+# signemail = email_list[number]
+# signemail = signemail + '@outlook.com'
 
 
 
