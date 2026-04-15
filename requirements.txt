@@ -1,3 +1,4 @@
 requests
 DrissionPage
 beautifulsoup4
+pyperclip
