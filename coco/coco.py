@@ -84,6 +84,8 @@ ele = tab.ele('css=#login-dashboard')
 ele.click()
 time.sleep(5)
 tab.get_screenshot(path=r"./coco登录.png", full_page=True)
+ele = tab.ele('css=#announcement-modal > div > div > div.modal-header > button')
+ele.click()
 ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
 
 ele.click()
