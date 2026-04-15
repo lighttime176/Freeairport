@@ -87,9 +87,9 @@ tab.get_screenshot(path=r"./coco登录.png", full_page=True)
 ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
 
 ele.click()
-link = tab.run_js("""
-return document.querySelector(ele).getAttribute('data-clipboard-text')
-""")
+link = pyperclip.paste()
+
+
 
 print(link)
 print(ele)
