@@ -88,10 +88,10 @@ ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-c
 
 ele.click()
 link = pyperclip.paste()
+tab.get_screenshot(path=r"./coco点击复制.png", full_page=True)
 
 
-
-print(link)
+logger.info(link)
 print(ele)
 # time.sleep(0.5)
 # link = pyperclip.paste()
@@ -102,22 +102,22 @@ print(ele)
 
 # logger.info(res)
 # 匹配以 https 开头，包含该域名的 clash 订阅链接
-pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
+# pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
 
 
-# 查找所有匹配项
-matches = re.findall(pattern, res)
+# # 查找所有匹配项
+# matches = re.findall(pattern, link)
 
-# 去重并打印
-for link in set(matches):
-    print(f"找到订阅链接: {link}")
-time.sleep(10)
-ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
-ele.click()
-time.sleep(1)
-tab.get_screenshot(path=r"./1.png", full_page=True)
-with open(r"./coco.html", "w", encoding="utf-8") as f:
-    f.write(tab.html)
+# # 去重并打印
+# for link in set(matches):
+#     print(f"找到订阅链接: {link}")
+# time.sleep(10)
+# ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
+# ele.click()
+# time.sleep(1)
+# tab.get_screenshot(path=r"./1.png", full_page=True)
+# with open(r"./coco.html", "w", encoding="utf-8") as f:
+#     f.write(tab.html)
 
 
 
