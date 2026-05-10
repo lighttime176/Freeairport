@@ -13,7 +13,7 @@ def scan_qr_native(image_path):
     # 1. 加载图片
     img = cv2.imread(image_path)
     if img is None:
-        print(f"Error: Could not read image {image_path}")
+        logger.info(f"Error: Could not read image {image_path}")
         return
 
     # 2. 初始化 OpenCV 自带的二维码检测器
@@ -24,10 +24,10 @@ def scan_qr_native(image_path):
     data, bbox, straight_qrcode = detector.detectAndDecode(img)
     
     if data:
-        print(f"识别成功！内容: {data}")
+        logger.info(f"识别成功！内容: {data}")
         return data
     else:
-        print("未检测到二维码。")
+        logger.info("未检测到二维码。")
         return None
 
 def logging_init():
@@ -80,11 +80,11 @@ account = ''.join(random.choice('0123456789') for _ in range(10))
 #data['email'] = f"{account}@"
 logger.info(f"注册邮箱：{account}")
 
-logger.info(account)
+
 ele = tab.ele('css=#emailPrefix')
 ele.input(account)
 tab.get_screenshot(path=r"./qs/1.png", full_page=True)
-logger.info(ele)
+
 ele = tab.ele('css=#password')
 ele.input('11111111')
 ele = tab.ele('css=#confirmPassword')
@@ -98,10 +98,10 @@ ele = tab.ele('text=Import Subscription')
 ele.click()
 tab.get_screenshot(path=r"./qs/3.png", full_page=True)
 ele = tab.ele('text=Scan QR Code to Subscribe')
-logger.info(ele)
+
 ele.click()
 
 time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 image_to_scan = "qs/4.png" 
-scan_qr_native(image_to_scan)
+data = scan_qr_native(image_to_scan)
