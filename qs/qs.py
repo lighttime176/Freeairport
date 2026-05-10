@@ -78,7 +78,7 @@ tab.get('https://user2.1000ws.top/#/register')
 # 随机生成邮箱
 account = ''.join(random.choice('0123456789') for _ in range(10))
 #data['email'] = f"{account}@"
-logger.info(f"注册邮箱：{account}")
+logger.info(f"注册邮箱：{account}@gmail.com")
 
 
 ele = tab.ele('css=#emailPrefix')
