@@ -210,7 +210,7 @@ ele.click()
 res = tab.listen.wait(timeout=10).response
 res = res.body
 logger.info(res)
-# #tab.get_screenshot(path=r"./1.png", full_page=True)
+tab.get_screenshot(path=r"./hx/3.png", full_page=True)
 # # 数字加 1
 # number += 1
 
