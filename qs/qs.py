@@ -78,5 +78,7 @@ ele.click()
 ele = tab.ele('text=Copy Subscription Link')
 ele.click()
 tab.get_screenshot(path=r"./qs/3.png", full_page=True)
+with open(r"./test_browser.html", "w", encoding="utf-8") as f:
+    f.write(tab.html)
 text = pyperclip.paste()
 logger.info(text)
