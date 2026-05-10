@@ -24,3 +24,8 @@
 2026-05-10 23:35:37,839 - INFO - 1613884488
 2026-05-10 23:35:39,030 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
 2026-05-10 23:35:45,299 - INFO - <ChromiumElement div data-v-348b5c82='' class='import-title'>
+2026-05-10 23:39:19,715 - INFO - 打开千速 url
+2026-05-10 23:39:25,016 - INFO - 注册邮箱：2203999907
+2026-05-10 23:39:25,016 - INFO - 2203999907
+2026-05-10 23:39:25,582 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
+2026-05-10 23:39:31,887 - INFO - <ChromiumElement div data-v-348b5c82='' class='import-title'>
