@@ -78,6 +78,8 @@ ele.click()
 tab.get_screenshot(path=r"./qs/3.png", full_page=True)
 ele = tab.ele('text=Copy Subscription Link')
 ele.click()
+clipboard_content = tab.run_js('return navigator.clipboard.readText();')
+print(clipboard_content)
 time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 with open(r"./test_browser.html", "w", encoding="utf-8") as f:
