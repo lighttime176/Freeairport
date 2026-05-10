@@ -2,4 +2,4 @@ requests
 DrissionPage
 beautifulsoup4
 pyperclip
-cv2
+opencv-python
