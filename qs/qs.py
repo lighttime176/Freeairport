@@ -112,5 +112,5 @@ headers ={
 res = requests.get(data,headers=headers)
 res_text = res.content.decode('utf-8')
 modified_str = res_text.replace('enable: true', 'enable: false')
-with open("/qs/qs.yaml", "w") as file:
+with open("qs.yaml", "w") as file:
     file.write(modified_str)
