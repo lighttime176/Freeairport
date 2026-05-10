@@ -109,7 +109,7 @@ data = scan_qr_native(image_to_scan)
 headers ={
 "User-Agent":"clash"
 }
-res = requests.get(data,headers=headers_clash)
+res = requests.get(data,headers=headers)
 res_text = res.content.decode('utf-8')
 modified_str = res_text.replace('enable: true', 'enable: false')
 with open("/qs/qs.yaml", "w") as file:
