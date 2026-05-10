@@ -105,3 +105,12 @@ time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 image_to_scan = "qs/4.png" 
 data = scan_qr_native(image_to_scan)
+
+headers ={
+"User-Agent":"clash"
+}
+res = requests.get(data,headers=headers_clash)
+res_text = res.content.decode('utf-8')
+modified_str = res_text.replace('enable: true', 'enable: false')
+with open("/qs/qs.yaml", "w") as file:
+    file.write(modified_str)
