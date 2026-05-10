@@ -94,6 +94,7 @@ co.set_paths(browser_path="/opt/google/chrome/google-chrome")  # 设置浏览器
 co.set_argument('--disable-gpu')    # 禁用gpu，提高加载速度
 co.set_argument('--blink-settings=imagesEnabled=false')  # 禁用图片加载
 ua = getUA()
+ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 co.set_user_agent(ua) 
 logger.info(ua)
 # co.incognito(True)
