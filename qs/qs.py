@@ -7,8 +7,26 @@ import ast
 import requests
 import pyperclip
 import subprocess
-
-
+import cv2
+from pyzbar.pyzbar import decode
+def scan_qr_code(image_path):
+    # 1. 读取图片
+    img = cv2.imread(image_path)
+    
+    # 2. 解码图片中的所有条码/二维码
+    barcodes = decode(img)
+    
+    # 3. 遍历结果
+    for barcode in barcodes:
+        # 提取二维码的内容（bytes类型，需转为字符串）
+        qr_data = barcode.data.decode('utf-8')
+        qr_type = barcode.type
+        
+        logger.info(f"识别到 {qr_type} 类型内容: {qr_data}")
+        
+        # 也可以获取二维码在图中的坐标位置
+        (x, y, w, h) = barcode.rect
+        print(f"坐标位置: x={x}, y={y}, 宽度={w}, 高度={h}")
 def get_macos_clipboard():
     # 强制通过系统 pbpaste 获取
     process = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
@@ -80,13 +98,11 @@ ele.click()
 time.sleep(5)
 ele = tab.ele('text=Import Subscription')
 ele.click()
-tab.get_screenshot(path=r"./qs/3.png", full_page=True)
-ele = tab.ele('text=Copy Subscription Link')
+tab.get_screenshot(path=r"./3.png", full_page=True)
+ele = tab.ele('text=Scan QR Code to Subscribe')
+logger.info(ele)
 ele.click()
-logger.info(get_macos_clipboard())
+
 time.sleep(2)
-tab.get_screenshot(path=r"./qs/4.png", full_page=True)
-with open(r"./test_browser.html", "w", encoding="utf-8") as f:
-    f.write(tab.html)
-text = pyperclip.paste()
-logger.info(text)
+tab.get_screenshot(path=r"./4.png", full_page=True)
+scan_qr_code('4.png')
