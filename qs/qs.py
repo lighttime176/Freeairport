@@ -8,30 +8,28 @@ import requests
 import pyperclip
 import subprocess
 import cv2
-from pyzbar.pyzbar import decode
-def scan_qr_code(image_path):
-    # 1. 读取图片
+
+def scan_qr_native(image_path):
+    # 1. 加载图片
     img = cv2.imread(image_path)
+    if img is None:
+        print(f"Error: Could not read image {image_path}")
+        return
+
+    # 2. 初始化 OpenCV 自带的二维码检测器
+    detector = cv2.QRCodeDetector()
     
-    # 2. 解码图片中的所有条码/二维码
-    barcodes = decode(img)
+    # 3. 解码
+    # data 是识别出的内容, bbox 是坐标, straight_qrcode 是修正后的二维码图
+    data, bbox, straight_qrcode = detector.detectAndDecode(img)
     
-    # 3. 遍历结果
-    for barcode in barcodes:
-        # 提取二维码的内容（bytes类型，需转为字符串）
-        qr_data = barcode.data.decode('utf-8')
-        qr_type = barcode.type
-        
-        logger.info(f"识别到 {qr_type} 类型内容: {qr_data}")
-        
-        # 也可以获取二维码在图中的坐标位置
-        (x, y, w, h) = barcode.rect
-        print(f"坐标位置: x={x}, y={y}, 宽度={w}, 高度={h}")
-def get_macos_clipboard():
-    # 强制通过系统 pbpaste 获取
-    process = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
-    stdout, stderr = process.communicate()
-    return stdout.decode('utf-8')
+    if data:
+        print(f"识别成功！内容: {data}")
+        return data
+    else:
+        print("未检测到二维码。")
+        return None
+
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
