@@ -38,7 +38,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('ok.log')
+  file_handler = logging.FileHandler('coco/ok.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
@@ -83,16 +83,16 @@ ele = tab.ele('css=#login-dashboard')
 
 ele.click()
 time.sleep(5)
-tab.get_screenshot(path=r"./coco登录.png", full_page=True)
+tab.get_screenshot(path=r"./coco/coco登录.png", full_page=True)
 ele = tab.ele('css=#announcement-modal > div > div > div.modal-footer > button')
 ele.click()
-tab.get_screenshot(path=r"./coco关闭广告.png", full_page=True)
+tab.get_screenshot(path=r"./coco/coco关闭广告.png", full_page=True)
 ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
 
 ele.click()
 time.sleep(0.5)
 link = pyperclip.paste()
-tab.get_screenshot(path=r"./coco点击复制.png", full_page=True)
+tab.get_screenshot(path=r"./coco/coco点击复制.png", full_page=True)
 
 
 logger.info(link)
