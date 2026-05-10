@@ -1261,3 +1261,15 @@
 2026-05-10 21:58:18,069 - INFO - 注册邮箱：0637502065
 2026-05-10 21:58:18,069 - INFO - 0637502065
 2026-05-10 21:58:19,664 - INFO - {'success': True, 'data': {'token': 'f50d7c2b23b482c4b724c8a5e93b5a95', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc0MzQ1LCJzZXNzaW9uIjoiZDg5MzQyZTkxZThmY2ZhNjRkZmYyOTc5ZGM5M2JhM2IiLCJpYXQiOjE3Nzg0MjE0OTgsImV4cCI6MTc3ODQ0MzA5OH0.MoIbgEfykKh3gq9N-b-H9Qz9auh616YXb2Ob1zafqtk'}}
+2026-05-10 22:00:13,747 - INFO - 尝试连接 IP 查询 API: https://ipinfo.io/json...
+2026-05-10 22:00:13,884 - INFO - 
+✅ 成功获取 IP 地址和位置信息：
+2026-05-10 22:00:13,884 - INFO - --- 您的公网信息 ---
+2026-05-10 22:00:13,884 - INFO - 公网 IP 地址: **13.105.117.130**
+2026-05-10 22:00:13,884 - INFO - 互联网服务提供商 (ISP): AS8075 Microsoft Corporation
+2026-05-10 22:00:13,884 - INFO - --------------------
+2026-05-10 22:00:13,886 - INFO - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2026-05-10 22:00:19,267 - INFO - 打开红杏 url
+2026-05-10 22:00:22,773 - INFO - 注册邮箱：7857919721
+2026-05-10 22:00:22,773 - INFO - 7857919721
+2026-05-10 22:00:24,796 - INFO - {'success': True, 'data': {'token': 'd4af0f1d707ed99ed48500a236cda626', 'is_admin': 0, 'auth_data': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MTc0MzQ3LCJzZXNzaW9uIjoiYzYxYTU0NGNhM2VmYTgwYmNiYjU1YTljZDA0YTA2NzYiLCJpYXQiOjE3Nzg0MjE2MjQsImV4cCI6MTc3ODQ0MzIyNH0.GfM92mPv99M7v6S_On8MDD0ucSE2FrQdwjaYoiUVEIw'}}
