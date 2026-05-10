@@ -24,5 +24,5 @@ def scan_qr_native(image_path):
 
 if __name__ == "__main__":
     # 这里的参数根据你的 workflow 传入逻辑修改
-    image_to_scan = "4.png" 
+    image_to_scan = "qs/4.png" 
     scan_qr_native(image_to_scan)
