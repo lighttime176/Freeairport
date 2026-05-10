@@ -30,7 +30,8 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.12"
-
+    - name: Install zbar library
+      run: brew install zbar
     - run: pip install -r requirements.txt
 
     # 运行 hx.py 脚本
