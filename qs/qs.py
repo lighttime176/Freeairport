@@ -8,6 +8,8 @@ import requests
 import pyperclip
 import subprocess
 import cv2
+import base64
+import binascii
 
 def scan_qr_native(image_path):
     # 1. 加载图片
@@ -106,11 +108,37 @@ tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 image_to_scan = "qs/4.png" 
 data = scan_qr_native(image_to_scan)
 
-headers ={
-"User-Agent":"clash"
+
+
+headers_clash = {
+    "User-Agent": "clash-verge/v1.3.8", # 模拟更具体的客户端
+    "Accept": "*/*",
 }
-res = requests.get(data,headers=headers)
-res_text = res.content.decode('utf-8')
-modified_str = res_text.replace('enable: true', 'enable: false')
-with open("qs.yaml", "w") as file:
-    file.write(modified_str)
+
+try:
+    res = requests.get(data, headers=headers_clash, timeout=15)
+    res.raise_for_status() # 检查是否请求成功
+    
+    raw_content = res.content
+    
+    # --- 尝试处理 Base64 编码 ---
+    try:
+        # 有些订阅是 Base64 后的 YAML，尝试解码
+        decoded_bytes = base64.b64decode(raw_content, validate=True)
+        content_str = decoded_bytes.decode('utf-8')
+    except (binascii.Error, UnicodeDecodeError):
+        # 如果不是 Base64 或者解码失败，则视为普通文本
+        content_str = raw_content.decode('utf-8')
+
+    # --- 执行修改 ---
+    # 建议使用正则表达式或更安全的匹配，防止误伤其他配置项
+    modified_str = content_str.replace('enable: true', 'enable: false')
+
+    # --- 保存文件 ---
+    with open("qs.yaml", "w", encoding='utf-8') as file:
+        file.write(modified_str)
+    
+    print("订阅转换成功！")
+
+except Exception as e:
+    print(f"获取订阅失败: {e}")
