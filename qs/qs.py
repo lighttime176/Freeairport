@@ -103,4 +103,5 @@ ele.click()
 
 time.sleep(2)
 tab.get_screenshot(path=r"./4.png", full_page=True)
-scan_qr_code('4.png')
+image_to_scan = "qs/4.png" 
+scan_qr_native(image_to_scan)
