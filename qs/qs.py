@@ -6,9 +6,14 @@ import email
 import ast
 import requests
 import pyperclip
+import subprocess
 
 
-
+def get_macos_clipboard():
+    # 强制通过系统 pbpaste 获取
+    process = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
+    stdout, stderr = process.communicate()
+    return stdout.decode('utf-8')
 def logging_init():
   # 创建一个logger对象
   logger = logging.getLogger('my_logger')
@@ -78,8 +83,7 @@ ele.click()
 tab.get_screenshot(path=r"./qs/3.png", full_page=True)
 ele = tab.ele('text=Copy Subscription Link')
 ele.click()
-clipboard_content = tab.run_js('return navigator.clipboard.readText();')
-print(clipboard_content)
+logger.info(get_macos_clipboard())
 time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 with open(r"./test_browser.html", "w", encoding="utf-8") as f:
