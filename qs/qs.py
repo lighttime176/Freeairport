@@ -5,7 +5,7 @@ import imaplib,sys
 import email
 import ast
 import requests
-
+import pyperclip
 
 
 
@@ -32,7 +32,7 @@ def logging_init():
   logger.addHandler(file_handler)
   return logger
 logger = logging_init()
-check_ip_and_location()
+
 
 # 创建页面对象
 co = ChromiumOptions().auto_port()  # 指定程序每次使用空闲的端口和临时用户文件夹创建浏览器
@@ -45,12 +45,14 @@ co.set_argument('--blink-settings=imagesEnabled=false')  # 禁用图片加载
 ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 co.set_user_agent(ua) 
 co.remove_extensions()
+
 browser = ChromiumPage(co)
 
 tab = browser.latest_tab
+tab.set.window.full()
 # tab.set.cookies(cookies)
 
-logger.info('打开红杏 url')
+logger.info('打开千速 url')
 tab.get('https://user2.1000ws.top/#/register')
 # 随机生成邮箱
 account = ''.join(random.choice('0123456789') for _ in range(10))
@@ -58,27 +60,23 @@ account = ''.join(random.choice('0123456789') for _ in range(10))
 logger.info(f"注册邮箱：{account}")
 
 logger.info(account)
-ele = tab.ele('text=邮箱')
-ele = ele.next().child()
+ele = tab.ele('css=#emailPrefix')
 ele.input(account)
 tab.get_screenshot(path=r"./qs/1.png", full_page=True)
-
-
-ele = tab.ele('text=密码')
-ele = ele.next().child()
-ele.input("11111111")
-ele = tab.ele('text=再次输入密码')
-ele = ele.next().child()
-ele.input("11111111")
-
+logger.info(ele)
+ele = tab.ele('css=#password')
+ele.input('11111111')
+ele = tab.ele('css=#confirmPassword')
+ele.input('11111111')
 tab.get_screenshot(path=r"./qs/2.png", full_page=True)
+ele = tab.ele('css=#app > div > div.auth-container > div.auth-card > form > div:nth-child(6) > button')
 
-
-ele = tab.ele('text=注册账号')
-tab.listen.start(targets='/register')  # 开始监听，指定获取包含该文本的数据包
 ele.click()
-
-res = tab.listen.wait(timeout=10).response
-res = res.body
-logger.info(res)
+time.sleep(5)
+ele = tab.ele('text=Import Subscription')
+ele.click()
+ele = tab.ele('text=Copy Subscription Link')
+ele.click()
 tab.get_screenshot(path=r"./qs/3.png", full_page=True)
+text = pyperclip.paste()
+logger.info(text)
