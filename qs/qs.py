@@ -139,7 +139,7 @@ try:
     with open("qs.yaml", "w", encoding='utf-8') as file:
         file.write(modified_str)
     
-    print("订阅转换成功！")
+    logger.info("订阅转换成功！")
 
 except Exception as e:
-    print(f"获取订阅失败: {e}")
+    logger.info(f"获取订阅失败: {e}")
