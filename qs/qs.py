@@ -107,7 +107,8 @@ time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 image_to_scan = "qs/4.png" 
 data = scan_qr_native(image_to_scan)
-
+with open("urls.txt", "w") as file:
+    file.write(data + "\n")
 
 
 headers_clash = {
