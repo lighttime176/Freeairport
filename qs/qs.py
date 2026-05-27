@@ -84,7 +84,7 @@ logger.info(f"注册邮箱：{account}@gmail.com")
 
 
 #ele = tab.ele('css=#emailPrefix')
-ele = tab.ele('text=邮箱 ')
+ele = tab.ele('css=#app > div > div.auth-container.page-transition-enter-active.page-transition-enter-to > div.auth-card > form > div:nth-child(1) > label')
 logger.info(ele)
 ele = ele.next().child().child().next()
 logger.info(ele)
