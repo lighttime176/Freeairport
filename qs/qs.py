@@ -83,7 +83,11 @@ account = ''.join(random.choice('0123456789') for _ in range(10))
 logger.info(f"注册邮箱：{account}@gmail.com")
 
 
-ele = tab.ele('css=#emailPrefix')
+#ele = tab.ele('css=#emailPrefix')
+ele = tab.ele('text=邮箱')
+logger.info(ele)
+ele = ele.next().child().child().next()
+logger.info(ele)
 ele.input(account)
 tab.get_screenshot(path=r"./qs/1.png", full_page=True)
 
