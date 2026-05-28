@@ -103,3 +103,6 @@
 2026-05-28 12:21:15,988 - INFO - 打开千速 url
 2026-05-28 12:21:18,564 - INFO - 注册邮箱：3134724063@gmail.com
 2026-05-28 12:21:18,571 - INFO - <ChromiumElement label data-v-5be4bd1c='' for='email' class='form-label'>
+2026-05-28 12:27:30,661 - INFO - 打开千速 url
+2026-05-28 12:27:33,869 - INFO - 注册邮箱：9631338714@gmail.com
+2026-05-28 12:27:48,942 - INFO - <NoneElement method=ele(), locator=css=#app > div > div.auth-container.page-transition-enter-active.page-transition-enter-to > div.auth-card > form > div:nth-child(1) > label, index=1, timeout=10>
