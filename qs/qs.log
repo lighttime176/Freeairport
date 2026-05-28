@@ -106,3 +106,8 @@
 2026-05-28 12:27:30,661 - INFO - 打开千速 url
 2026-05-28 12:27:33,869 - INFO - 注册邮箱：9631338714@gmail.com
 2026-05-28 12:27:48,942 - INFO - <NoneElement method=ele(), locator=css=#app > div > div.auth-container.page-transition-enter-active.page-transition-enter-to > div.auth-card > form > div:nth-child(1) > label, index=1, timeout=10>
+2026-05-28 12:28:54,299 - INFO - 打开千速 url
+2026-05-28 12:28:57,902 - INFO - 注册邮箱：5004792219@gmail.com
+2026-05-28 12:29:02,933 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
+2026-05-28 12:29:12,003 - INFO - 识别成功！内容: https://scripew0312kajwopiujhgs.1000ws.best/qws-subscribe1/9da06bdae8d235ebf49ee92faac2176a
+2026-05-28 12:29:12,945 - INFO - 订阅转换成功！
