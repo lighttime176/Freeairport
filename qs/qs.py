@@ -81,11 +81,13 @@ tab.get('https://user2.1000ws.top/#/register')
 account = ''.join(random.choice('0123456789') for _ in range(10))
 #data['email'] = f"{account}@"
 logger.info(f"注册邮箱：{account}@gmail.com")
-
+time.sleep(5)
 
 #ele = tab.ele('css=#emailPrefix')
+logger.info(ele)
 ele = tab.ele('css=#app > div > div.auth-container.page-transition-enter-active.page-transition-enter-to > div.auth-card > form > div:nth-child(1) > label')
 logger.info(ele)
+
 tab.get_screenshot(path=r"./qs/1.png", full_page=True)
 # ele = ele.next().child().child().next()
 # logger.info(ele)
