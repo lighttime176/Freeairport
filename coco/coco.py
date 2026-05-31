@@ -1,30 +1,36 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
-import logging,random,time,os,re,requests
+import logging,random,time,requests,os,re
 import imaplib,sys
 import email
-from bs4 import BeautifulSoup
-import os,ast,logging,re,email,imaplib,time
-from email.header import decode_header
-import pyperclip
-import pyperclip
-headers ={
-"User-Agent":"clash"
-}
-# with open('email.txt', 'r', encoding='utf-8') as f:
-#     content = f.read().strip()
+import ast
 
-# email_list = ast.literal_eval(content)
+
+
+# 读取 email.txt 文件
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# 转换成 Python 列表
+emails = ast.literal_eval(content)
+
+
+file_path = "coco/coconum.txt"
+
+
+# 如果文件不存在，则初始化为 0
+if not os.path.exists(file_path):
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write("0")
+
 # 读取文件中的数字
-# with open('num.txt', "r", encoding="utf-8") as file:
-#     try:
-#         number = int(file.read().strip())  # 读取并转换为整数
-#     except ValueError:
-#         number = 0  # 如果文件内容不是数字，初始化为 0
-
-# signemail = email_list[number]
-# signemail = signemail + '@outlook.com'
-
+with open(file_path, "r", encoding="utf-8") as file:
+    try:
+        number = int(file.read().strip())  # 读取并转换为整数
+    except ValueError:
+        number = 0  
+sign_email = emails[number]
 
 
 
@@ -38,7 +44,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('coco/ok.log')
+  file_handler = logging.FileHandler('coco/coco.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
@@ -69,60 +75,231 @@ tab = browser.latest_tab
 
 
 
-tab.get('https://www.cocoduck.live/auth/login')
+tab.get('https://dash.cocoduck.co/auth/register')
 logger.info('打开coco url')
+time.sleep(2)
+tab.get_screenshot(path=r"./打开网页.png", full_page=True)
+try:
+    ele = tab.ele('text=点击注册')
+    ele.click()
+except:
+    pass
 ele = tab.ele('css=#email')
-ele.input('b1rtyuii98@outlook.com')
+ele.input(signemail)
+logger.info(signemail)
 logger.info('输入邮箱')
+tab.get_screenshot(path=r"./输入邮箱.png", full_page=True)
+ele = tab.ele('css=#email-verify')
+ele.click()
+logger.info('发送邮件')
+time.sleep(5)
+tab.get_screenshot(path=r"./发完邮件.png", full_page=True)
+
+
+ele = tab.ele('css=#success-confirm')
+ele.click()
+logger.info('点击好')
+
 ele = tab.ele('css=#passwd')
 ele.input('11111111')
-logger.info('输入邮箱')
-ele = tab.ele('css=#login-dashboard')
+ele = tab.ele('css=#repasswd')
+ele.input('11111111')
+logger.info('输入账号密码')
 
-# tab.listen.start(targets='https://www.cocoduck.live/user')  # 开始监听，指定获取包含该文本的数据包
+ele = tab.ele('css=#tos')
+ele.click(by_js=True)
 
-ele.click()
+logger.info('点击我同意')
+tab.get_screenshot(path=r"./点击我同意.png", full_page=True)
 time.sleep(5)
-tab.get_screenshot(path=r"./coco/coco登录.png", full_page=True)
-ele = tab.ele('css=#announcement-modal > div > div > div.modal-footer > button')
-ele.click()
-tab.get_screenshot(path=r"./coco/coco关闭广告.png", full_page=True)
-ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
+
+
+
+for _ in range(30):
+  time.sleep(1)
+  logger.info(f"等待邮箱中，第{_}S")
+
+
+EMAIL_ADDRESS = 'luo1764682172@163.com'
+cookies = os.environ.get("ydyp")
+EMAIL_PASSWORD = cookies # 请确保是网易邮箱的 IMAP 授权码
+
+# 连接网易 IMAP 服务器
+server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+logger.info('连接网易服务器')
+
+# 添加 ID 命令支持
+imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+logger.info('发送command命令')
+
+args = ("name", "imaplib", "version", "1.0.0")
+typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
+server._untagged_response(typ, dat, 'ID')
+
+# 登录邮箱
+server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+logger.info('登录邮箱服务器')
+
+# 选中收件箱
+server.select("INBOX")
+logger.info('检查收件箱')
+
+# 搜索所有邮件 ID
+typ, data = server.search(None, 'ALL')
+all_ids = data[0].split()
+logger.info(f'共找到 {len(all_ids)} 封邮件')
+
+# 只取最新5封（若总数不足5封，就全部取）
+latest_ids = all_ids[-5:]
+
+# 拉取邮件
+fetch_data_lst = []
+for num in latest_ids:
+    typ, fetch_data = server.fetch(num, '(RFC822)')
+    fetch_data_lst.append(fetch_data)
+
+# 解析最新一封邮件（最后一封）
+fetch_data = fetch_data_lst[-1]
+msg = email.message_from_bytes(fetch_data[0][1])
+logger.info('获取邮箱字节数据')
+logger.info(f'原始主题: {msg["subject"]}')
+
+# 解码主题（更可靠的方式）
+from email.header import decode_header
+subject_parts = decode_header(msg['subject'])
+decoded_subject = ''.join([
+    (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
+    for part, charset in subject_parts
+])
+logger.info(f'解码后主题: {decoded_subject}')
+body = ""
+if msg.is_multipart():
+    for part in msg.walk():
+        content_type = part.get_content_type()
+        content_dispo = str(part.get("Content-Disposition"))
+        if content_type in ["text/plain", "text/html"] and "attachment" not in content_dispo:
+            charset = part.get_content_charset() or 'utf-8'
+            body = part.get_payload(decode=True).decode(charset, errors="replace")
+            break
+else:
+    charset = msg.get_content_charset() or 'utf-8'
+    body = msg.get_payload(decode=True).decode(charset, errors="replace")
+
+# 如果是 HTML，提取纯文本
+if "<html" in body.lower():
+    soup = BeautifulSoup(body, "html.parser")
+    text = soup.get_text(separator=' ', strip=True)  # 加 separator 保证内容连贯
+    text = re.sub(r'\s+', ' ', text)  # 把多余空白变成单个空格
+else:
+    text = body
+
+logger.info(f'纯文本正文:\n{text}')
+
+# 匹配验证码（6位数字，通常居中或在提示后）
+match = re.search(r'邮箱验证代码为: ([a-zA-Z0-9]+)', text)
+if not match:
+    match = re.search(r'\b\d{6}\b', text)  # 备选策略：直接找6位数字
+
+if match:
+    code = match.group(1)
+    logger.info(f'提取验证码: {code}')
+else:
+    logger.info('未找到验证码')
+
+codeele = tab.ele('css=#emailcode')
+codeele.input(match.group(1))
+logger.info('输入验证码')
+time.sleep(1)
+tab.get_screenshot(path=r"./输完验证码.png", full_page=True)
+ele = tab.ele('text=注册新账户')
+ele1 = tab.ele('css=#confirm-register')
+ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
+ele2 = ele2.child()
+tab.listen.start(targets='https://www.cocoduck.live/user')  # 开始监听，指定获取包含该文本的数据包
+
+# # 数字加 1
+number += 1
+# 将更新后的数字写回文件
+with open('coco/coconum.txt', "w", encoding="utf-8") as file:
+    file.write(str(number))
+logger.info(f"新的数字已写入: {number}")
 
 ele.click()
-time.sleep(0.5)
-link = pyperclip.paste()
-tab.get_screenshot(path=r"./coco/coco点击复制.png", full_page=True)
+time.sleep(0.2)
+try:
+    ele.click()
+    time.sleep(1)
+except:
+    pass
 
 
-logger.info(link)
-print(link)
-# time.sleep(0.5)
-# link = pyperclip.paste()
-# print(link)
 
-# res = tab.listen.wait(timeout=10).response
-# res = res.body
+logger.info('注册')
 
-# logger.info(res)
-# 匹配以 https 开头，包含该域名的 clash 订阅链接
+tab.get_screenshot(path=r"./点击注册后.png", full_page=True)
+try:
+    ele = tab.ele('css=#announcement-modal > div > div > div.modal-footer > button')
+    ele.click()
+    logger.info('关闭广告弹窗')
+except:
+    pass
+try:
+    res = tab.listen.wait(timeout=10).response
+    res = res.body
+    pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
+    matches = re.findall(pattern, res)
+    # 去重并打印
+    for link in set(matches):
+        logger.info(f"找到订阅链接: {link}")
+except:
+    with open(r"./test_browser.html", "w", encoding="utf-8") as f:
+        f.write(tab.html)
+    with open('test_browser.html', 'r', encoding='utf-8') as f:
+        html_content = f.read()
+
+    # 匹配以 https 开头，包含该域名的 clash 订阅链接
+    pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
+    # 查找所有匹配项
+    matches = re.findall(pattern, html_content)
+    # 去重并打印
+    for link in set(matches):
+        logger.info(f"找到订阅链接: {link}")
+
+
+
+# tab.get_screenshot(path=r"./1.png", full_page=True)
+
+
+
+headers_clash ={
+"User-Agent":"clash"
+}
+with open("coco/cocourls.txt", "w") as file:
+    file.write(link + "\n")
+res = requests.get(link,headers=headers_clash)
+res_text = res.content.decode('utf-8')
+modified_str = res_text.replace('enable: true', 'enable: false')
+with open("coco/coco.yaml", "w") as file:
+    file.write(modified_str)
+
+
+
+
+
+browser.quit()
+
+# with open(r"./test_browser.html", "w", encoding="utf-8") as f:
+#     f.write(tab.html)
+# with open('test_browser.html', 'r', encoding='utf-8') as f:
+#     html_content = f.read()
+
+# # 匹配以 https 开头，包含该域名的 clash 订阅链接
 # pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
 
 
 # # 查找所有匹配项
-# matches = re.findall(pattern, link)
+# matches = re.findall(pattern, html_content)
 
 # # 去重并打印
 # for link in set(matches):
-#     print(f"找到订阅链接: {link}")
-# time.sleep(10)
-# ele = tab.ele('css=body > div.page > div > div.page-body > div > div > div:nth-child(1) > div > div > div:nth-child(4) > div > div > div > button.btn.btn-red.btn-sm.client-btn')
-# ele.click()
-# time.sleep(1)
-# tab.get_screenshot(path=r"./1.png", full_page=True)
-# with open(r"./coco.html", "w", encoding="utf-8") as f:
-#     f.write(tab.html)
-
-
-
-
+#     logger.info(f"找到订阅链接: {link}")
