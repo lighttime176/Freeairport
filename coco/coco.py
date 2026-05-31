@@ -85,8 +85,8 @@ try:
 except:
     pass
 ele = tab.ele('css=#email')
-ele.input(signemail)
-logger.info(signemail)
+ele.input(sign_email)
+logger.info(sign_email)
 logger.info('输入邮箱')
 tab.get_screenshot(path=r"./输入邮箱.png", full_page=True)
 ele = tab.ele('css=#email-verify')
