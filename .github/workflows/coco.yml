@@ -23,7 +23,9 @@ jobs:
 
     steps:
     # 拉取代码
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+      with:
+        clean: true
 
     # 设置 Python 3.12
     - name: Set up Python 3.12
