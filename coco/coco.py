@@ -30,7 +30,7 @@ with open(file_path, "r", encoding="utf-8") as file:
         number = int(file.read().strip())  # 读取并转换为整数
     except ValueError:
         number = 0  
-sign_email = emails[number]
+sign_email = emails[number] + '@outlook.com'
 
 
 
