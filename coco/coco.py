@@ -289,18 +289,3 @@ with open("coco/coco.yaml", "w") as file:
 
 browser.quit()
 
-# with open(r"./test_browser.html", "w", encoding="utf-8") as f:
-#     f.write(tab.html)
-# with open('test_browser.html', 'r', encoding='utf-8') as f:
-#     html_content = f.read()
-
-# # 匹配以 https 开头，包含该域名的 clash 订阅链接
-# pattern = r'https://sub\.cocoduck\.cc/sub/[a-f0-9]+/clash'
-
-
-# # 查找所有匹配项
-# matches = re.findall(pattern, html_content)
-
-# # # 去重并打印
-# # for link in set(matches):
-# #     logger.info(f"找到订阅链接: {link}")
