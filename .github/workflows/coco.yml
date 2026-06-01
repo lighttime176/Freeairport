@@ -2,8 +2,9 @@ name: run_coco
 
 on:
   schedule:
-    #UTC 0 点对应北京时间早 8 点
-    - cron: '55 0 * * *'
+    # ➔ 改为北京时间 08:43 触发
+    - cron: '43 8 * * *'
+      timezone: 'Asia/Shanghai'  # ✨ 2026年新支持的参数，直接锁定北京时间
   workflow_dispatch:
     inputs:
       name:
