@@ -203,6 +203,78 @@ for btn in page.eles("tag:button"):
         btn.click()
         print("[OK] 已点击「创建账号」按钮")
         break
+page.get("https://sulianproxy.com/login")
+page.wait.doc_loaded()
+time.sleep(2)
+EMAIL = sign_email = '@outlook.com'
+PASSWORD = '11111111'
+if "login" in page.url.lower():
+    page.ele("#input-0").input(EMAIL)
+    page.ele("#input-2").input(PASSWORD)
+    time.sleep(0.3)
+    for btn in page.eles("tag:button"):
+        if "\u767b\u5f55" in btn.text.strip():
+            btn.click()
+            break
+    time.sleep(4)
+    print(f"  URL: {page.url}")
+else:
+    print("  \u5df2\u767b\u5f55")
+
+# ====== \u6253\u5f00 Dashboard ======
+print("[2/4] \u6253\u5f00 Dashboard...")
+page.get("https://sulianproxy.com/dashboard")
+page.wait.doc_loaded()
+time.sleep(4)
+
+# \u5173\u95ed\u5f39\u7a97
+page.run_js("""
+var btns = document.querySelectorAll('button');
+for (var i = 0; i < btns.length; i++) {
+    var t = btns[i].textContent.trim();
+    if (t.indexOf('Skip') > -1 || t === '\u5173\u95ed' || t.indexOf('\u7a0d\u540e\u63d0\u9192') > -1) {
+        btns[i].click();
+    }
+}
+""")
+time.sleep(2)
+
+# ====== \u4ece localStorage \u83b7\u53d6\u8ba2\u9605\u94fe\u63a5 ======
+print("[3/4] \u83b7\u53d6\u8ba2\u9605\u94fe\u63a5...")
+result = page.run_js("""
+return JSON.stringify({
+    subscribe_url: localStorage.getItem('subscribe_url') || '',
+    token: localStorage.getItem('token') || '',
+    user: localStorage.getItem('user') || '',
+    auth_data: localStorage.getItem('auth_data') || '',
+    email: localStorage.getItem('email') || '',
+    uuid: localStorage.getItem('uuid') || ''
+});
+""")
+
+data = json.loads(result) if isinstance(result, str) else {}
+
+subscribe_url = data.get('subscribe_url', '')
+token = data.get('token', '')
+auth_data = data.get('auth_data', '')
+
+print(f"  \u8ba2\u9605\u94fe\u63a5: {subscribe_url}")
+print(f"  Token: {token}")
+
+# ====== \u4fdd\u5b58\u5230\u6587\u4ef6 ======
+print("[4/4] \u4fdd\u5b58\u6587\u4ef6...")
+
+with open("subscription_url.txt", "w", encoding="utf-8") as f:
+    f.write(subscribe_url)
+print(f"  subscription_url.txt -> {subscribe_url}")
+
+with open("subscription_info.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print(f"  subscription_info.json -> \u4fdd\u5b58\u5168\u90e8\u4fe1\u606f")
+
+# ====== \u9a8c\u8bc1\u94fe\u63a5\u53ef\u7528\u6027 ======
+if subscribe_url:
+    print(f"\n  >>> \u8ba2\u9605\u94fe\u63a5: {subscribe_url}")
 
 # ele = tab.ele('text=注册新账户')
 # ele1 = tab.ele('css=#confirm-register')
