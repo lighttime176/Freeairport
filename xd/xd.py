@@ -59,7 +59,7 @@ co.set_paths(browser_path="/opt/google/chrome/google-chrome")
 
 page = ChromiumPage(addr_or_opts=co)
 page.get("https://sulianproxy.com/register")
-tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
+page.get_screenshot(path=r"xd/打开网页.png", full_page=True)
 page.wait.doc_loaded()
 time.sleep(2)
 logger.info("[OK] 页面加载成功:", page.title)
@@ -96,7 +96,7 @@ time.sleep(0.5)
 page.ele("#input-3").input("YourPassword123!")
 page.ele("#input-6").input("YourPassword123!")
 logger.info("[OK] 已输入密码")
-page.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+page.get_screenshot(path=r"xd/over.png", full_page=True)
 
     # ================== 以下为你续写的注册后续流程 ==================
 
