@@ -195,7 +195,7 @@ page.ele("#input-15").input(match.group(1))
 print("[OK] 已输入验证码")
 logger.info('输入验证码')
 time.sleep(1)
-tab.get_screenshot(path=r"./输完验证码.png", full_page=True)
+page.get_screenshot(path=r"./输完验证码.png", full_page=True)
 time.sleep(0.5)
 for btn in page.eles("tag:button"):
     if btn.text.strip() == "创建账号":
