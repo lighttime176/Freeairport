@@ -233,7 +233,7 @@ EMAIL = sign_email + '@outlook.com'
 logger.info(EMAIL)
 PASSWORD = '11111111'
 if "login" in page.url.lower():
-    page.ele("#input-0").input(EMAIL)
+    page.ele("#input-0").input(sign_email)
     page.ele("#input-2").input(PASSWORD)
     time.sleep(0.3)
     for btn in page.eles("tag:button"):
