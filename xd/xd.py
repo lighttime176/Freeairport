@@ -196,14 +196,14 @@ else:
 page.ele("#input-15").input(match.group(1))
 print("[OK] 已输入验证码")
 logger.info('输入验证码')
-time.sleep(1)
 page.get_screenshot(path=r"xd/输完验证码.png", full_page=True)
-# time.sleep(0.5)
-# for btn in page.eles("tag:button"):
-#     if btn.text.strip() == "创建账号":
-#         btn.click()
-#         print("[OK] 已点击「创建账号」按钮")
-#         break
+time.sleep(0.5)
+for btn in page.eles("tag:button"):
+    if btn.text.strip() == "创建账号":
+        btn.click()
+        print("[OK] 已点击「创建账号」按钮")
+        break
+
 # ele = tab.ele('text=注册新账户')
 # ele1 = tab.ele('css=#confirm-register')
 # ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
