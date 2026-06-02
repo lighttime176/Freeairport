@@ -229,7 +229,7 @@ page = ChromiumPage(addr_or_opts=co)
 page.get("https://sulianproxy.com/login")
 page.wait.doc_loaded()
 time.sleep(2)
-EMAIL = sign_email = '@outlook.com'
+EMAIL = sign_email + '@outlook.com'
 PASSWORD = '11111111'
 if "login" in page.url.lower():
     page.ele("#input-0").input(EMAIL)
