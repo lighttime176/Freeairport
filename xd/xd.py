@@ -69,7 +69,7 @@ page.run_js("window.focus();")
 # === 1. 邮箱前缀 ===
 page.ele("#input-1").input(emails)
 logger.info("[OK] 已输入邮箱前缀")
-tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+page.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
 # === 2. 展开下拉框，点击 outlook ===
 for d in page.eles("tag:div"):
     cls = d.attr("class") or ""
@@ -96,7 +96,7 @@ time.sleep(0.5)
 page.ele("#input-3").input("YourPassword123!")
 page.ele("#input-6").input("YourPassword123!")
 logger.info("[OK] 已输入密码")
-tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+page.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
 
     # ================== 以下为你续写的注册后续流程 ==================
 
