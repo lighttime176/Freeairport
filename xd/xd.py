@@ -67,7 +67,7 @@ logger.info("[OK] 页面加载成功:", page.title)
 page.run_js("window.focus();")
 
 # === 1. 邮箱前缀 ===
-page.ele("#input-1").input(emails)
+page.ele("#input-1").input(sign_email)
 logger.info("[OK] 已输入邮箱前缀")
 page.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
 # === 2. 展开下拉框，点击 outlook ===
@@ -91,68 +91,12 @@ result = page.run_js("""
 """)
 logger.info(f"[OK] 选择 @outlook.com ({result})")
 time.sleep(0.5)
-
+page.ele('css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(2) > div > button > span.v-btn__content').click()
 # === 3. 密码 ===
-page.ele("#input-3").input("YourPassword123!")
-page.ele("#input-6").input("YourPassword123!")
+page.ele("#input-3").input("11111111")
+page.ele("#input-6").input("11111111")
 logger.info("[OK] 已输入密码")
 page.get_screenshot(path=r"xd/over.png", full_page=True)
-
-    # ================== 以下为你续写的注册后续流程 ==================
-
-    # 4. 输入密码和确认密码 (使用页面属性定位)
-    # password_input = tab.ele("xpath://input[@placeholder='输入密码']")
-    # password_input.input("YourSecurePass123!") # 换成你要填写的统一密码
-    
-    # confirm_password_input = tab.ele("xpath://input[@placeholder='确认密码']")
-    # confirm_password_input.input("YourSecurePass123!")
-    # logger.info('已填写密码与确认密码')
-
-    # # 5. 点击“发送验证码”按钮
-    # # 源码中按钮包含文本“发送验证码”
-    # send_code_btn = tab.ele("text:发送验证码")
-    # if send_code_btn:
-    #     send_code_btn.click()
-    #     logger.info('已点击发送验证码按钮，请在后续逻辑中加入读取邮箱验证码')
-    #     time.sleep(2)
-    #     tab.get_screenshot(path=r"xd/已发验证码.png", full_page=True)
-    # else:
-    #     logger.error('未找到发送验证码按钮')
-# try:
-#     ele = tab.ele('text=点击注册')
-#     ele.click()
-# except:
-#     pass
-# ele = tab.ele('css=#email')
-# ele.input(sign_email)
-# logger.info(sign_email)
-# logger.info('输入邮箱')
-# tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
-# ele = tab.ele('css=#email-verify')
-# ele.click()
-# logger.info('发送邮件')
-# time.sleep(5)
-# tab.get_screenshot(path=r"xd/发完邮件.png", full_page=True)
-
-
-# ele = tab.ele('css=#success-confirm')
-
-# ele.click()
-# logger.info('点击好')
-
-# ele = tab.ele('css=#passwd')
-# ele.input('11111111')
-# ele = tab.ele('css=#repasswd')
-# ele.input('11111111')
-# logger.info('输入账号密码')
-
-# ele = tab.ele('css=#tos')
-# ele.click(by_js=True)
-
-# logger.info('点击我同意')
-# tab.get_screenshot(path=r"./点击我同意.png", full_page=True)
-# time.sleep(5)
-
 
 
 # for _ in range(30):
