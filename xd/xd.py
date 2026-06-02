@@ -244,11 +244,99 @@ if "login" in page.url.lower():
 else:
     print("  \u5df2\u767b\u5f55")
 time.sleep(2)
-page.ele('css=body > div.v-overlay-container > div.v-overlay.v-overlay--active.v-theme--LightTheme6.v-locale--is-ltr.v-dialog.v-dialog--scrollable.v-overlay--scroll-blocked > div.v-overlay__content.notice-dialog-shell > div > div.v-card-actions.notice-dialog__actions > button.v-btn.v-btn--slim.v-theme--LightTheme6.text-primary.v-btn--density-default.rounded-md.v-btn--size-default.v-btn--variant-tonal.notice-dialog__action-btn > span.v-btn__content').click()
-page.ele('css=#app > div > div > div > main > div:nth-child(1) > div > div:nth-child(4) > div.v-col-md-7.v-col-12 > div > div.v-window.v-theme--LightTheme6 > div > div.v-window-item.v-window-item--active > div > div:nth-child(1) > div.v-list-item__append > div.app-actions > button.v-btn.v-btn--icon.v-theme--LightTheme6.v-btn--density-default.v-btn--size-default.v-btn--variant-text.d-none.d-sm-flex.qr-trigger > span.v-btn__content > i').click()
-page.get_screenshot(path=r"xd/二维码.png", full_page=True)
-image_to_scan = "xd/二维码.png" 
-data = scan_qr_native(image_to_scan)
+page.get("https://sulianproxy.com/dashboard")
+page.wait.doc_loaded()
+time.sleep(5)
+
+# 关闭弹窗
+print("  关闭弹窗...")
+page.run_js("""
+var btns = document.querySelectorAll('button');
+for (var i = 0; i < btns.length; i++) {
+    var t = btns[i].textContent.trim();
+    if (t.indexOf('Skip') > -1 || t === '\u5173\u95ed' || t.indexOf('\u7a0d\u540e\u63d0\u9192') > -1) {
+        btns[i].click();
+    }
+}
+""")
+time.sleep(3)
+
+# 4. 找到 Clash 的 QR 二维码按钮并点击
+print("\n[4/5] 查找 Clash QR 二维码按钮...")
+click_result = page.run_js("""
+var cards = document.querySelectorAll('.v-card');
+for (var i = 0; i < cards.length; i++) {
+    if (cards[i].textContent.indexOf('\u8ba2\u9605\u4e0e\u5bfc\u5165') > -1) {
+        var items = cards[i].querySelectorAll('.v-list-item');
+        for (var j = 0; j < items.length; j++) {
+            if (items[j].textContent.indexOf('Clash') > -1 && items[j].textContent.indexOf('ClashMeta') === -1) {
+                var qrBtn = items[j].querySelector('.qr-trigger');
+                if (qrBtn) {
+                    qrBtn.click();
+                    return 'CLICKED_QR';
+                }
+            }
+        }
+    }
+}
+return 'NOT_FOUND';
+""")
+print(f"  结果: {click_result}")
+time.sleep(2)
+
+# 5. 截图 QR 弹窗
+print("\n[5/5] 截图 QR 二维码弹窗...")
+
+# 美化弹窗样式
+page.run_js("""
+var dialog = document.querySelector('.v-overlay--active.v-dialog .scan-dialog');
+if (dialog) {
+    dialog.style.background = 'white';
+    dialog.style.padding = '20px';
+    dialog.style.borderRadius = '12px';
+}
+""")
+time.sleep(0.5)
+
+# 全屏截图
+screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_qr.png")
+page.get_screenshot(path=screenshot_path, full_page=True)
+print(f"  截图已保存: {screenshot_path}")
+
+# 提取 SVG 二维码内容（无头模式下也可用）
+svg_content = page.run_js("""
+var svg = document.querySelector('.scan-dialog__qr-card svg');
+if (svg) return svg.outerHTML;
+return 'NO_SVG';
+""")
+
+if svg_content != "NO_SVG":
+    svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "qr_code.svg")
+    with open(svg_path, "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print(f"  SVG 二维码已保存: {svg_path}")
+else:
+    print("  未找到 SVG 二维码 (可能弹窗未打开)")
+
+# 输出弹窗内图片信息
+qr_images = page.run_js("""
+var imgs = document.querySelectorAll('.v-overlay--active img');
+var results = [];
+for (var i = 0; i < imgs.length; i++) {
+    results.push({src: imgs[i].src, alt: imgs[i].alt});
+}
+return JSON.stringify(results);
+""")
+
+try:
+    parsed = json.loads(qr_images) if isinstance(qr_images, str) else []
+    if parsed:
+        print(f"  弹窗内图片: {json.dumps(parsed, ensure_ascii=False, indent=2)}")
+except:
+    pass
+
+# image_to_scan = "xd/二维码.png" 
+# data = scan_qr_native(image_to_scan)
 # ele = tab.ele('text=注册新账户')
 # ele1 = tab.ele('css=#confirm-register')
 # ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
