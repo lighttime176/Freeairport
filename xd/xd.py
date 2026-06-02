@@ -180,7 +180,7 @@ else:
 logger.info(f'纯文本正文:\n{text}')
 
 # 匹配验证码（6位数字，通常居中或在提示后）
-match = re.search(r'邮箱验证代码为: ([a-zA-Z0-9]+)', text)
+match = re.search(r'请忽略此邮件。 ([a-zA-Z0-9]+)', text)
 if not match:
     match = re.search(r'\b\d{6}\b', text)  # 备选策略：直接找6位数字
 
