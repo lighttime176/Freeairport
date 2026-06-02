@@ -3,7 +3,7 @@ from DrissionPage import ChromiumOptions
 import logging, random, time, requests, os, re
 import imaplib, sys
 import email
-import ast
+import ast,json
 from bs4 import BeautifulSoup
 
 # 读取 email.txt 文件
@@ -68,6 +68,7 @@ page.run_js("window.focus();")
 
 # === 1. 邮箱前缀 ===
 page.ele("#input-1").input(sign_email)
+logger.info(sign_email)
 logger.info("[OK] 已输入邮箱前缀")
 page.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
 # === 2. 展开下拉框，点击 outlook ===
