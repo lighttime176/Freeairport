@@ -112,7 +112,7 @@ ele = tab.ele('css=#tos')
 ele.click(by_js=True)
 
 logger.info('点击我同意')
-tab.get_screenshot(path=r"./点击我同意.png", full_page=True)
+tab.get_screenshot(path=r"coco/点击我同意.png", full_page=True)
 time.sleep(5)
 
 
@@ -212,7 +212,7 @@ codeele = tab.ele('css=#emailcode')
 codeele.input(match.group(1))
 logger.info('输入验证码')
 time.sleep(1)
-tab.get_screenshot(path=r"./输完验证码.png", full_page=True)
+tab.get_screenshot(path=r"coco/输完验证码.png", full_page=True)
 ele = tab.ele('text=注册新账户')
 ele1 = tab.ele('css=#confirm-register')
 ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
@@ -238,7 +238,7 @@ except:
 
 logger.info('注册')
 
-tab.get_screenshot(path=r"./点击注册后.png", full_page=True)
+tab.get_screenshot(path=r"coco/点击注册后.png", full_page=True)
 try:
     ele = tab.ele('css=#announcement-modal > div > div > div.modal-footer > button')
     ele.click()
