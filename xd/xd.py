@@ -57,42 +57,46 @@ co.set_argument('--no-sandbox')
 co.set_argument('--headless=new')
 co.set_paths(browser_path="/opt/google/chrome/google-chrome")
 
-browser = ChromiumPage(co)
-tab = browser.latest_tab
+page = ChromiumPage(addr_or_opts=co)
+page.get("https://sulianproxy.com/register")
+tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
+page.wait.doc_loaded()
+time.sleep(2)
+logger.info("[OK] 页面加载成功:", page.title)
 
-# 开始执行自动化流
-try:
-    tab.get('https://sulianproxy.com/register')
-    logger.info('打开网页：https://sulianproxy.com/register')
-    time.sleep(2)
-    tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
+page.run_js("window.focus();")
 
-    # 1. 输入邮箱用户名 (根据 placeholder 定位最稳妥)
-    ele = tab.ele('css=#input-11')
-    ele.input(sign_email)
-    logger.info(f'已输入邮箱用户名: {sign_email}')
+# === 1. 邮箱前缀 ===
+page.ele("#input-1").input(emails)
+logger.info("[OK] 已输入邮箱前缀")
+tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+# === 2. 展开下拉框，点击 outlook ===
+for d in page.eles("tag:div"):
+    cls = d.attr("class") or ""
+    if "register-email-suffix" in cls:
+        d.click()
+        break
+time.sleep(1.5)
 
-    # 2. 核心修改：点击邮箱后缀下拉栏
-    # 在 Vuetify 3 结构中，默认选中的是 @qq.com。点击它的父级或自身即可展开选项框。
-    suffix_dropdown = tab.ele("text:@qq.com")
-    if suffix_dropdown:
-        suffix_dropdown.click()
-        logger.info('已成功点击展开邮箱后缀下拉框')
-        time.sleep(0.5)  # 等待下拉列表动画渲染渲染出来
-        
-        # 3. 选择 outlook 后缀
-        # 弹出的列表会渲染在 body 的全局浮层里，直接点击文本包含 'outlook' 的行即可
-        outlook_option = tab.ele("text:outlook")
-        if outlook_option:
-            outlook_option.click()
-            logger.info('已成功选择 outlook.com 后缀')
-        else:
-            logger.error('未找到 outlook 选项，请检查页面是否支持该后缀')
-    else:
-        logger.error('未找到默认的 @qq.com 下拉触发器')
+result = page.run_js("""
+    const items = document.querySelectorAll('.v-list-item');
+    for (const item of items) {
+        const title = item.querySelector('.v-list-item-title');
+        if (title && title.textContent.includes('@outlook.com')) {
+            item.click();
+            return 'OK';
+        }
+    }
+    return 'NOT_FOUND';
+""")
+logger.info(f"[OK] 选择 @outlook.com ({result})")
+time.sleep(0.5)
 
-    time.sleep(0.5)
-    tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+# === 3. 密码 ===
+page.ele("#input-3").input("YourPassword123!")
+page.ele("#input-6").input("YourPassword123!")
+logger.info("[OK] 已输入密码")
+tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
 
     # ================== 以下为你续写的注册后续流程 ==================
 
@@ -320,13 +324,6 @@ try:
 
 
 
-except Exception as main_e:
-    logger.error(f'自动化执行流程中发生异常: {main_e}')
-    tab.get_screenshot(path=r"xd/异常错误截图.png", full_page=True)
 
-finally:
-    # 无论成功失败，关闭浏览器释放内存
-    browser.quit()
-    logger.info('浏览器已关闭，主程序退出。')
 
 # browser.quit()
