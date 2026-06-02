@@ -2,3 +2,10 @@
 2026-06-02 13:45:32,776 - INFO - <ChromiumElement div class='v-field__field' data-no-activator=''>
 2026-06-02 13:56:02,249 - INFO - 打开xd url
 2026-06-02 13:56:04,451 - INFO - <ChromiumElement span class='v-select__selection-text'>
+2026-06-02 14:05:03,116 - INFO - 打开网页：https://sulianproxy.com/register
+2026-06-02 14:05:15,368 - ERROR - 自动化执行流程中发生异常: 
+No element found.
+Method: ele()
+Arguments: {'locator': "xpath://input[@placeholder='输入邮箱']", 'index': 1, 'timeout': 10}
+Version: 4.1.1.4
+2026-06-02 14:05:16,839 - INFO - 浏览器已关闭，主程序退出。
