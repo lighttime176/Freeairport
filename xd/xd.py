@@ -247,7 +247,7 @@ else:
 # page.get("https://sulianproxy.com/dashboard")
 # page.wait.doc_loaded()
 time.sleep(5)
-tab.get_screenshot(path=r"xd/1.png", full_page=True)
+page.get_screenshot(path=r"xd/1.png", full_page=True)
 # 关闭弹窗
 print("  关闭弹窗...")
 page.run_js("""
