@@ -230,6 +230,7 @@ page.get("https://sulianproxy.com/login")
 page.wait.doc_loaded()
 time.sleep(2)
 EMAIL = sign_email + '@outlook.com'
+logger.info(EMAIL)
 PASSWORD = '11111111'
 if "login" in page.url.lower():
     page.ele("#input-0").input(EMAIL)
