@@ -1,12 +1,10 @@
 from DrissionPage import ChromiumPage
 from DrissionPage import ChromiumOptions
-import logging,random,time,requests,os,re
-import imaplib,sys
+import logging, random, time, requests, os, re
+import imaplib, sys
 import email
 import ast
 from bs4 import BeautifulSoup
-
-
 
 # 读取 email.txt 文件
 file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
@@ -16,9 +14,7 @@ with open(file_path, 'r', encoding='utf-8') as f:
 # 转换成 Python 列表
 emails = ast.literal_eval(content)
 
-
 file_path = "xd/xdnum.txt"
-
 
 # 如果文件不存在，则初始化为 0
 if not os.path.exists(file_path):
@@ -34,63 +30,90 @@ with open(file_path, "r", encoding="utf-8") as file:
 sign_email = emails[number]
 
 
-
 def logging_init():
-  # 创建一个logger对象
-  logger = logging.getLogger('my_logger')
-  logger.setLevel(logging.INFO)  # 设置日志级别为INFO
+    logger = logging.getLogger('my_logger')
+    logger.setLevel(logging.INFO)
 
-  # 创建一个控制台处理器，输出到控制台
-  console_handler = logging.StreamHandler()
-  console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
 
-  # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('xd/xd.log')
-  file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
+    file_handler = logging.FileHandler('xd/xd.log')
+    file_handler.setLevel(logging.INFO)
 
-  # 创建一个日志格式化器
-  formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-  console_handler.setFormatter(formatter)  # 给控制台处理器设置格式
-  file_handler.setFormatter(formatter)  # 给文件处理器设置格式
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+    console_handler.setFormatter(formatter)
+    file_handler.setFormatter(formatter)
 
-  # 将控制台和文件处理器添加到logger
-  logger.addHandler(console_handler)
-  logger.addHandler(file_handler)
-  return logger
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+    return logger
+
 logger = logging_init()
 
 # 创建页面对象
-co = ChromiumOptions().auto_port()  # 指定程序每次使用空闲的端口和临时用户文件夹创建浏览器
+co = ChromiumOptions().auto_port()
 co.headless(True)   # 无头模式
-co.set_argument('--no-sandbox')  # 无沙盒模式
-co.set_argument('--headless=new')  # 无界面系统添加
-co.set_paths(browser_path="/opt/google/chrome/google-chrome")  # 设置浏览器路径
-#co.set_argument('--disable-gpu')    # 禁用gpu，提高加载速度
-#co.set_argument('--blink-settings=imagesEnabled=false')  # 禁用图片加载
-#co.set_user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:65.0) Gecko/20100101 Firefox/65.0") 
-#co.incognito(True)
-#co.remove_extensions()
-browser = ChromiumPage(co)
+co.set_argument('--no-sandbox')
+co.set_argument('--headless=new')
+co.set_paths(browser_path="/opt/google/chrome/google-chrome")
 
+browser = ChromiumPage(co)
 tab = browser.latest_tab
 
-
-
-tab.get('https://sulianproxy.com/register')
-logger.info('打开xd url')
-time.sleep(2)
-tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
-ele = tab.ele('css=#input-1')
-ele.input(sign_email)
-ele = tab.ele('css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(1) > div > div.v-input.v-input--horizontal.v-input--center-affix.v-input--density-compact.v-locale--is-ltr.v-input--dirty.v-text-field.v-select.v-select--single.v-select--selected.register-email-suffix > div > div > div.v-field__field > div > div > span')
-logger.info(ele)
+# 开始执行自动化流
 try:
-    ele.select.by_value('outlook.com')
-    ele.click()
-except:
-    pass
-time.sleep(1)
-tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+    tab.get('https://sulianproxy.com/register')
+    logger.info('打开网页：https://sulianproxy.com/register')
+    time.sleep(2)
+    tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
+
+    # 1. 输入邮箱用户名 (根据 placeholder 定位最稳妥)
+    email_input = tab.ele("xpath://input[@placeholder='输入邮箱']")
+    email_input.input(sign_email)
+    logger.info(f'已输入邮箱用户名: {sign_email}')
+
+    # 2. 核心修改：点击邮箱后缀下拉栏
+    # 在 Vuetify 3 结构中，默认选中的是 @qq.com。点击它的父级或自身即可展开选项框。
+    suffix_dropdown = tab.ele("text:@qq.com")
+    if suffix_dropdown:
+        suffix_dropdown.click()
+        logger.info('已成功点击展开邮箱后缀下拉框')
+        time.sleep(0.5)  # 等待下拉列表动画渲染渲染出来
+        
+        # 3. 选择 outlook 后缀
+        # 弹出的列表会渲染在 body 的全局浮层里，直接点击文本包含 'outlook' 的行即可
+        outlook_option = tab.ele("text:outlook")
+        if outlook_option:
+            outlook_option.click()
+            logger.info('已成功选择 outlook.com 后缀')
+        else:
+            logger.error('未找到 outlook 选项，请检查页面是否支持该后缀')
+    else:
+        logger.error('未找到默认的 @qq.com 下拉触发器')
+
+    time.sleep(0.5)
+    tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+
+    # ================== 以下为你续写的注册后续流程 ==================
+
+    # 4. 输入密码和确认密码 (使用页面属性定位)
+    password_input = tab.ele("xpath://input[@placeholder='输入密码']")
+    password_input.input("YourSecurePass123!") # 换成你要填写的统一密码
+    
+    confirm_password_input = tab.ele("xpath://input[@placeholder='确认密码']")
+    confirm_password_input.input("YourSecurePass123!")
+    logger.info('已填写密码与确认密码')
+
+    # 5. 点击“发送验证码”按钮
+    # 源码中按钮包含文本“发送验证码”
+    send_code_btn = tab.ele("text:发送验证码")
+    if send_code_btn:
+        send_code_btn.click()
+        logger.info('已点击发送验证码按钮，请在后续逻辑中加入读取邮箱验证码')
+        time.sleep(2)
+        tab.get_screenshot(path=r"xd/已发验证码.png", full_page=True)
+    else:
+        logger.error('未找到发送验证码按钮')
 # try:
 #     ele = tab.ele('text=点击注册')
 #     ele.click()
