@@ -68,8 +68,8 @@ try:
     tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
 
     # 1. 输入邮箱用户名 (根据 placeholder 定位最稳妥)
-    email_input = tab.ele("xpath://input[@placeholder='输入邮箱']")
-    email_input.input(sign_email)
+    ele = tab.ele('css=#input-11')
+    ele.input(sign_email)
     logger.info(f'已输入邮箱用户名: {sign_email}')
 
     # 2. 核心修改：点击邮箱后缀下拉栏
@@ -97,23 +97,23 @@ try:
     # ================== 以下为你续写的注册后续流程 ==================
 
     # 4. 输入密码和确认密码 (使用页面属性定位)
-    password_input = tab.ele("xpath://input[@placeholder='输入密码']")
-    password_input.input("YourSecurePass123!") # 换成你要填写的统一密码
+    # password_input = tab.ele("xpath://input[@placeholder='输入密码']")
+    # password_input.input("YourSecurePass123!") # 换成你要填写的统一密码
     
-    confirm_password_input = tab.ele("xpath://input[@placeholder='确认密码']")
-    confirm_password_input.input("YourSecurePass123!")
-    logger.info('已填写密码与确认密码')
+    # confirm_password_input = tab.ele("xpath://input[@placeholder='确认密码']")
+    # confirm_password_input.input("YourSecurePass123!")
+    # logger.info('已填写密码与确认密码')
 
-    # 5. 点击“发送验证码”按钮
-    # 源码中按钮包含文本“发送验证码”
-    send_code_btn = tab.ele("text:发送验证码")
-    if send_code_btn:
-        send_code_btn.click()
-        logger.info('已点击发送验证码按钮，请在后续逻辑中加入读取邮箱验证码')
-        time.sleep(2)
-        tab.get_screenshot(path=r"xd/已发验证码.png", full_page=True)
-    else:
-        logger.error('未找到发送验证码按钮')
+    # # 5. 点击“发送验证码”按钮
+    # # 源码中按钮包含文本“发送验证码”
+    # send_code_btn = tab.ele("text:发送验证码")
+    # if send_code_btn:
+    #     send_code_btn.click()
+    #     logger.info('已点击发送验证码按钮，请在后续逻辑中加入读取邮箱验证码')
+    #     time.sleep(2)
+    #     tab.get_screenshot(path=r"xd/已发验证码.png", full_page=True)
+    # else:
+    #     logger.error('未找到发送验证码按钮')
 # try:
 #     ele = tab.ele('text=点击注册')
 #     ele.click()
