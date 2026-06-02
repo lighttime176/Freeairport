@@ -320,6 +320,13 @@ try:
 
 
 
+except Exception as main_e:
+    logger.error(f'自动化执行流程中发生异常: {main_e}')
+    tab.get_screenshot(path=r"xd/异常错误截图.png", full_page=True)
 
+finally:
+    # 无论成功失败，关闭浏览器释放内存
+    browser.quit()
+    logger.info('浏览器已关闭，主程序退出。')
 
-browser.quit()
+# browser.quit()
