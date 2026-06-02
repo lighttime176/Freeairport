@@ -9,3 +9,10 @@ Method: ele()
 Arguments: {'locator': "xpath://input[@placeholder='输入邮箱']", 'index': 1, 'timeout': 10}
 Version: 4.1.1.4
 2026-06-02 14:05:16,839 - INFO - 浏览器已关闭，主程序退出。
+2026-06-02 14:09:26,764 - INFO - 打开网页：https://sulianproxy.com/register
+2026-06-02 14:09:39,086 - ERROR - 自动化执行流程中发生异常: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#input-11', 'index': 1, 'timeout': 10}
+Version: 4.1.1.4
+2026-06-02 14:09:40,357 - INFO - 浏览器已关闭，主程序退出。
