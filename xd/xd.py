@@ -338,9 +338,8 @@ except:
 
 image_to_scan = "xd/qr_code.svg" 
 data = scan_qr_native(image_to_scan)
-print(data)
-# with open("xd/urls.txt", "w") as file:
-#     file.write(data + "\n")
+
+
 # ele = tab.ele('text=注册新账户')
 # ele1 = tab.ele('css=#confirm-register')
 # ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
