@@ -336,7 +336,7 @@ try:
 except:
     pass
 
-image_to_scan = "xd/qr_code.svg" 
+image_to_scan = "xd/dashboard_qr.png" 
 data = scan_qr_native(image_to_scan)
 
 
