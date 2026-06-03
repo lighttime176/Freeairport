@@ -361,7 +361,7 @@ except KeyError:
     print("❌ 转换失败：链接中未包含有效的 'url' 参数")
 except Exception as e:
     print(f"❌ 解析发生错误: {e}")
-with open("urls.txt", "w") as file:
+with open("xd/urls.txt", "w") as file:
     file.write(sub_url + "\n")
 number += 1
 # 将更新后的数字写回文件
