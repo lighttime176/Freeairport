@@ -9,6 +9,7 @@ import subprocess
 import cv2
 import base64
 import binascii
+from urllib.parse import urlparse, parse_qs, unquote
 # 读取 email.txt 文件
 file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
 with open(file_path, 'r', encoding='utf-8') as f:
@@ -338,8 +339,30 @@ except:
 
 image_to_scan = "xd/dashboard_qr.png" 
 data = scan_qr_native(image_to_scan)
+try:
+    # 2. 解析链接结构
+    parsed_url = urlparse(data)
+    
+    # 3. 提取其中的 Query 参数（即 ? 后面的 url 和 name）
+    query_params = parse_qs(parsed_url.query)
+    
+    # 4. 从参数中取出 url 并进行 URL 解码
+    # query_params['url'][0] 拿到的是经过编码的字符串，unquote 将其还原为正常的 https:// 网址
+    sub_url = unquote(query_params['url'][0])
+    
+    # 5. 顺便提取出对应的订阅名称（别名）
+    sub_name = unquote(query_params['name'][0]) if 'name' in query_params else "未命名"
+    
+    # 6. 打印输出转换后的标准订阅链接
+    print(f"【配置名称】: {sub_name}")
+    print(f"【标准订阅链接】: {sub_url}")
 
-
+except KeyError:
+    print("❌ 转换失败：链接中未包含有效的 'url' 参数")
+except Exception as e:
+    print(f"❌ 解析发生错误: {e}")
+with open("urls.txt", "w") as file:
+    file.write(sub_url + "\n")
 # ele = tab.ele('text=注册新账户')
 # ele1 = tab.ele('css=#confirm-register')
 # ele2 = tab.ele('css=body > div.page.page-center > div > div.card.card-md > div > div.form-footer')
