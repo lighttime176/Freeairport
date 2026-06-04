@@ -254,9 +254,9 @@ try:
     for link in set(matches):
         logger.info(f"找到订阅链接: {link}")
 except:
-    with open(r"./test_browser.html", "w", encoding="utf-8") as f:
+    with open(r"coco/test_browser.html", "w", encoding="utf-8") as f:
         f.write(tab.html)
-    with open('test_browser.html', 'r', encoding='utf-8') as f:
+    with open('coco/test_browser.html', 'r', encoding='utf-8') as f:
         html_content = f.read()
 
     # 匹配以 https 开头，包含该域名的 clash 订阅链接
