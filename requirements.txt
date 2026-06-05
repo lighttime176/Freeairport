@@ -4,4 +4,5 @@ beautifulsoup4
 pyperclip
 opencv-python
 opencv-python-headless
+pyzbar
 
