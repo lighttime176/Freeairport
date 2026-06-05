@@ -346,3 +346,17 @@ Traceback (most recent call last):
 ValueError: OpenCV 未能在截图中识别到有效的二维码
 
 2026-06-05 18:03:30,385 - INFO - 浏览器服务已安全退出，主流程结束。
+2026-06-05 18:30:14,205 - INFO - 当前跳转 URL: https://sulianproxy.com/dashboard
+2026-06-05 18:30:19,479 - INFO - 正在自动关闭弹窗...
+2026-06-05 18:30:23,856 - INFO - 正在查找 Clash QR 二维码按钮...
+2026-06-05 18:30:23,892 - INFO - 查找二维码按钮结果: CLICKED_QR
+2026-06-05 18:30:26,958 - INFO - 【配置名称】: 迅达
+2026-06-05 18:30:26,959 - INFO - 【标准订阅链接】: https://resu.slabcde.top/amg8sl/e6a5c0139813267ed73cb15ba8707d18
+2026-06-05 18:30:26,961 - ERROR - 自动化脚本执行遇到致命错误:
+Traceback (most recent call last):
+  File "/Users/runner/work/Freeairport/Freeairport/xd/xd.py", line 366, in main
+    number += 1
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'number' where it is not associated with a value
+
+2026-06-05 18:30:28,821 - INFO - 浏览器服务已安全退出，主流程结束。
