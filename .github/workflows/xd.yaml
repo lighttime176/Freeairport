@@ -33,8 +33,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.12"
-    - name: Install zbar on macOS
-      run: brew install zbar
+
     # 安装依赖（如果有 requirements.txt）
     - name: Install dependencies
       run: |
