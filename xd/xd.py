@@ -107,15 +107,15 @@ def main():
     #     sign_email = emails[number]
     #     logger.info(f"当前使用的邮箱前缀: {sign_email}")
 
-    #     # ---- 浏览器配置 ----
-    #     co = ChromiumOptions().auto_port()
-    #     co.headless(True)   # 无头模式
-    #     co.set_argument('--no-sandbox')
-    #     co.set_argument('--headless=new')
-    #     co.set_paths(browser_path="/opt/google/chrome/google-chrome")
+        # ---- 浏览器配置 ----
+        co = ChromiumOptions().auto_port()
+        co.headless(True)   # 无头模式
+        co.set_argument('--no-sandbox')
+        co.set_argument('--headless=new')
+        co.set_paths(browser_path="/opt/google/chrome/google-chrome")
 
-    #     page = ChromiumPage(addr_or_opts=co)
-    #     tab = page.latest_tab  # 保持页面对象调用规范
+        page = ChromiumPage(addr_or_opts=co)
+        tab = page.latest_tab  # 保持页面对象调用规范
 
     #     # ---- 1. 访问注册页面 ----
     #     tab.get("https://sulianproxy.com/register")
