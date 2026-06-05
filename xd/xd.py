@@ -16,7 +16,8 @@ from bs4 import BeautifulSoup
 import cv2
 from DrissionPage import ChromiumOptions, ChromiumPage
 import requests
-from pyzbar.pyzbar import decode
+from PIL import Image
+import zxingcpp
 
 # ==========================================
 # 1. 微信通知配置与函数
@@ -61,21 +62,15 @@ logger = logging_init()
 # ==========================================
 # 3. 工具函数
 # ==========================================
-def scan_complex_screenshot_pyzbar(image_path):
-    """使用 pyzbar 识别带背景的截图"""
-    img = cv2.imread(image_path)
-    if img is None:
-        print("无法读取图片")
-        return None
-
-    # pyzbar 会扫描整张图的特征，无视弹窗和网页干扰
-    barcodes = decode(img)
-
-    for barcode in barcodes:
-        if barcode.type == 'QRCODE':
-            # 解码并转换为字符串
-            return barcode.data.decode('utf-8')
-
+def scan_qr(image_path):
+    try:
+        img = Image.open(image_path)
+        results = zxingcpp.read_barcodes(img)
+        for result in results:
+            if result.format == zxingcpp.BarcodeFormat.QRCode:
+                return result.text
+    except Exception as e:
+        print(f"识别出错: {e}")
     return None
 
 # ==========================================
@@ -325,7 +320,7 @@ def main():
         """)
         time.sleep(0.5)
         tab.get_screenshot(path=r"xd/4.png", full_page=True)
-        qr_data = scan_complex_screenshot_pyzbar("xd/4.png")
+        qr_data = scan_qr("xd/4.png")
 
         if qr_data:
             print("🎉 pyzbar 成功提取数据：")
@@ -349,9 +344,9 @@ def main():
         #     logger.info(f"SVG 二维码源码已备份: {svg_path}")
 
         # ---- 6. 二维码解码与标准链接提取 ----
-        qr_data = scan_qr_native('xd/4.png')
-        if not qr_data:
-            raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
+        # qr_data = scan_qr_native('xd/4.png')
+        # if not qr_data:
+        #     raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
 
         parsed_url = urlparse(qr_data)
         query_params = parse_qs(parsed_url.query)
