@@ -324,9 +324,9 @@ def main():
         """)
         time.sleep(0.5)
         tab.get_screenshot(path=r"xd/4.png", full_page=True)
-        screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_qr.png")
-        tab.get_screenshot(path=screenshot_path, full_page=True)
-        logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
+        # screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_qr.png")
+        # tab.get_screenshot(path=screenshot_path, full_page=True)
+        # logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
 
         # 备份 SVG 二维码内容
         # svg_content = tab.run_js("""
@@ -341,7 +341,7 @@ def main():
         #     logger.info(f"SVG 二维码源码已备份: {svg_path}")
 
         # ---- 6. 二维码解码与标准链接提取 ----
-        qr_data = scan_qr_native('xd/dashboard_qr.png')
+        qr_data = scan_qr_native('xd/4.png')
         if not qr_data:
             raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
 
