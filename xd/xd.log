@@ -334,3 +334,15 @@ Traceback (most recent call last):
 ValueError: OpenCV 未能在截图中识别到有效的二维码
 
 2026-06-05 17:58:35,695 - INFO - 浏览器服务已安全退出，主流程结束。
+2026-06-05 18:03:14,770 - INFO - 当前跳转 URL: https://sulianproxy.com/dashboard
+2026-06-05 18:03:20,150 - INFO - 正在自动关闭弹窗...
+2026-06-05 18:03:25,100 - INFO - 正在查找 Clash QR 二维码按钮...
+2026-06-05 18:03:25,197 - INFO - 查找二维码按钮结果: CLICKED_QR
+2026-06-05 18:03:28,369 - WARNING - 未检测到二维码。
+2026-06-05 18:03:28,373 - ERROR - 自动化脚本执行遇到致命错误:
+Traceback (most recent call last):
+  File "/Users/runner/work/Freeairport/Freeairport/xd/xd.py", line 346, in main
+    raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
+ValueError: OpenCV 未能在截图中识别到有效的二维码
+
+2026-06-05 18:03:30,385 - INFO - 浏览器服务已安全退出，主流程结束。
