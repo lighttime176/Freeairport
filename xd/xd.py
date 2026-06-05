@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 import cv2
 from DrissionPage import ChromiumOptions, ChromiumPage
 import requests
+from pyzbar.pyzbar import decode
 
 # ==========================================
 # 1. 微信通知配置与函数
@@ -60,22 +61,22 @@ logger = logging_init()
 # ==========================================
 # 3. 工具函数
 # ==========================================
-def scan_qr_native(image_path):
-    """使用 OpenCV 检测并解码二维码"""
+def scan_complex_screenshot_pyzbar(image_path):
+    """使用 pyzbar 识别带背景的截图"""
     img = cv2.imread(image_path)
     if img is None:
-        logger.error(f"Error: Could not read image {image_path}")
+        print("无法读取图片")
         return None
 
-    detector = cv2.QRCodeDetector()
-    data, bbox, straight_qrcode = detector.detectAndDecode(img)
-    
-    if data:
-        logger.info(f"二维码识别成功！内容: {data}")
-        return data
-    else:
-        logger.warning("未检测到二维码。")
-        return None
+    # pyzbar 会扫描整张图的特征，无视弹窗和网页干扰
+    barcodes = decode(img)
+
+    for barcode in barcodes:
+        if barcode.type == 'QRCODE':
+            # 解码并转换为字符串
+            return barcode.data.decode('utf-8')
+
+    return None
 
 # ==========================================
 # 4. 主执行流程
@@ -324,6 +325,13 @@ def main():
         """)
         time.sleep(0.5)
         tab.get_screenshot(path=r"xd/4.png", full_page=True)
+        qr_data = scan_complex_screenshot_pyzbar("xd/4.png")
+
+        if qr_data:
+            print("🎉 pyzbar 成功提取数据：")
+            print(qr_data)
+        else:
+            print("❌ pyzbar 识别失败")
         # screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_qr.png")
         # tab.get_screenshot(path=screenshot_path, full_page=True)
         # logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
