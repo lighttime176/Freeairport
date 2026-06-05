@@ -85,172 +85,172 @@ def main():
     sign_email = "未知"
     sub_url = None
     
-    try:
-        # ---- 读取 email.txt ----
-        file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        emails = ast.literal_eval(content)
+    # try:
+    #     # ---- 读取 email.txt ----
+    #     file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
+    #     with open(file_path, 'r', encoding='utf-8') as f:
+    #         content = f.read()
+    #     emails = ast.literal_eval(content)
 
-        # ---- 读取/初始化 计数器 ----
-        num_file_path = "xd/xdnum.txt"
-        if not os.path.exists(num_file_path):
-            with open(num_file_path, "w", encoding="utf-8") as file:
-                file.write("0")
+    #     # ---- 读取/初始化 计数器 ----
+    #     num_file_path = "xd/xdnum.txt"
+    #     if not os.path.exists(num_file_path):
+    #         with open(num_file_path, "w", encoding="utf-8") as file:
+    #             file.write("0")
 
-        with open(num_file_path, "r", encoding="utf-8") as file:
-            try:
-                number = int(file.read().strip())
-            except ValueError:
-                number = 0  
+    #     with open(num_file_path, "r", encoding="utf-8") as file:
+    #         try:
+    #             number = int(file.read().strip())
+    #         except ValueError:
+    #             number = 0  
                 
-        sign_email = emails[number]
-        logger.info(f"当前使用的邮箱前缀: {sign_email}")
+    #     sign_email = emails[number]
+    #     logger.info(f"当前使用的邮箱前缀: {sign_email}")
 
-        # ---- 浏览器配置 ----
-        co = ChromiumOptions().auto_port()
-        co.headless(True)   # 无头模式
-        co.set_argument('--no-sandbox')
-        co.set_argument('--headless=new')
-        co.set_paths(browser_path="/opt/google/chrome/google-chrome")
+    #     # ---- 浏览器配置 ----
+    #     co = ChromiumOptions().auto_port()
+    #     co.headless(True)   # 无头模式
+    #     co.set_argument('--no-sandbox')
+    #     co.set_argument('--headless=new')
+    #     co.set_paths(browser_path="/opt/google/chrome/google-chrome")
 
-        page = ChromiumPage(addr_or_opts=co)
-        tab = page.latest_tab  # 保持页面对象调用规范
+    #     page = ChromiumPage(addr_or_opts=co)
+    #     tab = page.latest_tab  # 保持页面对象调用规范
 
-        # ---- 1. 访问注册页面 ----
-        tab.get("https://sulianproxy.com/register")
-        tab.wait.doc_loaded()
-        time.sleep(2)
-        tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
-        logger.info(f"[OK] 页面加载成功: {tab.title}")
+    #     # ---- 1. 访问注册页面 ----
+    #     tab.get("https://sulianproxy.com/register")
+    #     tab.wait.doc_loaded()
+    #     time.sleep(2)
+    #     tab.get_screenshot(path=r"xd/打开网页.png", full_page=True)
+    #     logger.info(f"[OK] 页面加载成功: {tab.title}")
 
-        tab.run_js("window.focus();")
+    #     tab.run_js("window.focus();")
 
-        # 输入邮箱前缀
-        tab.ele("#input-1").input(sign_email)
-        logger.info(f"[OK] 已输入邮箱前缀: {sign_email}")
-        tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
+    #     # 输入邮箱前缀
+    #     tab.ele("#input-1").input(sign_email)
+    #     logger.info(f"[OK] 已输入邮箱前缀: {sign_email}")
+    #     tab.get_screenshot(path=r"xd/输入邮箱.png", full_page=True)
         
-        # 展开下拉框并选择 outlook
-        for d in tab.eles("tag:div"):
-            cls = d.attr("class") or ""
-            if "register-email-suffix" in cls:
-                d.click()
-                break
-        time.sleep(1.5)
+    #     # 展开下拉框并选择 outlook
+    #     for d in tab.eles("tag:div"):
+    #         cls = d.attr("class") or ""
+    #         if "register-email-suffix" in cls:
+    #             d.click()
+    #             break
+    #     time.sleep(1.5)
 
-        result = tab.run_js("""
-            const items = document.querySelectorAll('.v-list-item');
-            for (const item of items) {
-                const title = item.querySelector('.v-list-item-title');
-                if (title && title.textContent.includes('@outlook.com')) {
-                    item.click();
-                    return 'OK';
-                }
-            }
-            return 'NOT_FOUND';
-        """)
-        logger.info(f"[OK] 选择 @outlook.com ({result})")
-        time.sleep(0.5)
+    #     result = tab.run_js("""
+    #         const items = document.querySelectorAll('.v-list-item');
+    #         for (const item of items) {
+    #             const title = item.querySelector('.v-list-item-title');
+    #             if (title && title.textContent.includes('@outlook.com')) {
+    #                 item.click();
+    #                 return 'OK';
+    #             }
+    #         }
+    #         return 'NOT_FOUND';
+    #     """)
+    #     logger.info(f"[OK] 选择 @outlook.com ({result})")
+    #     time.sleep(0.5)
         
-        # 输入密码并提交
-        tab.ele("#input-3").input("11111111")
-        tab.ele("#input-6").input("11111111")
-        logger.info("[OK] 已输入密码")
+    #     # 输入密码并提交
+    #     tab.ele("#input-3").input("11111111")
+    #     tab.ele("#input-6").input("11111111")
+    #     logger.info("[OK] 已输入密码")
         
-        tab.ele('css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(2) > div > button > span.v-btn__content').click()
+    #     tab.ele('css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(2) > div > button > span.v-btn__content').click()
         
-        # 确认弹窗
-        tab.ele("css=body > div.v-overlay-container > div > div.v-overlay__content > div > div.v-card-actions.px-6.pb-6.pt-0 > button > span.v-btn__content").click()
-        time.sleep(0.5)
-        tab.get_screenshot(path=r"xd/over.png", full_page=True)
+    #     # 确认弹窗
+    #     tab.ele("css=body > div.v-overlay-container > div > div.v-overlay__content > div > div.v-card-actions.px-6.pb-6.pt-0 > button > span.v-btn__content").click()
+    #     time.sleep(0.5)
+    #     tab.get_screenshot(path=r"xd/over.png", full_page=True)
 
-        # ---- 2. 等待接收邮件 ----
-        for i in range(30):
-            time.sleep(1)
-            logger.info(f"等待邮箱中，第 {i+1} S")
+    #     # ---- 2. 等待接收邮件 ----
+    #     for i in range(30):
+    #         time.sleep(1)
+    #         logger.info(f"等待邮箱中，第 {i+1} S")
 
-        # IMAP 读取 163 邮箱
-        EMAIL_ADDRESS = 'luo1764682172@163.com'
-        EMAIL_PASSWORD = os.environ.get("ydyp")  # 从环境变量获取授权码
+    #     # IMAP 读取 163 邮箱
+    #     EMAIL_ADDRESS = 'luo1764682172@163.com'
+    #     EMAIL_PASSWORD = os.environ.get("ydyp")  # 从环境变量获取授权码
 
-        server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
-        logger.info('连接网易服务器成功')
+    #     server = imaplib.IMAP4_SSL(host='imap.163.com', port=993)
+    #     logger.info('连接网易服务器成功')
 
-        imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
-        args = ("name", "imaplib", "version", "1.0.0")
-        typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
-        server._untagged_response(typ, dat, 'ID')
+    #     imaplib.Commands['ID'] = ('NONAUTH', 'AUTH', 'SELECTED')
+    #     args = ("name", "imaplib", "version", "1.0.0")
+    #     typ, dat = server._simple_command('ID', '("' + '" "'.join(args) + '")')
+    #     server._untagged_response(typ, dat, 'ID')
 
-        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-        logger.info('登录邮箱服务器成功')
+    #     server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+    #     logger.info('登录邮箱服务器成功')
 
-        server.select("INBOX")
-        typ, data = server.search(None, 'ALL')
-        all_ids = data[0].split()
-        logger.info(f'共找到 {len(all_ids)} 封邮件')
+    #     server.select("INBOX")
+    #     typ, data = server.search(None, 'ALL')
+    #     all_ids = data[0].split()
+    #     logger.info(f'共找到 {len(all_ids)} 封邮件')
 
-        latest_ids = all_ids[-5:]
-        fetch_data_lst = []
-        for num in latest_ids:
-            typ, fetch_data = server.fetch(num, '(RFC822)')
-            fetch_data_lst.append(fetch_data)
+    #     latest_ids = all_ids[-5:]
+    #     fetch_data_lst = []
+    #     for num in latest_ids:
+    #         typ, fetch_data = server.fetch(num, '(RFC822)')
+    #         fetch_data_lst.append(fetch_data)
 
-        fetch_data = fetch_data_lst[-1]
-        msg = email.message_from_bytes(fetch_data[0][1])
+    #     fetch_data = fetch_data_lst[-1]
+    #     msg = email.message_from_bytes(fetch_data[0][1])
         
-        subject_parts = decode_header(msg['subject'])
-        decoded_subject = ''.join([
-            (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
-            for part, charset in subject_parts
-        ])
-        logger.info(f'最新邮件主题: {decoded_subject}')
+    #     subject_parts = decode_header(msg['subject'])
+    #     decoded_subject = ''.join([
+    #         (part.decode(charset or "utf-8") if isinstance(part, bytes) else part)
+    #         for part, charset in subject_parts
+    #     ])
+    #     logger.info(f'最新邮件主题: {decoded_subject}')
         
-        body = ""
-        if msg.is_multipart():
-            for part in msg.walk():
-                content_type = part.get_content_type()
-                content_dispo = str(part.get("Content-Disposition"))
-                if content_type in ["text/plain", "text/html"] and "attachment" not in content_dispo:
-                    charset = part.get_content_charset() or 'utf-8'
-                    body = part.get_payload(decode=True).decode(charset, errors="replace")
-                    break
-        else:
-            charset = msg.get_content_charset() or 'utf-8'
-            body = msg.get_payload(decode=True).decode(charset, errors="replace")
+    #     body = ""
+    #     if msg.is_multipart():
+    #         for part in msg.walk():
+    #             content_type = part.get_content_type()
+    #             content_dispo = str(part.get("Content-Disposition"))
+    #             if content_type in ["text/plain", "text/html"] and "attachment" not in content_dispo:
+    #                 charset = part.get_content_charset() or 'utf-8'
+    #                 body = part.get_payload(decode=True).decode(charset, errors="replace")
+    #                 break
+    #     else:
+    #         charset = msg.get_content_charset() or 'utf-8'
+    #         body = msg.get_payload(decode=True).decode(charset, errors="replace")
 
-        if "<html" in body.lower():
-            soup = BeautifulSoup(body, "html.parser")
-            text = soup.get_text(separator=' ', strip=True)
-            text = re.sub(r'\s+', ' ', text)
-        else:
-            text = body
+    #     if "<html" in body.lower():
+    #         soup = BeautifulSoup(body, "html.parser")
+    #         text = soup.get_text(separator=' ', strip=True)
+    #         text = re.sub(r'\s+', ' ', text)
+    #     else:
+    #         text = body
 
-        logger.info(f'纯文本正文:\n{text}')
+    #     logger.info(f'纯文本正文:\n{text}')
 
-        # 匹配验证码
-        match = re.search(r'请忽略此邮件。 ([a-zA-Z0-9]+)', text)
-        if not match:
-            match = re.search(r'\b\d{6}\b', text)
+    #     # 匹配验证码
+    #     match = re.search(r'请忽略此邮件。 ([a-zA-Z0-9]+)', text)
+    #     if not match:
+    #         match = re.search(r'\b\d{6}\b', text)
 
-        if match:
-            code = match.group(1)
-            logger.info(f'提取验证码成功: {code}')
-        else:
-            logger.error('未找到验证码')
-            raise ValueError("未从邮件正文中匹配到有效的验证码")
+    #     if match:
+    #         code = match.group(1)
+    #         logger.info(f'提取验证码成功: {code}')
+    #     else:
+    #         logger.error('未找到验证码')
+    #         raise ValueError("未从邮件正文中匹配到有效的验证码")
 
-        # ---- 3. 输入验证码并创建账号 ----
-        tab.ele("#input-15").input(code)
-        logger.info('[OK] 已输入验证码')
-        tab.get_screenshot(path=r"xd/输完验证码.png", full_page=True)
-        time.sleep(0.5)
+    #     # ---- 3. 输入验证码并创建账号 ----
+    #     tab.ele("#input-15").input(code)
+    #     logger.info('[OK] 已输入验证码')
+    #     tab.get_screenshot(path=r"xd/输完验证码.png", full_page=True)
+    #     time.sleep(0.5)
         
-        for btn in tab.eles("tag:button"):
-            if btn.text.strip() == "创建账号":
-                btn.click()
-                logger.info("[OK] 已点击「创建账号」按钮")
-                break
+    #     for btn in tab.eles("tag:button"):
+    #         if btn.text.strip() == "创建账号":
+    #             btn.click()
+    #             logger.info("[OK] 已点击「创建账号」按钮")
+    #             break
         
         # ---- 4. 登录账户 ----
         tab.get("https://sulianproxy.com/login")
@@ -258,6 +258,7 @@ def main():
         time.sleep(2)
         
         FULL_EMAIL = sign_email + '@outlook.com'
+        FULL_EMAIL = 'a1fgbf6666@outlook.com'
         PASSWORD = '11111111'
         
         if "login" in tab.url.lower():
@@ -288,7 +289,7 @@ def main():
             }
         """)
         time.sleep(3)
-
+        tab.get_screenshot(path=r"xd/2.png", full_page=True)
         # ---- 5. 触发 Clash 二维码弹窗 ----
         logger.info("正在查找 Clash QR 二维码按钮...")
         click_result = tab.run_js("""
@@ -311,7 +312,7 @@ def main():
         """)
         logger.info(f"查找二维码按钮结果: {click_result}")
         time.sleep(2)
-
+        tab.get_screenshot(path=r"xd/3.png", full_page=True)
         # 美化弹窗并截图
         tab.run_js("""
             var dialog = document.querySelector('.v-overlay--active.v-dialog .scan-dialog');
@@ -322,7 +323,7 @@ def main():
             }
         """)
         time.sleep(0.5)
-
+        tab.get_screenshot(path=r"xd/4.png", full_page=True)
         screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xd/dashboard_qr.png")
         tab.get_screenshot(path=screenshot_path, full_page=True)
         logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
