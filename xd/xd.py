@@ -324,7 +324,7 @@ def main():
         """)
         time.sleep(0.5)
         tab.get_screenshot(path=r"xd/4.png", full_page=True)
-        screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xd/dashboard_qr.png")
+        screenshot_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard_qr.png")
         tab.get_screenshot(path=screenshot_path, full_page=True)
         logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
 
@@ -335,7 +335,7 @@ def main():
             return 'NO_SVG';
         """)
         if svg_content != "NO_SVG":
-            svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xd/qr_code.svg")
+            svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "qr_code.svg")
             with open(svg_path, "w", encoding="utf-8") as f:
                 f.write(svg_content)
             logger.info(f"SVG 二维码源码已备份: {svg_path}")
