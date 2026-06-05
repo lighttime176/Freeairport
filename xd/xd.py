@@ -85,7 +85,7 @@ def main():
     sign_email = "未知"
     sub_url = None
     
-    # try:
+    try:
     #     # ---- 读取 email.txt ----
     #     file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
     #     with open(file_path, 'r', encoding='utf-8') as f:
