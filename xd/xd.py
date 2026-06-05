@@ -329,19 +329,19 @@ def main():
         logger.info(f"后台二维码弹窗截图已保存: {screenshot_path}")
 
         # 备份 SVG 二维码内容
-        svg_content = tab.run_js("""
-            var svg = document.querySelector('.scan-dialog__qr-card svg');
-            if (svg) return svg.outerHTML;
-            return 'NO_SVG';
-        """)
-        if svg_content != "NO_SVG":
-            svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "qr_code.svg")
-            with open(svg_path, "w", encoding="utf-8") as f:
-                f.write(svg_content)
-            logger.info(f"SVG 二维码源码已备份: {svg_path}")
+        # svg_content = tab.run_js("""
+        #     var svg = document.querySelector('.scan-dialog__qr-card svg');
+        #     if (svg) return svg.outerHTML;
+        #     return 'NO_SVG';
+        # """)
+        # if svg_content != "NO_SVG":
+        #     svg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "qr_code.svg")
+        #     with open(svg_path, "w", encoding="utf-8") as f:
+        #         f.write(svg_content)
+        #     logger.info(f"SVG 二维码源码已备份: {svg_path}")
 
         # ---- 6. 二维码解码与标准链接提取 ----
-        qr_data = scan_qr_native('xd/qr_code.svg')
+        qr_data = scan_qr_native('xd/dashboard_qr.png')
         if not qr_data:
             raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
 
