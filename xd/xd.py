@@ -341,7 +341,7 @@ def main():
             logger.info(f"SVG 二维码源码已备份: {svg_path}")
 
         # ---- 6. 二维码解码与标准链接提取 ----
-        qr_data = scan_qr_native(screenshot_path)
+        qr_data = scan_qr_native('xd/qr_code.svg')
         if not qr_data:
             raise ValueError("OpenCV 未能在截图中识别到有效的二维码")
 
