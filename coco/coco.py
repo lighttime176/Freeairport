@@ -272,7 +272,7 @@ def main():
                 
             # 【核心推送1】：成功获取订阅通知
             send_notification(
-                title="🎉 账号注册成功通知", 
+                title="🎉 COCO账号注册成功通知", 
                 content=f"邮箱: {sign_email}\n成功提取订阅:\n{link}"
             )
         else:
