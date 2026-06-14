@@ -9,10 +9,8 @@
 
 
 
-	'e1rggpp45'	,'f1uippp99'	,'e1gjjuuu7',	'f1yiuio777',	'e1gdfgfg444',
-    'f1hjkuu777',	'e1dgfsdg444'	,'f1uiyimm77'	,'e1rtrtybnb5',	'f1ioio88',
-    'e1tghmmm4',	'f1uo8886'	,'e1jyjghn666'	,'f1uiyouio7'	,'e1rhgrtu5',
-    'f1trhjty55',	'e1fgdrg344',	'f1uky888'	,'e1fhdt555',	'f1jku8777'	,
+	'e1dsfd222'	,'f1rytym78',	'e1gbfgh55',	'f1jkhjk6',	'e1dfgh44',	'f1fghgh55'	,'e1fgnnn6',	'f1gfhhn5'	,'e1bgfdg5',	'f1dfsadf344',	'e1vbfgdb',	'f1bnb66hn'	,'e1dfbg44'	,'f1dfbfgh66'	,'e1casdf44'	,'f1fdgbhg6'	,'e1gfdh5'	,'f1fgdrfg5','e1fdh5444'	,'f1ghjfgh766',	
+
 
 
 	'g1dfsef333'	,'h1ghft66879'	,'g1fgdhfth555'	,'h1yhiu777'	,'g1kln66'	,
