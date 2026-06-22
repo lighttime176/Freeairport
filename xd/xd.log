@@ -576,3 +576,22 @@ UnboundLocalError: cannot access local variable 'number' where it is not associa
 2026-06-21 16:13:36,380 - INFO - 【标准订阅链接】: https://resu.slabcde.top/amg8sl/e6a5c0139813267ed73cb15ba8707d18
 2026-06-21 16:13:36,380 - INFO - 成功更新计数器。新数字已写入: 8
 2026-06-21 16:13:40,378 - INFO - 浏览器服务已安全退出，主流程结束。
+2026-06-22 16:58:56,221 - INFO - 当前使用的邮箱前缀: a1hmngh777
+2026-06-22 16:59:08,098 - INFO - [OK] 页面加载成功: MALA-PRO
+2026-06-22 16:59:08,182 - INFO - [OK] 已输入邮箱前缀: a1hmngh777
+2026-06-22 16:59:10,257 - INFO - [OK] 选择 @outlook.com (NOT_FOUND)
+2026-06-22 16:59:11,169 - INFO - [OK] 已输入密码
+2026-06-22 16:59:21,265 - ERROR - 自动化脚本执行遇到致命错误:
+Traceback (most recent call last):
+  File "/Users/runner/work/Freeairport/Freeairport/xd/xd.py", line 157, in main
+    tab.ele('css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(2) > div > button > span.v-btn__content').click()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/DrissionPage/_elements/none_element.py", line 37, in __getattr__
+    raise ElementNotFoundError(METHOD=self.method, ARGS=self.args)
+DrissionPage.errors.ElementNotFoundError: 
+No element found.
+Method: ele()
+Arguments: {'locator': 'css=#app > div > div > div.v-row.v-row--no-gutters.bg-containerBg.position-relative > div.v-col-lg-12.v-col-12.d-flex.align-center > div > div > div > div > div > div.v-card-text.pa-sm-10.pa-6 > form > div:nth-child(2) > div > button > span.v-btn__content', 'index': 1, 'timeout': 10}
+Version: 4.1.1.4
+
+2026-06-22 16:59:23,310 - INFO - 浏览器服务已安全退出，主流程结束。
