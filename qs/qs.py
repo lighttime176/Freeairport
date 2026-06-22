@@ -89,7 +89,7 @@ ele = tab.ele('css=#emailPrefix')
 logger.info(ele)
 
 tab.get_screenshot(path=r"./qs/1.png", full_page=True)
-ele = ele.next().child().child().next()
+# ele = ele.next().child().child().next()
 logger.info(ele)
 ele.input(account)
 
