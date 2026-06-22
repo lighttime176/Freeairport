@@ -67,11 +67,11 @@ dns:
     - +.bing.net
     - +.bingapis.com
 proxies:
-- name: '到期时间: 2026-06-22'
+- name: '到期时间: 2026-06-23'
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -85,7 +85,7 @@ proxies:
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -99,7 +99,7 @@ proxies:
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -109,11 +109,11 @@ proxies:
   reality-opts:
     public-key: VoA8WXthSh6CroV4pHK7V6L5gYUw8MHTo2kIVknTXSE
     short-id: 693b25e06841ac7f
-- name: '我的邀请码: df8e3273be'
+- name: '我的邀请码: e4180be3e1'
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -127,7 +127,7 @@ proxies:
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -141,7 +141,7 @@ proxies:
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -155,7 +155,7 @@ proxies:
   type: vless
   server: cdn.hk1.cocoduck.org
   port: 30394
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -169,7 +169,7 @@ proxies:
   type: vless
   server: cdn.hk2.cocoduck.org
   port: 30086
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -183,7 +183,7 @@ proxies:
   type: vless
   server: cdn.hk3.cocoduck.org
   port: 30407
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -197,7 +197,7 @@ proxies:
   type: vless
   server: cdn.hk4.cocoduck.org
   port: 22389
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -211,7 +211,7 @@ proxies:
   type: vless
   server: cdn.hk5.cocoduck.org
   port: 30395
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -225,7 +225,7 @@ proxies:
   type: vless
   server: cdn.hk6.cocoduck.org
   port: 30396
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -239,7 +239,7 @@ proxies:
   type: vless
   server: cdn.hk7.cocoduck.org
   port: 30397
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -253,7 +253,7 @@ proxies:
   type: vless
   server: cdn.hk8.cocoduck.org
   port: 30398
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -267,7 +267,7 @@ proxies:
   type: vless
   server: cdn.tw1.cocoduck.org
   port: 40090
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -281,7 +281,7 @@ proxies:
   type: vless
   server: cdn.tw2.cocoduck.org
   port: 41540
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -295,7 +295,7 @@ proxies:
   type: vless
   server: cdn.tw3.cocoduck.org
   port: 22574
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -309,7 +309,7 @@ proxies:
   type: vless
   server: cdn.tw4.cocoduck.org
   port: 41191
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -323,7 +323,7 @@ proxies:
   type: vless
   server: cdn.jp1.cocoduck.org
   port: 25641
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -337,7 +337,7 @@ proxies:
   type: vless
   server: cdn.jp2.cocoduck.org
   port: 25642
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -351,7 +351,7 @@ proxies:
   type: vless
   server: cdn.jp3.cocoduck.org
   port: 27596
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -365,7 +365,7 @@ proxies:
   type: vless
   server: cdn.jp4.cocoduck.org
   port: 17595
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -379,7 +379,7 @@ proxies:
   type: vless
   server: cdn.sg1.cocoduck.org
   port: 15803
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -393,7 +393,7 @@ proxies:
   type: vless
   server: cdn.sg2.cocoduck.org
   port: 27573
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -407,7 +407,7 @@ proxies:
   type: vless
   server: cdn.sg3.cocoduck.org
   port: 19609
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -421,7 +421,7 @@ proxies:
   type: vless
   server: cdn.sg4.cocoduck.org
   port: 35805
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -435,7 +435,7 @@ proxies:
   type: vless
   server: cdn.us1.cocoduck.org
   port: 25637
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -449,7 +449,7 @@ proxies:
   type: vless
   server: cdn.us2.cocoduck.org
   port: 25638
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -463,7 +463,7 @@ proxies:
   type: vless
   server: cdn.us3.cocoduck.org
   port: 12121
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -477,7 +477,7 @@ proxies:
   type: vless
   server: cdn.us4.cocoduck.org
   port: 44595
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -491,7 +491,7 @@ proxies:
   type: vless
   server: cdn.de1.cocoduck.org
   port: 17890
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -505,7 +505,7 @@ proxies:
   type: vless
   server: cdn.uk1.cocoduck.org
   port: 17891
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -519,7 +519,7 @@ proxies:
   type: vless
   server: cdn.fr1.cocoduck.org
   port: 45080
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -533,7 +533,7 @@ proxies:
   type: vless
   server: cdn.gr1.cocoduck.org
   port: 13062
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -547,7 +547,7 @@ proxies:
   type: vless
   server: cdn.se1.cocoduck.org
   port: 13254
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -561,7 +561,7 @@ proxies:
   type: vless
   server: cdn.nl1.cocoduck.org
   port: 21958
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -575,7 +575,7 @@ proxies:
   type: vless
   server: cdn.be1.cocoduck.org
   port: 36829
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -589,7 +589,7 @@ proxies:
   type: vless
   server: cdn.ch1.cocoduck.org
   port: 13255
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -603,7 +603,7 @@ proxies:
   type: vless
   server: cdn.th1.cocoduck.org
   port: 45071
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -617,7 +617,7 @@ proxies:
   type: vless
   server: cdn.in1.cocoduck.org
   port: 36828
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -631,7 +631,7 @@ proxies:
   type: vless
   server: cdn.in2.cocoduck.org
   port: 36827
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -645,7 +645,7 @@ proxies:
   type: vless
   server: cdn.kr1.cocoduck.org
   port: 17598
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -659,7 +659,7 @@ proxies:
   type: vless
   server: cdn.ua1.cocoduck.org
   port: 41732
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -673,7 +673,7 @@ proxies:
   type: vless
   server: cdn.ie1.cocoduck.org
   port: 41733
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -687,7 +687,7 @@ proxies:
   type: vless
   server: cdn.tr2.cocoduck.org
   port: 22797
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -701,7 +701,7 @@ proxies:
   type: vless
   server: cdn.at1.cocoduck.org
   port: 27741
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -715,7 +715,7 @@ proxies:
   type: vless
   server: cdn.au1.cocoduck.org
   port: 45040
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -729,7 +729,7 @@ proxies:
   type: vless
   server: cdn.ca1.cocoduck.org
   port: 42786
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -743,7 +743,7 @@ proxies:
   type: vless
   server: cdn.ph1.cocoduck.org
   port: 45072
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -757,7 +757,7 @@ proxies:
   type: vless
   server: cdn.kh1.cocoduck.org
   port: 45075
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -771,7 +771,7 @@ proxies:
   type: vless
   server: cdn.id1.cocoduck.org
   port: 45074
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -785,7 +785,7 @@ proxies:
   type: vless
   server: cdn.ru1.cocoduck.org
   port: 45260
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -799,7 +799,7 @@ proxies:
   type: vless
   server: cdn.pt1.cocoduck.org
   port: 56212
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -813,7 +813,7 @@ proxies:
   type: vless
   server: cdn.es1.cocoduck.org
   port: 46974
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -827,7 +827,7 @@ proxies:
   type: vless
   server: cdn.my1.cocoduck.org
   port: 17597
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -841,7 +841,7 @@ proxies:
   type: vless
   server: cdn.ae1.cocoduck.org
   port: 45259
-  uuid: d08f1b4d-7b46-4fb2-9006-140edb8299cc
+  uuid: 2ae045c9-8bac-4063-aa25-00e99b48caed
   udp: true
   network: tcp
   tls: true
@@ -855,10 +855,10 @@ proxy-groups:
 - name: 套餐信息
   type: select
   proxies:
-  - '到期时间: 2026-06-22'
+  - '到期时间: 2026-06-23'
   - '剩余流量: 2 GB (100%)'
   - '官网: COCODUCK.CC'
-  - '我的邀请码: df8e3273be'
+  - '我的邀请码: e4180be3e1'
   - 打不开网站请从官网跳转
   - 无法订阅请重新复制导入
 - name: 节点选择
