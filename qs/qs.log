@@ -245,3 +245,9 @@
 2026-06-25 21:13:07,740 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
 2026-06-25 21:13:16,923 - INFO - 识别成功！内容: https://scripew0312kajwopiujhgs.1000ws.best/qws-subscribe1/820f7a3b0cb6302e6e2c427326bf94c2
 2026-06-25 21:13:17,874 - INFO - 订阅转换成功！
+2026-06-25 21:37:01,620 - INFO - 打开千速 url
+2026-06-25 21:37:04,943 - INFO - 注册邮箱：8764726094@gmail.com
+2026-06-25 21:37:09,977 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
+2026-06-25 21:37:10,331 - INFO - <ChromiumElement input data-v-5be4bd1c='' type='text' id='emailPrefix' class='form-control' placeholder='Enter email prefix' required=''>
+2026-06-25 21:37:19,802 - INFO - 识别成功！内容: https://scripew0312kajwopiujhgs.1000ws.best/qws-subscribe1/481c2a9a8844b16d67b99793598f0c85
+2026-06-25 21:37:20,585 - INFO - 订阅转换成功！
