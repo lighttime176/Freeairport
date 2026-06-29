@@ -1,26 +1,23 @@
-from DrissionPage import ChromiumPage
-from DrissionPage import ChromiumOptions
-import logging,random,time,requests,os,re
-import imaplib,sys
-import email
+# === 1. Python 内置标准库 ===
 import ast
-import requests
-import pyperclip
-import subprocess
-import cv2
 import base64
 import binascii
-import ast
 import email
 from email.header import decode_header
 import imaplib
 import logging
 import os
 import re
+import subprocess
 import sys
 import time
+import random
+
+# === 2. 第三方依赖库 ===
 from bs4 import BeautifulSoup
+import cv2
 from DrissionPage import ChromiumOptions, ChromiumPage
+import pyperclip
 import requests
 
 def scan_qr_native(image_path):
@@ -229,7 +226,7 @@ time.sleep(2)
 tab.get_screenshot(path=r"./qs/4.png", full_page=True)
 image_to_scan = "qs/4.png" 
 data = scan_qr_native(image_to_scan)
-with open("urls.txt", "w") as file:
+with open("qs/urls.txt", "w") as file:
     file.write(data + "\n")
 
 
@@ -262,6 +259,9 @@ try:
         file.write(modified_str)
     
     logger.info("订阅转换成功！")
-
+    number += 1
+    with open('qs/qsnum.txt', "w", encoding="utf-8") as file:
+        file.write(str(number))
+    logger.info(f"成功更新计数器。新数字已写入: {number}")
 except Exception as e:
     logger.info(f"获取订阅失败: {e}")
