@@ -10,6 +10,18 @@ import subprocess
 import cv2
 import base64
 import binascii
+import ast
+import email
+from email.header import decode_header
+import imaplib
+import logging
+import os
+import re
+import sys
+import time
+from bs4 import BeautifulSoup
+from DrissionPage import ChromiumOptions, ChromiumPage
+import requests
 
 def scan_qr_native(image_path):
     # 1. 加载图片
