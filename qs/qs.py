@@ -192,9 +192,9 @@ if not match:
 
 if match:
     code = match.group(1)
-    print(f'提取验证码成功: {code}')
+    logger.info(f'提取验证码成功: {code}')
 else:
-    print('未找到验证码')
+    logger.info('未找到验证码')
     raise ValueError("邮件中未匹配到验证码")
 ele = tab.ele('css=#verificationCode')
 ele.input(code)
