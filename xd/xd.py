@@ -18,7 +18,25 @@ from DrissionPage import ChromiumOptions, ChromiumPage
 import requests
 from PIL import Image
 import zxingcpp
+from pathlib import Path
+# 获取当前工作目录
+current_dir = Path(".")
 
+# 计数器
+deleted_count = 0
+
+# 遍历所有的 .png 和 .svg 文件
+# *.png 匹配所有 png，*.svg 匹配所有 svg
+for file_path in current_dir.glob("*"):
+    if file_path.is_file() and file_path.suffix.lower() in [".png", ".svg"]:
+        try:
+            file_path.unlink()  # 删除文件
+            print(f"已删除: {file_path.name}")
+            deleted_count += 1
+        except Exception as e:
+            print(f"无法删除 {file_path.name}: {e}")
+
+print(f"--- 清理完成，共删除 {deleted_count} 个文件 ---")
 # ==========================================
 # 1. 微信通知配置与函数
 # ==========================================
