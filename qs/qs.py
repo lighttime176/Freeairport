@@ -261,7 +261,7 @@ try:
     with open("qs/qs.yaml", "w", encoding='utf-8') as file:
         file.write(modified_str)
     
-#     logger.info("订阅转换成功！")
+    logger.info("订阅转换成功！")
 
-# except Exception as e:
-#     logger.info(f"获取订阅失败: {e}")
+except Exception as e:
+    logger.info(f"获取订阅失败: {e}")
