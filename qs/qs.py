@@ -113,7 +113,7 @@ try:
     
     ele.select.by_value('outlook.com')
     ele.click()
-expect:
+except:
     pass
 tab.get_screenshot(path=r"./qs/2.png", full_page=True)
 # ele = tab.ele('css=#password')
