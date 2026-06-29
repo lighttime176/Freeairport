@@ -89,28 +89,28 @@ tab.set.window.full()
 
 logger.info('打开千速 url')
 tab.get('https://user2.1000ws.top/#/register')
-# ---- 读取 email.txt ----
-# file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
-# with open(file_path, 'r', encoding='utf-8') as f:
-#     content = f.read()
-# emails = ast.literal_eval(content)
 
-# # ---- 读取/初始化 计数器 ----
-# num_file_path = "qs/qsnum.txt"
-# if not os.path.exists(num_file_path):
-#     with open(num_file_path, "w", encoding="utf-8") as file:
-#         file.write("0")
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+emails = ast.literal_eval(content)
 
-# with open(num_file_path, "r", encoding="utf-8") as file:
-#     try:
-#         number = int(file.read().strip())
-#     except ValueError:
-#         number = 0  
+# ---- 读取/初始化 计数器 ----
+num_file_path = "qs/qsnum.txt"
+if not os.path.exists(num_file_path):
+    with open(num_file_path, "w", encoding="utf-8") as file:
+        file.write("0")
+
+with open(num_file_path, "r", encoding="utf-8") as file:
+    try:
+        number = int(file.read().strip())
+    except ValueError:
+        number = 0  
         
-# sign_email = emails[number]
-# logger.info(f"准备注册邮箱: {sign_email}@outlook.com")
-# time.sleep(5)
-# tab.get_screenshot(path=r"./qs/1.png", full_page=True)
+sign_email = emails[number]
+logger.info(f"准备注册邮箱: {sign_email}@outlook.com")
+time.sleep(5)
+tab.get_screenshot(path=r"./qs/1.png", full_page=True)
 # ele = tab.ele('css=#emailPrefix')
 # ele.input(sign_email)
 
