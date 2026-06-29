@@ -77,76 +77,98 @@ tab.set.window.full()
 
 logger.info('打开千速 url')
 tab.get('https://user2.1000ws.top/#/register')
-# 随机生成邮箱
-account = ''.join(random.choice('0123456789') for _ in range(10))
-#data['email'] = f"{account}@"
-logger.info(f"注册邮箱：{account}@gmail.com")
-time.sleep(5)
+# ---- 读取 email.txt ----
+file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../email.txt')
+with open(file_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+emails = ast.literal_eval(content)
 
+# ---- 读取/初始化 计数器 ----
+num_file_path = "qs/qsnum.txt"
+if not os.path.exists(num_file_path):
+    with open(num_file_path, "w", encoding="utf-8") as file:
+        file.write("0")
+
+with open(num_file_path, "r", encoding="utf-8") as file:
+    try:
+        number = int(file.read().strip())
+    except ValueError:
+        number = 0  
+        
+sign_email = emails[number]
+logger.info(f"准备注册邮箱: {sign_email}")
+time.sleep(5)
+tab.get_screenshot(path=r"./qs/1.png", full_page=True)
 ele = tab.ele('css=#emailPrefix')
 
 #ele = tab.ele('css=#app > div > div.auth-container.page-transition-enter-active.page-transition-enter-to > div.auth-card > form > div:nth-child(1) > label')
-logger.info(ele)
+#logger.info(ele)
 
-tab.get_screenshot(path=r"./qs/1.png", full_page=True)
+
 # ele = ele.next().child().child().next()
-logger.info(ele)
-ele.input(account)
-
-
-ele = tab.ele('css=#password')
-ele.input('11111111')
-ele = tab.ele('css=#confirmPassword')
-ele.input('11111111')
-tab.get_screenshot(path=r"./qs/2.png", full_page=True)
-ele = tab.ele('css=#app > div > div.auth-container > div.auth-card > form > div:nth-child(6) > button')
-
-ele.click()
-time.sleep(5)
-ele = tab.ele('text=Import Subscription')
-ele.click()
-tab.get_screenshot(path=r"./qs/3.png", full_page=True)
-ele = tab.ele('text=Scan QR Code to Subscribe')
-
-ele.click()
-
-time.sleep(2)
-tab.get_screenshot(path=r"./qs/4.png", full_page=True)
-image_to_scan = "qs/4.png" 
-data = scan_qr_native(image_to_scan)
-with open("urls.txt", "w") as file:
-    file.write(data + "\n")
-
-
-headers_clash = {
-    "User-Agent": "clash-verge/v1.3.8", # 模拟更具体的客户端
-    "Accept": "*/*",
-}
-
+#logger.info(ele)
+ele.input(sign_email)
 try:
-    res = requests.get(data, headers=headers_clash, timeout=15)
-    res.raise_for_status() # 检查是否请求成功
+    ele = tab.ele('css=css=body > div:nth-child(1) > div > div.auth-container:nth-child(1) > div.auth-card:nth-child(3) > form.auth-form > div.form-group:nth-child(1) > div.input-with-suffix > div.email-suffix:nth-child(3) > div.suffix-text')
     
-    raw_content = res.content
+    ele.select.by_value('outlook.com')
+    ele.click()
+expect:
+    pass
+tab.get_screenshot(path=r"./qs/2.png", full_page=True)
+# ele = tab.ele('css=#password')
+# ele.input('11111111')
+# ele = tab.ele('css=#confirmPassword')
+# ele.input('11111111')
+# tab.get_screenshot(path=r"./qs/2.png", full_page=True)
+# ele = tab.ele('css=#app > div > div.auth-container > div.auth-card > form > div:nth-child(6) > button')
+
+# ele.click()
+# time.sleep(5)
+# ele = tab.ele('text=Import Subscription')
+# ele.click()
+# tab.get_screenshot(path=r"./qs/3.png", full_page=True)
+# ele = tab.ele('text=Scan QR Code to Subscribe')
+
+# ele.click()
+
+# time.sleep(2)
+# tab.get_screenshot(path=r"./qs/4.png", full_page=True)
+# image_to_scan = "qs/4.png" 
+# data = scan_qr_native(image_to_scan)
+# with open("urls.txt", "w") as file:
+#     file.write(data + "\n")
+
+
+# headers_clash = {
+#     "User-Agent": "clash-verge/v1.3.8", # 模拟更具体的客户端
+#     "Accept": "*/*",
+# }
+
+# try:
+#     res = requests.get(data, headers=headers_clash, timeout=15)
+#     res.raise_for_status() # 检查是否请求成功
     
-    # --- 尝试处理 Base64 编码 ---
-    try:
-        # 有些订阅是 Base64 后的 YAML，尝试解码
-        decoded_bytes = base64.b64decode(raw_content, validate=True)
-        content_str = decoded_bytes.decode('utf-8')
-    except (binascii.Error, UnicodeDecodeError):
-        # 如果不是 Base64 或者解码失败，则视为普通文本
-        content_str = raw_content.decode('utf-8')
-
-    # --- 执行修改 ---
-    # 建议使用正则表达式或更安全的匹配，防止误伤其他配置项
-    modified_str = content_str.replace('enable: true', 'enable: false')
-
-    # --- 保存文件 ---
-    with open("qs.yaml", "w", encoding='utf-8') as file:
-        file.write(modified_str)
+#     raw_content = res.content
     
-    logger.info("订阅转换成功！")
+#     # --- 尝试处理 Base64 编码 ---
+#     try:
+#         # 有些订阅是 Base64 后的 YAML，尝试解码
+#         decoded_bytes = base64.b64decode(raw_content, validate=True)
+#         content_str = decoded_bytes.decode('utf-8')
+#     except (binascii.Error, UnicodeDecodeError):
+#         # 如果不是 Base64 或者解码失败，则视为普通文本
+#         content_str = raw_content.decode('utf-8')
 
-except Exception as e:
-    logger.info(f"获取订阅失败: {e}")
+#     # --- 执行修改 ---
+#     # 建议使用正则表达式或更安全的匹配，防止误伤其他配置项
+#     modified_str = content_str.replace('enable: true', 'enable: false')
+
+#     # --- 保存文件 ---
+#     with open("qs.yaml", "w", encoding='utf-8') as file:
+#         file.write(modified_str)
+    
+#     logger.info("订阅转换成功！")
+
+# except Exception as e:
+#     logger.info(f"获取订阅失败: {e}")
