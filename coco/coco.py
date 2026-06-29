@@ -128,7 +128,7 @@ def main():
         tab.get_screenshot(path=r"coco/点击我同意.png", full_page=True)
         
         # 等待邮件接收
-        for i in range(30):
+        for i in range(60):
             time.sleep(1)
             logger.info(f"等待邮箱中，第 {i+1} S")
 
