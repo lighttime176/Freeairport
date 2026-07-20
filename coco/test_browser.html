@@ -41,10 +41,10 @@
                     <div class="navbar-nav flex-row order-md-last">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                                <span class="avatar avatar-sm" style="background-image: url(https://api.dicebear.com/7.x/identicon/svg?seed=d51a58ffeeebdc61b00cc5597664a0e2)"></span>
+                                <span class="avatar avatar-sm" style="background-image: url(https://api.dicebear.com/7.x/identicon/svg?seed=fc06178bc36b70a442509f45dfd17f0d)"></span>
                                 <div class="d-none d-xl-block ps-2">
-                                    <div>h1bvnvn6699@outlook.com</div>
-                                    <div class="mt-1 small text-secondary">俏皮的负电拍拍</div>
+                                    <div>g1fgdbdf4@outlook.com</div>
+                                    <div class="mt-1 small text-secondary">糟糕的秋天</div>
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -289,8 +289,8 @@
                                                                                             <button class="btn btn-primary  btn-sm client-btn" data-client="v2ray">
                                                     <i class="ti ti-brand-vue me-1"></i>V2Ray
                                                 </button>
-                                                <button class="btn btn-primary  btn-sm client-btn" data-client="shadowsocks">
-                                                    <i class="ti ti-shield me-1"></i>Shadowsocks
+                                                <button class="btn btn-primary btn-sm" id="send-clash-email-btn">
+                                                    <i class="ti ti-mail me-1"></i>发送到邮箱
                                                 </button>
                                                 <button class="btn btn-primary btn-sm" id="v2ray-qr-btn">
                                                     <i class="ti ti-qrcode me-1"></i>扫码导入订阅
@@ -632,14 +632,14 @@
 
             // 订阅链接映射（# 后为订阅备注名，避免小火箭显示 URL 路径 clash）
             const subscriptionUrls = {
-                'clash': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/clash#' + subProfileName,
-                'shadowrocket': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/clash#' + subProfileName,
-                'quantumult': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/quantumultx',
-                'stash': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/clash#' + subProfileName,
-                'surge': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/surge',
-                'v2ray': 'https://sub.cocoduck.cc/link/10d21c79b9573081?sip002=1',
-                'shadowsocks': 'https://sub.cocoduck.cc/link/10d21c79b9573081?sip002=1',
-                'singbox': 'https://sub.cocoduck.cc/sub/10d21c79b9573081/singbox'
+                'clash': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/clash#' + subProfileName,
+                'shadowrocket': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/clash#' + subProfileName,
+                'quantumult': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/quantumultx',
+                'stash': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/clash#' + subProfileName,
+                'surge': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/surge',
+                'v2ray': 'https://sub.cocoduck.cc/link/9e287b19d1f342aa?sip002=1',
+                'shadowsocks': 'https://sub.cocoduck.cc/link/9e287b19d1f342aa?sip002=1',
+                'singbox': 'https://sub.cocoduck.cc/sub/9e287b19d1f342aa/singbox'
             };
 
             // 复制到剪贴板
@@ -709,6 +709,42 @@
                     }
                 });
             });
+
+            const sendClashEmailBtn = document.getElementById('send-clash-email-btn');
+            if (sendClashEmailBtn) {
+                sendClashEmailBtn.addEventListener('click', function() {
+                    if (!confirm('将 Clash 订阅配置文件发送到您的注册邮箱，是否继续？')) {
+                        return;
+                    }
+
+                    sendClashEmailBtn.disabled = true;
+                    const originalHtml = sendClashEmailBtn.innerHTML;
+                    sendClashEmailBtn.innerHTML =
+                        '<span class="spinner-border spinner-border-sm me-1"></span>发送中...';
+
+                    $.ajax({
+                        url: '/user/subscribe/send_email',
+                        type: 'POST',
+                        success: function(data) {
+                            if (data.ret === 1) {
+                                document.getElementById('success-message').textContent = data.msg;
+                                $('#success-dialog').modal('show');
+                            } else {
+                                document.getElementById('fail-message').textContent = data.msg || '发送失败';
+                                $('#fail-dialog').modal('show');
+                            }
+                        },
+                        error: function() {
+                            document.getElementById('fail-message').textContent = '网络错误，请稍后再试';
+                            $('#fail-dialog').modal('show');
+                        },
+                        complete: function() {
+                            sendClashEmailBtn.disabled = false;
+                            sendClashEmailBtn.innerHTML = originalHtml;
+                        }
+                    });
+                });
+            }
 
             // 扫码导入订阅（Clash YAML，兼容 Shadowrocket）
             const v2rayQrBtn = document.getElementById('v2ray-qr-btn');
@@ -1306,15 +1342,15 @@
             d.getElementsByTagName("head")[0].appendChild(s);
         })();
         $crisp.push(["safe", true])
-        $crisp.push(["set", "user:nickname", "俏皮的负电拍拍"],
-            ["set", "user:email", "h1bvnvn6699@outlook.com"],
+        $crisp.push(["set", "user:nickname", "糟糕的秋天"],
+            ["set", "user:email", "g1fgdbdf4@outlook.com"],
             ["set", "session:data",
                 [[
-                    ["user_id", "82663"],
+                    ["user_id", "82898"],
                     ["user_class", "1"],
                     ["node_group", "0"],
-                    ["reg_email", "h1bvnvn6699@outlook.com"],
-                    ["class_expire_time", "2026-07-21 04:10:00"],
+                    ["reg_email", "g1fgdbdf4@outlook.com"],
+                    ["class_expire_time", "2026-07-22 03:41:59"],
                     ["available_traffic", "2GB"],
                     ["balance", "0.00"]
                 ]]
