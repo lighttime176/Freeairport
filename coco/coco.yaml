@@ -69,11 +69,11 @@ dns:
     - +.bing.net
     - +.bingapis.com
 proxies:
-- name: '到期时间: 2026-07-24'
+- name: '到期时间: 2026-07-25'
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -87,7 +87,7 @@ proxies:
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -101,7 +101,7 @@ proxies:
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -111,11 +111,11 @@ proxies:
   reality-opts:
     public-key: VoA8WXthSh6CroV4pHK7V6L5gYUw8MHTo2kIVknTXSE
     short-id: 693b25e06841ac7f
-- name: '我的邀请码: ef58dcd861'
+- name: '我的邀请码: cbe131ec0b'
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -129,7 +129,7 @@ proxies:
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -143,7 +143,7 @@ proxies:
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -157,7 +157,7 @@ proxies:
   type: vless
   server: cdn.hk1.rednoteimg.com
   port: 47123
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -171,7 +171,7 @@ proxies:
   type: vless
   server: cdn.hk2.rednoteimg.com
   port: 47122
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -185,7 +185,7 @@ proxies:
   type: vless
   server: cdn.hk3.rednoteimg.com
   port: 47130
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -199,7 +199,7 @@ proxies:
   type: vless
   server: cdn.hk4.rednoteimg.com
   port: 47135
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -213,7 +213,7 @@ proxies:
   type: vless
   server: cdn.hk5.rednoteimg.com
   port: 47140
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -227,7 +227,7 @@ proxies:
   type: vless
   server: cdn.hk6.rednoteimg.com
   port: 47145
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -241,7 +241,7 @@ proxies:
   type: vless
   server: cdn.hk7.rednoteimg.com
   port: 47146
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -255,7 +255,7 @@ proxies:
   type: vless
   server: cdn.hk8.rednoteimg.com
   port: 47147
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -269,7 +269,7 @@ proxies:
   type: vless
   server: cdn.tw1.rednoteimg.com
   port: 47129
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -283,7 +283,7 @@ proxies:
   type: vless
   server: cdn.tw2.rednoteimg.com
   port: 47134
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -297,7 +297,7 @@ proxies:
   type: vless
   server: cdn.tw3.rednoteimg.com
   port: 47136
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -311,7 +311,7 @@ proxies:
   type: vless
   server: cdn.jp1.rednoteimg.com
   port: 47124
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -325,7 +325,7 @@ proxies:
   type: vless
   server: cdn.jp2.rednoteimg.com
   port: 47132
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -339,7 +339,7 @@ proxies:
   type: vless
   server: cdn.jp3.rednoteimg.com
   port: 47141
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -353,7 +353,7 @@ proxies:
   type: vless
   server: cdn.jp4.rednoteimg.com
   port: 47142
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -367,7 +367,7 @@ proxies:
   type: vless
   server: cdn.sg1.rednoteimg.com
   port: 47127
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -381,7 +381,7 @@ proxies:
   type: vless
   server: cdn.sg2.rednoteimg.com
   port: 47128
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -395,7 +395,7 @@ proxies:
   type: vless
   server: cdn.sg3.rednoteimg.com
   port: 47137
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -409,7 +409,7 @@ proxies:
   type: vless
   server: cdn.sg4.rednoteimg.com
   port: 47144
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -423,7 +423,7 @@ proxies:
   type: vless
   server: cdn.us1.rednoteimg.com
   port: 47125
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -437,7 +437,7 @@ proxies:
   type: vless
   server: cdn.us2.rednoteimg.com
   port: 47126
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -451,7 +451,7 @@ proxies:
   type: vless
   server: cdn.us3.rednoteimg.com
   port: 47133
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -465,7 +465,7 @@ proxies:
   type: vless
   server: cdn.us4.rednoteimg.com
   port: 47143
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -479,7 +479,7 @@ proxies:
   type: vless
   server: cdn.de1.rednoteimg.com
   port: 47131
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -493,7 +493,7 @@ proxies:
   type: vless
   server: cdn.uk1.rednoteimg.com
   port: 47148
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -507,7 +507,7 @@ proxies:
   type: vless
   server: cdn.fr1.rednoteimg.com
   port: 47151
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -521,7 +521,7 @@ proxies:
   type: vless
   server: cdn.gr1.rednoteimg.com
   port: 47153
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -535,7 +535,7 @@ proxies:
   type: vless
   server: cdn.se1.rednoteimg.com
   port: 47155
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -549,7 +549,7 @@ proxies:
   type: vless
   server: cdn.nl1.rednoteimg.com
   port: 47158
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -563,7 +563,7 @@ proxies:
   type: vless
   server: cdn.be1.rednoteimg.com
   port: 47162
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -577,7 +577,7 @@ proxies:
   type: vless
   server: cdn.ch1.rednoteimg.com
   port: 47165
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -591,7 +591,7 @@ proxies:
   type: vless
   server: cdn.th1.rednoteimg.com
   port: 47168
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -605,7 +605,7 @@ proxies:
   type: vless
   server: cdn.in1.rednoteimg.com
   port: 47154
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -619,7 +619,7 @@ proxies:
   type: vless
   server: cdn.in2.rednoteimg.com
   port: 47167
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -633,21 +633,7 @@ proxies:
   type: vless
   server: cdn.kr1.rednoteimg.com
   port: 47150
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
-  udp: true
-  network: tcp
-  tls: true
-  flow: xtls-rprx-vision
-  servername: bilibili-hk.biliimg.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: VoA8WXthSh6CroV4pHK7V6L5gYUw8MHTo2kIVknTXSE
-    short-id: 693b25e06841ac7f
-- name: 乌克兰
-  type: vless
-  server: cdn.ua1.rednoteimg.com
-  port: 47185
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -661,7 +647,7 @@ proxies:
   type: vless
   server: cdn.ie1.rednoteimg.com
   port: 47166
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -675,7 +661,7 @@ proxies:
   type: vless
   server: cdn.tr2.rednoteimg.com
   port: 47139
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -689,7 +675,7 @@ proxies:
   type: vless
   server: cdn.at1.rednoteimg.com
   port: 47163
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -703,7 +689,7 @@ proxies:
   type: vless
   server: cdn.au1.rednoteimg.com
   port: 47152
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -717,7 +703,7 @@ proxies:
   type: vless
   server: cdn.ca1.rednoteimg.com
   port: 47161
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -731,7 +717,7 @@ proxies:
   type: vless
   server: cdn.ph1.rednoteimg.com
   port: 47169
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -745,7 +731,7 @@ proxies:
   type: vless
   server: cdn.kh1.rednoteimg.com
   port: 47171
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -759,7 +745,7 @@ proxies:
   type: vless
   server: cdn.id1.rednoteimg.com
   port: 47170
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -773,7 +759,7 @@ proxies:
   type: vless
   server: cdn.ru1.rednoteimg.com
   port: 47164
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -787,7 +773,7 @@ proxies:
   type: vless
   server: cdn.pt1.rednoteimg.com
   port: 47157
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -801,7 +787,7 @@ proxies:
   type: vless
   server: cdn.es1.rednoteimg.com
   port: 47159
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -815,7 +801,7 @@ proxies:
   type: vless
   server: cdn.my1.rednoteimg.com
   port: 47149
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -829,7 +815,7 @@ proxies:
   type: vless
   server: cdn.ae1.rednoteimg.com
   port: 47156
-  uuid: 1887e592-b68c-44c2-859e-e2b940d2be23
+  uuid: 5262b28b-f0a2-48da-a22f-98b764e4cc5c
   udp: true
   network: tcp
   tls: true
@@ -843,10 +829,10 @@ proxy-groups:
 - name: 套餐信息
   type: select
   proxies:
-  - '到期时间: 2026-07-24'
+  - '到期时间: 2026-07-25'
   - '剩余流量: 2 GB (100%)'
   - '官网: COCODUCK.CC'
-  - '我的邀请码: ef58dcd861'
+  - '我的邀请码: cbe131ec0b'
   - 打不开网站请从官网跳转
   - 无法订阅请重新复制导入
 - name: 节点选择
@@ -889,7 +875,6 @@ proxy-groups:
   - 印度 1
   - 印度 2
   - 韩国 ISP
-  - 乌克兰
   - 爱尔兰
   - 土耳其
   - 奥地利
