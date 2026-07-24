@@ -14,7 +14,7 @@
     <script src="//testingcf.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="//testingcf.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
 <script src="https://client.crisp.chat/l.js" async=""></script></head>
-<body class="border-top-wide border-primary d-flex flex-column" style="">
+<body class="border-top-wide border-primary d-flex flex-column modal-open" style="overflow: hidden; padding-right: 15px;">
     <div class="page page-center">
         <div class="container-tight my-auto">
             <div class="text-center mb-4">
@@ -175,7 +175,7 @@
     </div>
 </div>
 
-<div class="modal modal-blur fade" id="fail-dialog" tabindex="-1" aria-hidden="true" style="display: none;">
+<div class="modal modal-blur fade show" id="fail-dialog" tabindex="-1" role="dialog" aria-modal="true" style="display: block; padding-left: 0px;">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -232,4 +232,4 @@
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;eabd330495844a1a8207c810401e3465&quot;,&quot;r&quot;:1}" crossorigin="anonymous"></script>
 
 
-</body></html>
+<div class="modal-backdrop fade show"></div></body></html>
