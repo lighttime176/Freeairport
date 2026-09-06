@@ -6036,3 +6036,21 @@ ValueError: 订阅链接抓取失败
 2026-09-05 12:36:23,253 - WARNING - 网络监听未抓取到订阅，尝试解析本地HTML... 原因: 'bool' object has no attribute 'response'
 2026-09-05 12:36:23,304 - INFO - 成功找到订阅链接: https://sub.cocoduck.cc/sub/e63c7b655258c75f/clash
 2026-09-05 12:36:26,183 - INFO - 浏览器已关闭，主流程结束
+2026-09-06 15:49:33,582 - INFO - 准备注册邮箱: h1fdsdv333@outlook.com
+2026-09-06 15:49:40,028 - INFO - 打开coco url
+2026-09-06 15:49:52,638 - INFO - 输入邮箱成功
+2026-09-06 15:49:53,272 - INFO - 发送邮件按钮已点击
+2026-09-06 15:50:00,039 - ERROR - 脚本执行报错:
+Traceback (most recent call last):
+  File "/Users/runner/work/Freeairport/Freeairport/coco/coco.py", line 116, in main
+    ele.click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 23, in __call__
+    return self.left(by_js, timeout, wait_stop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 69, in left
+    raise NoRectError
+DrissionPage.errors.NoRectError: 
+This element has no location or size.
+Version: 4.1.1.4
+
+2026-09-06 15:50:01,623 - INFO - 浏览器已关闭，主流程结束
