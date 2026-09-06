@@ -6072,3 +6072,21 @@ This element has no location or size.
 Version: 4.1.1.4
 
 2026-09-06 15:55:07,560 - INFO - 浏览器已关闭，主流程结束
+2026-09-06 15:59:36,737 - INFO - 准备注册邮箱: i1dsfsdf222@outlook.com
+2026-09-06 15:59:43,714 - INFO - 打开coco url
+2026-09-06 15:59:56,257 - INFO - 输入邮箱成功
+2026-09-06 15:59:56,795 - INFO - 发送邮件按钮已点击
+2026-09-06 16:00:03,518 - ERROR - 脚本执行报错:
+Traceback (most recent call last):
+  File "/Users/runner/work/Freeairport/Freeairport/coco/coco.py", line 116, in main
+    ele.click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 23, in __call__
+    return self.left(by_js, timeout, wait_stop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 69, in left
+    raise NoRectError
+DrissionPage.errors.NoRectError: 
+This element has no location or size.
+Version: 4.1.1.4
+
+2026-09-06 16:00:05,430 - INFO - 浏览器已关闭，主流程结束
