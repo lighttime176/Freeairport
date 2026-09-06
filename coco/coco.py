@@ -111,11 +111,11 @@ def main():
         logger.info('发送邮件按钮已点击')
         time.sleep(5)
         tab.get_screenshot(path=r"coco/发完邮件.png", full_page=True)
-
-        ele = tab.ele('css=#success-confirm')
-        ele.click()
-        logger.info('点击好')
-
+        #---------------------------------------
+        # ele = tab.ele('css=#success-confirm')
+        # ele.click()
+        # logger.info('点击好')
+        #---------------------------------------
         ele = tab.ele('css=#passwd')
         ele.input('11111111')
         ele = tab.ele('css=#repasswd')
