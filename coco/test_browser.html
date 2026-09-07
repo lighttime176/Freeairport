@@ -14,7 +14,7 @@
     <script src="//testingcf.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="//testingcf.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
 <script src="https://client.crisp.chat/l.js" async=""></script></head>
-<body class="border-top-wide border-primary d-flex flex-column">
+<body class="border-top-wide border-primary d-flex flex-column modal-open" style="overflow: hidden; padding-right: 15px;">
     <div class="page page-center">
         <div class="container-tight my-auto">
             <div class="text-center mb-4">
@@ -86,6 +86,26 @@
 
     <script src="/assets/js/random-name.js"></script>
     <script>
+        function showAuthModal(dialogId, fallbackMessage) {
+            const modalElement = document.getElementById(dialogId);
+            const modalApi = window.bootstrap || (window.tabler && window.tabler.bootstrap);
+
+            if (modalElement && modalApi && modalApi.Modal) {
+                modalApi.Modal.getOrCreateInstance(modalElement).show();
+                return;
+            }
+
+            window.alert(fallbackMessage);
+        }
+
+        function showRegisterRequestError(xhr) {
+            const message = xhr.responseJSON && xhr.responseJSON.msg
+                ? xhr.responseJSON.msg
+                : '请求失败，请稍后重试';
+            $('#fail-message').text(message);
+            showAuthModal('fail-dialog', message);
+        }
+
         $(function() {
             if (typeof RandomName === 'undefined') {
                 console.error('RandomName is not loaded');
@@ -114,12 +134,13 @@
                     success: function(data) {
                         if (data.ret === 1) {
                             $('#success-message').text(data.msg);
-                            $('#success-dialog').modal('show');
+                            showAuthModal('success-dialog', data.msg);
                         } else {
                             $('#fail-message').text(data.msg);
-                            $('#fail-dialog').modal('show');
+                            showAuthModal('fail-dialog', data.msg);
                         }
-                    }
+                    },
+                    error: showRegisterRequestError
                 })
             });
         
@@ -140,18 +161,22 @@
                 success: function(data) {
                     if (data.ret === 1) {
                         $('#success-message').text(data.msg);
-                        $('#success-dialog').modal('show');
-                        window.setTimeout(location.href = data.redir, 1200);
+                        const redir = data.redir || '/user';
+                        window.setTimeout(function() {
+                            window.location.href = redir;
+                        }, 1200);
+                        showAuthModal('success-dialog', data.msg);
                     } else {
                         $('#fail-message').text(data.msg);
-                        $('#fail-dialog').modal('show');
+                        showAuthModal('fail-dialog', data.msg);
                     }
-                }
+                },
+                error: showRegisterRequestError
             })
         });
     </script>
 
-    <div class="modal modal-blur fade" id="success-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal modal-blur fade" id="success-dialog" tabindex="-1" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -175,7 +200,7 @@
     </div>
 </div>
 
-<div class="modal modal-blur fade" id="fail-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal modal-blur fade show" id="fail-dialog" tabindex="-1" role="dialog" aria-modal="true" style="display: block;">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -204,7 +229,7 @@
 
     <script type="text/javascript"> window.$crisp = [];
         window.CRISP_WEBSITE_ID = "906653c3-dc39-41db-8ce8-2ccc2917b184";
-        (function () {
+                (function () {
             d = document;
             s = d.createElement("script");
             s.src = "https://client.crisp.chat/l.js";
@@ -225,6 +250,34 @@
                     ["balance", ""]
                 ]]
             ]);
+
+        $crisp.push(["on", "session:loaded", function (sessionId) {
+            fetch("/user/crisp/session", {
+                method: "POST",
+                credentials: "same-origin",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: JSON.stringify({ session_id: sessionId })
+            }).catch(function () {
+                // 会话将在用户下次打开页面时重新绑定，不影响 Crisp 正常使用
+            });
+        }]);
+
+        document.addEventListener("click", function (event) {
+            const logoutLink = event.target.closest('a[href="/user/logout"]');
+            if (!logoutLink) {
+                return;
+            }
+
+            event.preventDefault();
+            window.CRISP_TOKEN_ID = null;
+            $crisp.push(["do", "session:reset"]);
+            window.setTimeout(function () {
+                window.location.href = logoutLink.href;
+            }, 100);
+        });
     </script>
 
 
@@ -232,4 +285,4 @@
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;eabd330495844a1a8207c810401e3465&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
 
 
-</body></html>
+<div class="modal-backdrop fade show"></div></body></html>
