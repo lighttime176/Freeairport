@@ -68,7 +68,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -82,7 +82,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -96,7 +96,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -106,11 +106,11 @@ proxies:
   reality-opts:
     public-key: VoA8WXthSh6CroV4pHK7V6L5gYUw8MHTo2kIVknTXSE
     short-id: 693b25e06841ac7f
-- name: '我的邀请码: 9e7aff5607'
+- name: '我的邀请码: a6e817cd64'
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -124,7 +124,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -138,7 +138,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -152,7 +152,7 @@ proxies:
   type: vless
   server: cdn.hk1.bilibiliimg.com
   port: 37123
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -166,7 +166,7 @@ proxies:
   type: vless
   server: cdn.hk2.bilibiliimg.com
   port: 37122
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -180,7 +180,7 @@ proxies:
   type: vless
   server: cdn.hk3.bilibiliimg.com
   port: 37130
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -194,7 +194,7 @@ proxies:
   type: vless
   server: cdn.hk4.bilibiliimg.com
   port: 37135
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -208,7 +208,7 @@ proxies:
   type: vless
   server: cdn.hk5.bilibiliimg.com
   port: 37140
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -222,7 +222,7 @@ proxies:
   type: vless
   server: cdn.hk6.bilibiliimg.com
   port: 37145
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -236,7 +236,7 @@ proxies:
   type: vless
   server: cdn.hk7.bilibiliimg.com
   port: 37146
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -250,7 +250,7 @@ proxies:
   type: vless
   server: cdn.hk8.bilibiliimg.com
   port: 37147
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -264,7 +264,7 @@ proxies:
   type: vless
   server: cdn.tw1.bilibiliimg.com
   port: 37129
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -278,7 +278,7 @@ proxies:
   type: vless
   server: cdn.tw2.bilibiliimg.com
   port: 37134
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -292,7 +292,7 @@ proxies:
   type: vless
   server: cdn.tw3.bilibiliimg.com
   port: 37136
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -306,7 +306,7 @@ proxies:
   type: vless
   server: cdn.tw4.bilibiliimg.com
   port: 37160
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -320,7 +320,7 @@ proxies:
   type: vless
   server: cdn.jp1.bilibiliimg.com
   port: 37124
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -334,7 +334,7 @@ proxies:
   type: vless
   server: cdn.jp2.bilibiliimg.com
   port: 37132
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -348,7 +348,7 @@ proxies:
   type: vless
   server: cdn.jp3.bilibiliimg.com
   port: 37141
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -362,7 +362,7 @@ proxies:
   type: vless
   server: cdn.jp4.bilibiliimg.com
   port: 37142
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -376,7 +376,7 @@ proxies:
   type: vless
   server: cdn.sg1.bilibiliimg.com
   port: 37127
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -390,7 +390,7 @@ proxies:
   type: vless
   server: cdn.sg2.bilibiliimg.com
   port: 37128
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -404,7 +404,7 @@ proxies:
   type: vless
   server: cdn.sg3.bilibiliimg.com
   port: 37137
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -418,7 +418,7 @@ proxies:
   type: vless
   server: cdn.sg4.bilibiliimg.com
   port: 37144
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -432,7 +432,7 @@ proxies:
   type: vless
   server: cdn.us1.bilibiliimg.com
   port: 37125
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -446,7 +446,7 @@ proxies:
   type: vless
   server: cdn.us2.bilibiliimg.com
   port: 37126
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -460,7 +460,7 @@ proxies:
   type: vless
   server: cdn.us3.bilibiliimg.com
   port: 37133
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -474,7 +474,7 @@ proxies:
   type: vless
   server: cdn.us4.bilibiliimg.com
   port: 37143
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -488,7 +488,7 @@ proxies:
   type: vless
   server: cdn.de1.bilibiliimg.com
   port: 37131
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -502,7 +502,7 @@ proxies:
   type: vless
   server: cdn.uk1.bilibiliimg.com
   port: 37148
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -516,7 +516,7 @@ proxies:
   type: vless
   server: cdn.fr1.bilibiliimg.com
   port: 37151
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -530,7 +530,7 @@ proxies:
   type: vless
   server: cdn.gr1.bilibiliimg.com
   port: 37153
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -544,7 +544,7 @@ proxies:
   type: vless
   server: cdn.se1.bilibiliimg.com
   port: 37155
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -558,7 +558,7 @@ proxies:
   type: vless
   server: cdn.be1.bilibiliimg.com
   port: 37162
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -572,7 +572,7 @@ proxies:
   type: vless
   server: cdn.ch1.bilibiliimg.com
   port: 37165
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -586,7 +586,7 @@ proxies:
   type: vless
   server: cdn.th1.bilibiliimg.com
   port: 37168
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -600,7 +600,7 @@ proxies:
   type: vless
   server: cdn.in1.bilibiliimg.com
   port: 37154
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -614,7 +614,7 @@ proxies:
   type: vless
   server: cdn.in2.bilibiliimg.com
   port: 37167
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -628,7 +628,7 @@ proxies:
   type: vless
   server: cdn.kr1.bilibiliimg.com
   port: 37150
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -642,7 +642,7 @@ proxies:
   type: vless
   server: cdn.kr1.bilibiliimg.com
   port: 37255
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -656,7 +656,7 @@ proxies:
   type: vless
   server: cdn.ie1.bilibiliimg.com
   port: 37166
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -670,7 +670,7 @@ proxies:
   type: vless
   server: cdn.tr2.bilibiliimg.com
   port: 37139
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -684,7 +684,7 @@ proxies:
   type: vless
   server: cdn.at1.bilibiliimg.com
   port: 37163
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -698,7 +698,7 @@ proxies:
   type: vless
   server: cdn.au1.bilibiliimg.com
   port: 37152
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -712,7 +712,7 @@ proxies:
   type: vless
   server: cdn.ca1.bilibiliimg.com
   port: 37161
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -726,7 +726,7 @@ proxies:
   type: vless
   server: cdn.ph1.bilibiliimg.com
   port: 37169
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -740,7 +740,7 @@ proxies:
   type: vless
   server: cdn.kh1.bilibiliimg.com
   port: 37171
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -754,7 +754,7 @@ proxies:
   type: vless
   server: cdn.id1.bilibiliimg.com
   port: 37170
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -768,7 +768,7 @@ proxies:
   type: vless
   server: cdn.ru1.bilibiliimg.com
   port: 37164
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -782,7 +782,7 @@ proxies:
   type: vless
   server: cdn.pt1.bilibiliimg.com
   port: 37157
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -796,7 +796,7 @@ proxies:
   type: vless
   server: cdn.es1.bilibiliimg.com
   port: 37159
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -810,7 +810,7 @@ proxies:
   type: vless
   server: cdn.my1.bilibiliimg.com
   port: 37149
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -824,7 +824,7 @@ proxies:
   type: vless
   server: cdn.ae1.bilibiliimg.com
   port: 37156
-  uuid: 0cef3415-af4f-48ae-b8b7-09a5c311a3ec
+  uuid: c7c8fe0c-b98e-426b-9b10-286803bed5ea
   udp: true
   network: tcp
   tls: true
@@ -841,7 +841,7 @@ proxy-groups:
   - '到期时间: 2026-11-23'
   - '剩余流量: 2 GB (100%)'
   - '官网: COCODUCK.CC'
-  - '我的邀请码: 9e7aff5607'
+  - '我的邀请码: a6e817cd64'
   - 打不开网站请从官网跳转
   - 无法订阅请重新复制导入
 - name: 节点选择
