@@ -51,7 +51,7 @@ def logging_init():
   console_handler.setLevel(logging.INFO)  # 设置控制台日志级别为INFO
 
   # 创建一个文件处理器，输出到文件
-  file_handler = logging.FileHandler('qs/qs.log')
+  file_handler = logging.FileHandler('lj/lj.log')
   file_handler.setLevel(logging.INFO)  # 设置文件日志级别为INFO
 
   # 创建一个日志格式化器
@@ -108,3 +108,28 @@ sign_email = emails[number]
 logger.info(f"准备注册邮箱: {sign_email}@outlook.com")
 time.sleep(5)
 tab.get_screenshot(path=r"./lj/打开网页.png", full_page=True)
+ele = tab.ele('css=#app > div > div.container.mt--8.pb-5 > div > div > div.card.bg-secondary.shadow.border-0 > div.card-body.px-lg-5.py-lg-5 > form > div:nth-child(1) > div > input')
+ele.input(sign_email)
+
+def choose_email_suffix(tab, suffix='outlook.com'):
+    suffix_box = tab.ele('css=.email-suffix', timeout=10)
+    suffix_box.click()
+    time.sleep(0.5)
+
+    option = tab.ele(
+        f'xpath://div[contains(@class, "suffix-option") and normalize-space()="{suffix}"]',
+        timeout=5,
+    )
+    option.click()
+    time.sleep(0.3)
+
+    current = tab.ele('css=.suffix-text', timeout=5).text.strip()
+    if current != suffix:
+        raise RuntimeError(f'邮箱后缀选择失败，当前为: {current}')
+
+
+choose_email_suffix(tab, 'outlook.com')
+ele = tab.ele('css=#app > div > div.container.mt--8.pb-5 > div > div > div.card.bg-secondary.shadow.border-0 > div.card-body.px-lg-5.py-lg-5 > form > div:nth-child(3) > input')
+ele.input('11111111')
+ele = tab.ele('css=#app > div > div.container.mt--8.pb-5 > div > div > div.card.bg-secondary.shadow.border-0 > div.card-body.px-lg-5.py-lg-5 > form > div:nth-child(4) > input')
+ele.input('11111111')
