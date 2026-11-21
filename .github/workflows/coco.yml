@@ -18,7 +18,7 @@ permissions:
 
 jobs:
   run-and-commit:
-    runs-on: 	macos-latest
+    runs-on: 	linux-latest
     env:
       TZ: Asia/Shanghai
 
