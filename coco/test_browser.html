@@ -15,7 +15,7 @@
     <script src="//testingcf.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
     <script src="/assets/js/bootstrap-jquery-modal-compat.js"></script>
 <script src="https://client.crisp.chat/l.js" async=""></script></head>
-<body class="border-top-wide border-primary d-flex flex-column modal-open" style="overflow: hidden; padding-right: 15px;">
+<body class="border-top-wide border-primary d-flex flex-column modal-open" style="overflow: hidden; padding-right: 0px;">
     <div class="page page-center">
         <div class="container-tight my-auto">
             <div class="text-center mb-4">
@@ -28,7 +28,7 @@
                         <h2 class="card-title text-center mb-4">注册账户</h2>
                         <div class="mb-3">
                             <div class="input-group">
-                                <input id="name" type="text" class="form-control" placeholder="昵称">
+                                <input id="name" type="text" class="form-control" placeholder="昵称（2-16位，中英文/数字/_/-）" maxlength="16">
                                 <button id="random-name" class="btn btn-icon" type="button" title="随机生成昵称">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dice" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -43,34 +43,31 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input id="email" type="email" class="form-control" placeholder="电子邮箱">
-                        </div>
-                        <div class="mb-3">
-                            <div class="input-group input-group-flat">
-                                <input id="passwd" type="password" class="form-control" placeholder="登录密码">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <div class="input-group input-group-flat">
-                                <input id="repasswd" type="password" class="form-control" placeholder="重复登录密码">
-                            </div>
+                            <div class="input-group">
+                                <input id="email" type="email" class="form-control" placeholder="电子邮箱">
+                                                                    <button id="email-verify" class="btn text-blue" type="button">获取</button>
+                                                            </div>
                         </div>
                                                     <div class="mb-3">
-                                <div class="input-group input-group-flat">
-                                    <input id="code" type="text" class="form-control" placeholder="注册邀请码（可选）" value="">
-                                </div>
+                                <input id="emailcode" type="text" class="form-control" placeholder="邮箱验证码（收不到请查看垃圾箱）">
                             </div>
-                                                                            <div class="mb-3">
-                                <div class="input-group mb-2">
-                                    <input id="emailcode" type="text" class="form-control" placeholder="请输入验证码(收不到邮件请查看垃圾箱)">
-                                    <button id="email-verify" class="btn text-blue" type="button">获取</button>
-                                </div>
+                                                <div class="mb-3">
+                            <input id="passwd" type="password" class="form-control" placeholder="登录密码">
+                        </div>
+                        <div class="mb-3">
+                            <input id="repasswd" type="password" class="form-control" placeholder="重复登录密码">
+                        </div>
+                                                    <div class="mb-3">
+                                <input id="code" type="text" class="form-control" placeholder="注册邀请码（可选）" value="">
                             </div>
                                                 <div class="mb-3">
                             <label class="form-check">
                                 <input id="tos" type="checkbox" class="form-check-input">
                                 <span class="form-check-label">
-                                    我已阅读并同意 <a href="/tos" tabindex="-1"> 服务条款与隐私政策 </a>
+                                    我已阅读并同意
+                                    <a href="https://cocoduck.cc/docs/tos/" target="_blank" rel="noopener">服务条款</a>
+                                    与
+                                    <a href="https://cocoduck.cc/docs/privacy-policy/" target="_blank" rel="noopener">隐私协议</a>
                                 </span>
                             </label>
                         </div>
@@ -283,7 +280,7 @@
 
 
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;eabd330495844a1a8207c810401e3465&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;eabd330495844a1a8207c810401e3465&quot;,&quot;r&quot;:1,&quot;spa&quot;:2}" crossorigin="anonymous"></script>
 
 
 <div class="modal-backdrop fade show"></div></body></html>
