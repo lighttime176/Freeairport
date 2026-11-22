@@ -9872,3 +9872,21 @@ DrissionPage.errors.NoRectError:
 版本: 4.1.1.4
 
 2026-11-23 04:24:51,865 - INFO - 浏览器已关闭，主流程结束
+2026-11-23 04:32:19,378 - INFO - 准备注册邮箱: i1ghbgfb66@outlook.com
+2026-11-23 04:32:28,201 - INFO - 打开coco url
+2026-11-23 04:32:40,415 - INFO - 输入邮箱成功
+2026-11-23 04:32:40,818 - INFO - 发送邮件按钮已点击
+2026-11-23 04:32:47,441 - ERROR - 脚本执行报错:
+Traceback (most recent call last):
+  File "/home/runner/work/Freeairport/Freeairport/coco/coco.py", line 116, in main
+    ele.click()
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 23, in __call__
+    return self.left(by_js, timeout, wait_stop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.16/x64/lib/python3.12/site-packages/DrissionPage/_units/clicker.py", line 69, in left
+    raise NoRectError
+DrissionPage.errors.NoRectError: 
+该元素没有位置及大小。
+版本: 4.1.1.4
+
+2026-11-23 04:32:49,453 - INFO - 浏览器已关闭，主流程结束
